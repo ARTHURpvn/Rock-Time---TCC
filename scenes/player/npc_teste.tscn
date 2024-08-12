@@ -1,0 +1,137 @@
+[gd_scene load_steps=19 format=3 uid="uid://c7vunb0ds57yj"]
+
+[ext_resource type="Texture2D" uid="uid://cei21wbs4kh2j" path="res://assets/lana.png" id="1_0tv2g"]
+[ext_resource type="Script" path="res://scripts/npc_teste.gd" id="1_pqkyr"]
+[ext_resource type="PackedScene" uid="uid://dl4xm45r6wktw" path="res://dialogue/dialogue.tscn" id="3_s3sfm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unchm"]
+size = Vector2(15, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdf1e"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(17, 11, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tptxa"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(65, 11, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbdpp"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(113, 11, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4dlf"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(161, 11, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juk40"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(209, 11, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngtmy"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(257, 11, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn73o"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(17, 203, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce83p"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(65, 203, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acb8l"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(113, 203, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inq2p"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(161, 203, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekl6s"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(209, 203, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrefx"]
+atlas = ExtResource("1_0tv2g")
+region = Rect2(257, 203, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aqgfq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdf1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tptxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbdpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4dlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juk40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngtmy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn73o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce83p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acb8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inq2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekl6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrefx")
+}],
+"loop": true,
+"name": &"walk_w",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jpndp"]
+radius = 29.0172
+
+[node name="npc" type="CharacterBody2D"]
+script = ExtResource("1_pqkyr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_unchm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aqgfq")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0.5, 0)
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_jpndp")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Dialogue" parent="." instance=ExtResource("3_s3sfm")]
+scale = Vector2(0.972973, 1)
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]

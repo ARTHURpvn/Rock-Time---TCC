@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl4xm45r6wktw"]
+
+[ext_resource type="Texture2D" uid="uid://k0mbt1o0cjra" path="res://assets/ceu-negro-estrelado-500x333-1-378x252.jpg" id="1_6dbyq"]
+[ext_resource type="Script" path="res://dialogue/dialogue.gd" id="1_xcn3k"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcn3k")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -55.0
+offset_top = -75.0
+offset_right = 54.0
+offset_bottom = -35.0
+texture = ExtResource("1_6dbyq")
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 208.0
+offset_bottom = 24.0
+scale = Vector2(0.3, 0.3)
+text = "Name:"
+fit_content = true
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 350.0
+offset_bottom = 106.0
+scale = Vector2(0.3, 0.3)
+text = "aqui iria ser o chat"
