@@ -1,57 +1,43 @@
-from pydub import AudioSegment
-import pytuning
-import numpy as np
+import librosa
 import json
+import numpy as np
 
-def is_guitar_note(pitch, guitar_note_range=(80, 1200)):
-    # Verifica se a nota está dentro da faixa típica de frequências da guitarra
-    return guitar_note_range[0] <= pitch <= guitar_note_range[1]
+# Defina os números das teclas da guitarra
+teclas = [1, 2, 3, 4]
 
-def audio_to_numpy(audio_file):
-    # Carregar o arquivo de áudio
-    audio = AudioSegment.from_file(audio_file)
-    
-    # Converter para mono e obter os dados em formato numpy
-    audio = audio.set_channels(1)
-    samples = np.array(audio.get_array_of_samples(), dtype=np.float32)
-    
-    # Normalizar os samples
-    samples /= np.max(np.abs(samples))
-    
-    return samples, audio.frame_rate
+# Carregue a música
+musica = 'note-generator/teste.mp3'
+audio, sr = librosa.load(musica)
 
-def generate_guitar_notes(audio_file, json_file, threshold=0.02, max_notes=0):
-    # Converter áudio para numpy array
-    y, sr = audio_to_numpy(audio_file)
-    
-    # Usar pytuning para detectar notas e frequências
-    pitch, magnitude = pytuning.detect_pitch(y, sr)
+# Detecta os onsets das notas
+onsets = librosa.onset.onset_detect(y=audio, sr=sr, units='time')
 
-    # Filtragem e geração dos eventos
-    events = []
-    for i in range(len(pitch)):
-        if magnitude[i] > threshold:
-            if is_guitar_note(pitch[i]):
-                value = np.random.randint(1, 4)  # Valor aleatório entre 1 e 3
-                position = round(i / sr)  # Tempo em segundos, mantendo 2 casas decimais
-                events.append({"position": position, "value": value})
+# Calcula o BPM
+if len(onsets) > 1:
+    intervals = np.diff(onsets)  # Calcula os intervalos entre os onsets
+    average_interval = np.mean(intervals)  # Intervalo médio
+    bpm = 60 / average_interval  # Converte intervalo médio para BPM
+else:
+    bpm = 0  # Se não houver onsets suficientes, define BPM como 0
 
-    # Ordenar os eventos por posição e limitar o número de notas
-    events.sort(key=lambda x: x['position'])
-    
-    if len(events) > max_notes and max_notes > 0:
-        # Selecionar notas igualmente espaçadas
-        selected_events = []
-        step = len(events) // max_notes
-        for i in range(0, len(events), step):
-            selected_events.append(events[i])
-        events = selected_events
+# Crie uma lista para armazenar as notas mapeadas
+notas_mapeadas = []
 
-    # Salvar eventos em um arquivo JSON
-    with open(json_file, 'w') as f:
-        json.dump(events, f, indent=4)
+for onset in onsets:
+    tecla = teclas[int(onset) % len(teclas)]
+    notas_mapeadas.append({
+        'position': int(onset),  # Converte o tempo de onset para inteiro
+        'value': tecla
+    })
 
-    print(f"Notas exportadas para {json_file}")
+# Exporta o dicionário para um arquivo JSON
+json_data = {
+    'bpm': bpm,
+    'notes': notas_mapeadas
+}
 
-# Exemplo de uso
-generate_guitar_notes('note-generator/snd_helena.mp3', 'note-generator/guitar_notes.json')
+with open('note-generator/guitar_notes.json', 'w') as arquivo:
+    json.dump(json_data, arquivo, indent=4)
+
+print("Notas mapeadas com sucesso!")
+print("BPM calculado:", bpm)

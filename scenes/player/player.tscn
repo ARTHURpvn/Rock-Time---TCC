@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://8cktn02h16m7"]
+[gd_scene load_steps=27 format=3 uid="uid://8cktn02h16m7"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rn5vj"]
 [ext_resource type="Texture2D" uid="uid://5duqmxktg7wl" path="res://assets/castiel2.png" id="2_y3ps3"]
+[ext_resource type="PackedScene" uid="uid://bdhantnplqk0h" path="res://scenes/dialogue/user_interface.tscn" id="3_idn6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojnvm"]
 size = Vector2(12, 4)
@@ -439,6 +440,9 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_gwrt5")
 states/Walk/position = Vector2(454, 145)
 graph_offset = Vector2(66, -1)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4hnw"]
+radius = 29.0172
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 script = ExtResource("1_rn5vj")
 _animation_tree = NodePath("AnimationTree")
@@ -469,3 +473,15 @@ tree_root = SubResource("AnimationNodeStateMachine_16cl8")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_f4hnw")
+
+[node name="User Interface" parent="." instance=ExtResource("3_idn6y")]
+follow_viewport_enabled = false
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]

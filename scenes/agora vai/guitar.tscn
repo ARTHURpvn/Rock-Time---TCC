@@ -4,19 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://g2yxw6suy0i7" path="res://scenes/agora vai/notas.tscn" id="2_fwprd"]
 [ext_resource type="PackedScene" uid="uid://bpwu8ss3637fc" path="res://scenes/agora vai/ondeApertar.tscn" id="3_6ovdk"]
 [ext_resource type="Script" path="res://scripts/JSON.gd" id="3_52d4r"]
-[ext_resource type="AudioStream" uid="uid://llyrpptghdce" path="res://note-generator/snd_helena.mp3" id="5_0oarp"]
+[ext_resource type="AudioStream" uid="uid://bqdijlk6ggehv" path="res://note-generator/teste.mp3" id="5_180tq"]
 
 [node name="Guitar" type="Node2D"]
 script = ExtResource("1_f1c3r")
 tiles = ExtResource("2_fwprd")
-bpm = 120.0
+bpm = 93.0
 
 [node name="JSON" type="Node" parent="."]
 script = ExtResource("3_52d4r")
 tiles = ExtResource("2_fwprd")
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
+one_shot = true
 
 [node name="Baixo" type="Node2D" parent="."]
 position = Vector2(220, 310)
@@ -29,11 +29,15 @@ position = Vector2(-30, 0)
 [node name="ondeApertar3" parent="Baixo" instance=ExtResource("3_6ovdk")]
 position = Vector2(30, 0)
 
+[node name="ondeApertar4" parent="Baixo" instance=ExtResource("3_6ovdk")]
+position = Vector2(60, 0)
+
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(168, 90)
+position = Vector2(235, 90)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_0oarp")
-autoplay = true
+stream = ExtResource("5_180tq")
+volume_db = -6.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="child_entered_tree" from="Baixo" to="." method="_on_baixo_child_entered_tree"]

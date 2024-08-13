@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cei21wbs4kh2j" path="res://assets/lana.png" id="1_0tv2g"]
 [ext_resource type="Script" path="res://scripts/npc_teste.gd" id="1_pqkyr"]
-[ext_resource type="PackedScene" uid="uid://dl4xm45r6wktw" path="res://dialogue/dialogue.tscn" id="3_s3sfm"]
+[ext_resource type="PackedScene" uid="uid://dl4xm45r6wktw" path="res://scenes/dialogue/dialogue.tscn" id="3_s3sfm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unchm"]
 size = Vector2(15, 6)
@@ -130,8 +130,6 @@ shape = SubResource("CircleShape2D_jpndp")
 autostart = true
 
 [node name="Dialogue" parent="." instance=ExtResource("3_s3sfm")]
-scale = Vector2(0.972973, 1)
 
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]

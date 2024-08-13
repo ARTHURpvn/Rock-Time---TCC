@@ -13,6 +13,7 @@ func load_json():
 	var file = FileAccess.open(JSON_PATH, FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	file.close()
+	
 	return content
 
 func get_notes_info() -> Array:

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://0bjx16a64f4b"]
+[gd_scene load_steps=3 format=3 uid="uid://0bjx16a64f4b"]
 
 [ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="1_8uai2"]
 [ext_resource type="PackedScene" uid="uid://c7vunb0ds57yj" path="res://scenes/player/npc_teste.tscn" id="2_ixgf5"]
-[ext_resource type="PackedScene" uid="uid://d3151rpt4wd5d" path="res://scenes/agora vai/guitar.tscn" id="3_r8obx"]
 
 [node name="Jogo" type="Node2D"]
 
@@ -10,6 +9,4 @@
 position = Vector2(267, 257)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ixgf5")]
-position = Vector2(167, 49)
-
-[node name="Guitar" parent="." instance=ExtResource("3_r8obx")]
+position = Vector2(210, 196)

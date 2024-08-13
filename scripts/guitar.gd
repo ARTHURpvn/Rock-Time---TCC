@@ -1,48 +1,42 @@
 extends Node2D
 
 var positions: Array = []
-var current_note = 0
+var current_note: int = 0
 @export var tiles: PackedScene
-@export var bpm: float  # Exporte o BPM para que possa ser ajustado na interface do Godot
-var notes_info = []
-var timer_interval: float = 0.0
+@export var bpm: float
 
-# Called when the node enters the scene tree for the first time.
+var notes_info: Array = []
+var elapsed_time: float = 0.0
+
+var distance_to_fall: float = 400  # Distância que a nota percorre
+var speed_scale: float = 0.3  # Fator de escala para a velocidade
+
 func _ready():
+	# Definindo as posições das notas
 	positions.append($Baixo/ondeApertar.global_position.x)
 	positions.append($Baixo/ondeApertar2.global_position.x)
 	positions.append($Baixo/ondeApertar3.global_position.x)
+	positions.append($Baixo/ondeApertar4.global_position.x)
 	
-	# Carregar os dados do JSON e configurar o timer
-	notes_info = $JSON.get_notes_info()
-	if notes_info.size() > 0:
-		calculate_timer_interval()
-		start_timer()
-
-func calculate_timer_interval():
-	# Calcular o intervalo entre batidas com base no BPM
-	timer_interval = 60 / bpm
-
-func start_timer():
-	$Timer.wait_time = timer_interval
-	$Timer.start()
-
-func _spawn():
-	if current_note >= len(notes_info):
-		return  # Se não há mais notas para processar, sair
+	# Carregando as informações das notas
+	notes_info = $JSON.load_json()
 	
+
+func _process(delta: float):
+	elapsed_time += delta
+
+	# Checando se já é o momento de spawnar a próxima nota
+	while current_note < notes_info.size() and notes_info[current_note]["position"] <= elapsed_time:
+		_spawn(notes_info[current_note]["value"])
+		current_note += 1
+
+func _spawn(note_value: int):
 	var tiles_instance = tiles.instantiate()
 	var pos = $Marker2D.position
 
 	# Configurar a posição para o spawn
-	pos.x = positions[notes_info[current_note]["value"] - 1]
-	tiles_instance.spawn(notes_info[current_note]["value"], pos)
+	pos.x = positions[note_value - 1]  
+	pos.y = $Marker2D.position.y + notes_info[note_value]["position"]
+	tiles_instance.position = pos
+	tiles_instance.spawn(note_value, pos)
 	add_child(tiles_instance)
-
-func _on_timer_timeout():
-	_spawn()
-	current_note += 1
-
-	# Verificar se ainda há notas e ajustar o timer para o próximo spawn
-	if current_note < len(notes_info):
-		$Timer.wait_time = notes_info[current_note]["position"] / 1000.0  # Converta milissegundos para segundos se necessário

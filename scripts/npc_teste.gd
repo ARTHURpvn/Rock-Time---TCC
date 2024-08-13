@@ -67,14 +67,7 @@ func move(delta):
 		
 	
 
-func _on_chat_detection_area_body_entered(body):
-	if body.has_method("player"):
-		player = body
-		player_in_chat_zone = true 
 
-func _on_chat_detection_area_body_exited(body):
-	if body.has_method("player"):
-		player_in_chat_zone = false 
 		
 func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
