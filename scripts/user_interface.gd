@@ -1,114 +1,144 @@
 extends CanvasLayer
 
-var dialogue = []
-var current_dialogue_id = 0
+const JSON_PATH = "res://scenes/dialogue/dialogue.json"
+
+var dialogue_data = []
+var current_dialogue_id = 1 
 var d_active = false
-const JSON_PATH = "res://scenes/dialogue/worker_dialogue1.json"
-
 var selected_index = 0
-var buttons = []
-var choice_ids = {}  # Dicionário para armazenar IDs
-
-func load_dialogue():
-	var file = FileAccess.open(JSON_PATH, FileAccess.READ)
-	var content = JSON.parse_string(file.get_as_text())
-	file.close()
-	return content
 
 func _ready():
 	$ColorRect.visible = false
 	$ChoicesContainer.visible = false 
 
-func start(): 
+func load_dialogue():
+	var file = FileAccess.open(JSON_PATH, FileAccess.READ)
+	if file:
+		var content = JSON.parse_string(file.get_as_text())
+		file.close()
+		return content
+
+func start_dialogue(): 
 	if d_active:
 		return
-	
-	d_active = true
-	$ColorRect.visible = true
-	dialogue = load_dialogue()
-	current_dialogue_id = -1
-	next_script()
 
-func next_script(choice_id = -1):
-	current_dialogue_id += 1
-	if current_dialogue_id >= len(dialogue):
-		d_active = false
-		$ColorRect.visible = false
-		$ChoicesContainer.visible = false
+	var data = load_dialogue()
+	if not data or not data.has("npcs"):
+		print("No NPCs found in dialogue JSON.")
 		return
 	
-	var current_dialogue = dialogue[current_dialogue_id]
+	dialogue_data = data["npcs"][0]["dialogue"]
+	d_active = true
+	$ColorRect.visible = true
+	current_dialogue_id = 1
+	advance_dialogue()
+
+func advance_dialogue(choice_id = -1):
+	if not d_active:
+		return
 	
-	if "escolhas" in current_dialogue:
-		show_choices(current_dialogue["escolhas"])
+	if choice_id != -1:
+		current_dialogue_id = choice_id
+	
+	if current_dialogue_id == 0:
+		end_dialogue()
+		return
+	
+	var current_dialogue = get_dialogue_by_id(current_dialogue_id)
+	if not current_dialogue:
+		end_dialogue()
+		return
+	
+	$ColorRect/Name.text = current_dialogue.get("name", "Unknown")
+	$ColorRect/Text.text = current_dialogue.get("text", "")
+	
+	if current_dialogue.has("options"):
+		display_choices(current_dialogue["options"])
 	else:
 		hide_choices()
-		$ColorRect/Name.text = current_dialogue["name"]
-		$ColorRect/Text.text = current_dialogue["text"]
 
-	# Se uma escolha foi feita, mova para o próximo diálogo baseado na escolha
-	if choice_id != -1:
-		for choice in current_dialogue["escolhas"]:
-			if choice["id"] == choice_id:
-				current_dialogue_id = choice["id_proximo_dialogo"] 
-				break
+func get_dialogue_by_id(dialogue_id):
+	for dialogue_item in dialogue_data:
+		if dialogue_item["id"] == dialogue_id:
+			return dialogue_item
+	return null
 
-func show_choices(choices):
+func display_choices(choices):
 	$ChoicesContainer.visible = true
-	
-	# Remove todos os filhos do ChoicesContainer
-	var children = $ChoicesContainer.get_children()
-	for child in children:
+	# Remove all children from the container
+	for child in $ChoicesContainer.get_children():
 		child.queue_free()
-	
-	buttons.clear()
-	choice_ids.clear()  # Limpa o dicionário de IDs
-	selected_index = 0 
-	
-	# Adiciona botões de escolha
+	selected_index = 0
+
 	for choice in choices:
 		var button = Button.new()
-		button.text = choice["texto"]
-		# Use `button.connect` para conectar o sinal de pressionamento
-		button.pressed.connect( self._on_choice_pressed, choice["next_dialogue"])
+		button.text = str(choice["text"])
+		button.pressed.connect(func(): on_choice_selected(choice))
 		$ChoicesContainer.add_child(button)
-		buttons.append(button)
-		choice_ids[button.text] = choice["next_dialogue"] 
-
-	# Destaca o botão selecionado
-	if buttons.size() > 0:
-		_navigate(0)  
+	
+	# Focus the first button by default
+	select_button(0)
 
 func hide_choices():
 	$ChoicesContainer.visible = false
 
-func _on_choice_pressed(choice_id):
-	# choice_id é passado como parâmetro para o método conectado
-	print("Choice ID pressed:", choice_id)
-	next_script(choice_id)
+func end_dialogue():
+	d_active = false
+	$ColorRect.visible = false
+	$ChoicesContainer.visible = false
+	# Notify the character script that dialogue has ended
+	get_parent().call_deferred("_on_dialogue_ended")
+
+func return_is_dialogue():
+	return d_active
 
 func _input(event):
-	if !d_active:
+	if not d_active:
 		return
 
 	if event.is_action_pressed('ui_accept') and $ChoicesContainer.visible:
-		if buttons.size() > 0:
-			_on_choice_pressed(choice_ids.get(buttons[selected_index].text, -1))
+		if selected_index >= 0 and selected_index < $ChoicesContainer.get_child_count():
+			var button = $ChoicesContainer.get_child(selected_index)
+			button.emit_signal("pressed")
 	elif event.is_action_pressed('ui_up'):
-		_navigate(-1)
+		navigate(-1)
 	elif event.is_action_pressed('ui_down'):
-		_navigate(1)
+		navigate(1)
 
-func _navigate(direction):
-	if buttons.size() == 0:
+func navigate(direction):
+	var button_count = $ChoicesContainer.get_child_count()
+	if button_count == 0:
 		return
+		
+	selected_index += direction
 	
-	# Remove a seleção atual
-	buttons[selected_index].focus_mode = Control.FOCUS_NONE
-	
-	# Calcula o novo índice selecionado
-	selected_index = (selected_index + direction + buttons.size()) % buttons.size()
-	
-	# Atualiza o botão selecionado
-	buttons[selected_index].focus_mode = Control.FOCUS_ALL
-	buttons[selected_index].grab_focus()
+	if selected_index < 0:
+		selected_index -= 1
+	elif selected_index >= button_count:
+		selected_index += 1
+
+	select_button(selected_index)
+
+func select_button(index):
+	if index >= 0 and index < $ChoicesContainer.get_child_count():
+		var button = $ChoicesContainer.get_child(index)
+		button.grab_focus()
+
+func on_choice_selected(choice):
+	if choice.has("quest"):
+		handle_quest(choice["quest"])
+	if choice.has("next"):
+		advance_dialogue(choice["next"])
+	else:
+		end_dialogue()
+
+func handle_quest(quest):
+	var quest_name = Label.new()
+	var quest_dsc = Label.new()
+
+	quest_name.uppercase = true
+	quest_dsc.text = quest.description
+	quest_name.text = quest.title
+
+	$Quests.add_child(quest_name)
+	$Quests.add_child(quest_dsc)

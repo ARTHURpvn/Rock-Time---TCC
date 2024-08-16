@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://c7vunb0ds57yj"]
+[gd_scene load_steps=18 format=3 uid="uid://c7vunb0ds57yj"]
 
-[ext_resource type="Texture2D" uid="uid://cei21wbs4kh2j" path="res://assets/lana.png" id="1_0tv2g"]
+[ext_resource type="Texture2D" uid="uid://cei21wbs4kh2j" path="res://assets/personagens/lana.png" id="1_0tv2g"]
 [ext_resource type="Script" path="res://scripts/npc_teste.gd" id="1_pqkyr"]
-[ext_resource type="PackedScene" uid="uid://dl4xm45r6wktw" path="res://scenes/dialogue/dialogue.tscn" id="3_s3sfm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unchm"]
 size = Vector2(15, 6)
@@ -108,6 +107,7 @@ animations = [{
 radius = 29.0172
 
 [node name="npc" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_pqkyr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -128,8 +128,6 @@ shape = SubResource("CircleShape2D_jpndp")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
-
-[node name="Dialogue" parent="." instance=ExtResource("3_s3sfm")]
 
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -51,7 +51,6 @@ func _process(delta):
 			MOVE:
 				move(delta)
 	if Input.is_action_just_pressed("dialog"):
-		$Dialogue.start()
 		is_roaming = false
 		is_chatting = true
 		$AnimatedSprite2D.play("idle")

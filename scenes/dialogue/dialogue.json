@@ -1,0 +1,142 @@
+{
+  "npcs": [
+    {
+      "id": "npc1",
+      "dialogue": [
+        {
+          "id": 1,
+          "name": "Guardião da Vila",
+          "text": "Olá, viajante! O que posso fazer por você?",
+          "options": [
+            {
+              "text": "Quero saber mais sobre esta vila.",
+              "next": 2
+            },
+            {
+              "text": "Você tem alguma missão para mim?",
+              "next": 3
+            },
+            {
+              "text": "Nunca mind. Adeus!",
+              "next": 0
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Guardião da Vila",
+          "text": "Esta vila é conhecida por seus belos jardins e a hospitalidade de seus moradores.",
+          "options": [
+            {
+              "text": "Isso é fascinante! Alguma recomendação de lugar para visitar?",
+              "next": 4
+            },
+            {
+              "text": "Obrigado pela informação. Adeus!",
+              "next": 0
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Guardião da Vila",
+          "text": "Sim, há uma missão para você. Você deve investigar as ruínas ao sul da vila.",
+          "options": [
+            {
+              "name": "Guardião da Vila",
+              "text": "Entendido! Partirei imediatamente.",
+              "command": "acceptQuest",
+              "quest": {
+                "id": "quest1",
+                "title": "Investigar Ruínas",
+                "description": "Investigue as ruínas ao sul da vila e descubra o que está acontecendo.",
+                "reward": {
+                  "xp": 100,
+                  "items": ["mapa_antigo"]
+                }
+              }
+            },
+            {
+              "text": "Não estou interessado. Adeus!",
+              "next": 0
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Guardião da Vila",
+          "text": "Você deve visitar o Jardim Botânico e o Mercado Central.",
+          "options": [
+            {
+              "text": "Ótimo! Vou visitar esses lugares.",
+              "next": 0
+            },
+            {
+              "text": "Ainda tenho mais perguntas. Vamos voltar.",
+              "next": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "npc2",
+      "name": "Maga da Floresta",
+      "dialogue": [
+        {
+          "id": 1,
+          "name": "Guardião da Vila",
+          "text": "Saudações, jovem. O que deseja?",
+          "options": [
+            {
+              "text": "Estou procurando por um item mágico.",
+              "next": 2
+            },
+            {
+              "text": "Só estou explorando. Adeus!",
+              "next": 0
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Guardião da Vila",
+          "text": "Há uma loja de itens mágicos na cidade vizinha. Talvez você encontre o que procura lá.",
+          "options": [
+            {
+              "text": "Obrigado pela dica!",
+              "next": 0
+            },
+            {
+              "text": "Você sabe algo sobre as florestas ao redor?",
+              "next": 3
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Guardião da Vila",
+          "text": "As florestas são perigosas e cheias de criaturas mágicas. Vá preparado.",
+          "options": [
+            {
+              "text": "Vou me preparar. Adeus!",
+              "next": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "quests": [
+    {
+      "id": "quest1",
+      "title": "Direita",
+      "description": "Vai para a direita",
+      "reward": {
+        "xp": 100,
+        "items": ["mapa_antigo"]
+      },
+      "status": "incompleta"
+    }
+  ]
+}

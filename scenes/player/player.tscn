@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://8cktn02h16m7"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_rn5vj"]
-[ext_resource type="Texture2D" uid="uid://5duqmxktg7wl" path="res://assets/castiel2.png" id="2_y3ps3"]
+[ext_resource type="Texture2D" uid="uid://5duqmxktg7wl" path="res://assets/personagens/castiel2.png" id="2_y3ps3"]
 [ext_resource type="PackedScene" uid="uid://bdhantnplqk0h" path="res://scenes/dialogue/user_interface.tscn" id="3_idn6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojnvm"]
@@ -387,49 +387,49 @@ _data = {
 "walk_up": SubResource("Animation_8qbwh")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1n0vc"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0i02u"]
 animation = &"idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eb2xr"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4nb7b"]
 animation = &"idle_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0ujwp"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qh8cl"]
 animation = &"idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yt6lk"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_me1xg"]
 animation = &"idle_left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_2nd60"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_1n0vc")
+blend_point_0/node = SubResource("AnimationNodeAnimation_0i02u")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_eb2xr")
+blend_point_1/node = SubResource("AnimationNodeAnimation_4nb7b")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_0ujwp")
+blend_point_2/node = SubResource("AnimationNodeAnimation_qh8cl")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_yt6lk")
+blend_point_3/node = SubResource("AnimationNodeAnimation_me1xg")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k5aqf"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3gcao"]
 animation = &"walk_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2pblh"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aeahx"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b27ed"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5bayj"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x8fon"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uxn7a"]
 animation = &"walk_left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_gwrt5"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_k5aqf")
+blend_point_0/node = SubResource("AnimationNodeAnimation_3gcao")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_2pblh")
+blend_point_1/node = SubResource("AnimationNodeAnimation_aeahx")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_b27ed")
+blend_point_2/node = SubResource("AnimationNodeAnimation_5bayj")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_x8fon")
+blend_point_3/node = SubResource("AnimationNodeAnimation_uxn7a")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
@@ -444,7 +444,9 @@ graph_offset = Vector2(66, -1)
 radius = 29.0172
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
+y_sort_enabled = true
 script = ExtResource("1_rn5vj")
+_acceleration = 0.5
 _animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -460,8 +462,10 @@ shape = SubResource("RectangleShape2D_ojnvm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 4)
-zoom = Vector2(3, 3)
-position_smoothing_speed = 4.0
+zoom = Vector2(2, 2)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
