@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://qfxvf7exkx3p"]
+[gd_scene load_steps=26 format=3 uid="uid://qfxvf7exkx3p"]
 
+[ext_resource type="Script" path="res://scripts/characters/perso_banda.gd" id="1_ctmys"]
 [ext_resource type="Texture2D" uid="uid://5duqmxktg7wl" path="res://assets/personagens/castiel2.png" id="1_l328l"]
-[ext_resource type="Script" path="res://scripts/perso_banda.gd" id="1_t5bku"]
+[ext_resource type="Texture2D" uid="uid://b6mahm3elynp8" path="res://assets/light/light2D-gradient.png" id="3_ape21"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa7lx"]
 size = Vector2(12, 4)
@@ -441,10 +442,7 @@ graph_offset = Vector2(66, -1)
 
 [node name="Perso Banda" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 y_sort_enabled = true
-script = ExtResource("1_t5bku")
-_move_speed = 60.0
-_friction = 0.8
-_acceleration = 0.4
+script = ExtResource("1_ctmys")
 _animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -468,3 +466,12 @@ tree_root = SubResource("AnimationNodeStateMachine_uodwk")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(2.38419e-07, -8)
+scale = Vector2(3.29297, 2.85352)
+color = Color(0.840715, 0.680536, 0.140492, 1)
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.8)
+texture = ExtResource("3_ape21")
+texture_scale = 0.06

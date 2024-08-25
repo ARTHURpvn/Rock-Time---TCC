@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://4u0qpkn4ukfj"]
+
+[ext_resource type="Script" path="res://scripts/characters/hud.gd" id="1_khn1u"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_khn1u")
+
+[node name="Time" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -9.5
+offset_right = 9.5
+offset_bottom = 23.0
+grow_horizontal = 2
