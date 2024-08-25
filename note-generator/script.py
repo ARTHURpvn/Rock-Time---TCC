@@ -1,43 +1,53 @@
 import librosa
 import json
 import numpy as np
+from scipy.signal import butter, lfilter
 
-# Defina os números das teclas da guitarra
-teclas = [1, 2, 3, 4]
+# Função para criar um filtro passa-banda
+def butter_bandpass(lowcut, highcut, fs, order=5):
+    nyquist = 0.5 * fs
+    low = lowcut / nyquist
+    high = highcut / nyquist
+    b, a = butter(order, [low, high], btype='band')
+    return b, a
 
-# Carregue a música
-musica = 'note-generator/teste.mp3'
-audio, sr = librosa.load(musica)
+# Aplicar o filtro passa-banda
+def bandpass_filter(data, lowcut, highcut, fs, order=5):
+    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+    y = lfilter(b, a, data)
+    return y
 
-# Detecta os onsets das notas
-onsets = librosa.onset.onset_detect(y=audio, sr=sr, units='time')
+# Detecção de notas de guitarra
+def detectar_notas_de_guitarra(audio_path, output_json):
+    # Carregar o arquivo de áudio
+    y, sr = librosa.load(audio_path)
+    
+    # Aplicar o filtro passa-banda para isolar as frequências da guitarra
+    lowcut = 80.0  # Limite inferior de frequência para guitarra
+    highcut = 1200.0  # Limite superior de frequência para guitarra
+    y_filtered = bandpass_filter(y, lowcut, highcut, sr)
+    
+    # Detecção de batidas/picos nas frequências filtradas
+    tempo, beat_frames = librosa.beat.beat_track(y=y_filtered, sr=sr)
+    
+    # Converter os frames das batidas para tempos (em segundos)
+    beat_times = librosa.frames_to_time(beat_frames, sr=sr)
+    
+    # Criar uma lista para armazenar as notas de guitarra detectadas
+    notas_guitarra = [{"time": int(beat_time), "value": 1} for i, beat_time in enumerate(beat_times)]
+    
+    # Verificar se o BPM é um único valor ou um array
+    if isinstance(tempo, (list, tuple, np.ndarray)):
+        tempo = tempo[0]  # Pega o primeiro valor, ou você pode decidir uma forma de lidar com múltiplos BPMs
 
-# Calcula o BPM
-if len(onsets) > 1:
-    intervals = np.diff(onsets)  # Calcula os intervalos entre os onsets
-    average_interval = np.mean(intervals)  # Intervalo médio
-    bpm = 60 / average_interval  # Converte intervalo médio para BPM
-else:
-    bpm = 0  # Se não houver onsets suficientes, define BPM como 0
+    # Exportar para um arquivo JSON
+    with open(output_json, "w") as f:
+        json.dump(notas_guitarra, f, indent=4)
+    
+    print(f"BPM: {tempo:.2f}")
+    print(f"Dados exportados para {output_json}")
 
-# Crie uma lista para armazenar as notas mapeadas
-notas_mapeadas = []
-
-for onset in onsets:
-    tecla = teclas[int(onset) % len(teclas)]
-    notas_mapeadas.append({
-        'position': int(onset),  # Converte o tempo de onset para inteiro
-        'value': tecla
-    })
-
-# Exporta o dicionário para um arquivo JSON
-json_data = {
-    'bpm': bpm,
-    'notes': notas_mapeadas
-}
-
-with open('note-generator/guitar_notes.json', 'w') as arquivo:
-    json.dump(json_data, arquivo, indent=4)
-
-print("Notas mapeadas com sucesso!")
-print("BPM calculado:", bpm)
+# Exemplo de uso
+audio_path = "teste.mp3"  # Substitua pelo caminho da sua música
+output_json = "guitar_notes.json"
+detectar_notas_de_guitarra(audio_path, output_json)

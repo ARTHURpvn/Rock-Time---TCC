@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://0qbn7wyjrlgy"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/note_picker.gd" id="1_0l6or"]
+[ext_resource type="Material" uid="uid://clx0al7qrhf5a" path="res://scenes/ritmo/notas/blue_note_mat.tres" id="2_dcrbe"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_evw00"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nobwh"]
+size = Vector3(0.80426, 0.259277, 0.717529)
+
+[node name="NotePicker" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+script = ExtResource("1_0l6or")
+line = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 0.01, 0)
+material_override = ExtResource("2_dcrbe")
+mesh = SubResource("PlaneMesh_evw00")
+
+[node name="Area3D" type="Area3D" parent="." groups=["picker"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00326538, 0.00366211, 0.00109863)
+shape = SubResource("BoxShape3D_nobwh")
