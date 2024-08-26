@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cd4rl7grebm4f"]
 
-[ext_resource type="Script" path="res://scripts/ritmo/note.gd" id="1_30uxv"]
+[ext_resource type="Script" path="res://scripts/ritmo/short_note.gd" id="1_1ep8q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr0wl"]
 
@@ -9,19 +9,16 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_74wv8"]
 size = Vector3(1.10059, 1.16907, 1.16248)
 
-[node name="Note" type="Node3D"]
+[node name="ShortNote" type="Node3D"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-script = ExtResource("1_30uxv")
+script = ExtResource("1_1ep8q")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_jr0wl")
 mesh = SubResource("BoxMesh_10s4q")
 
-[node name="Area3D" type="Area3D" parent="." groups=["note"]]
+[node name="Area" type="Area3D" parent="." groups=["note"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0102621, -0.0233765, -0.00177002)
 shape = SubResource("BoxShape3D_74wv8")
-
-[connection signal="area_entered" from="Area3D" to="." method="_on_area_entered"]
-[connection signal="area_exited" from="Area3D" to="." method="_on_area_exited"]

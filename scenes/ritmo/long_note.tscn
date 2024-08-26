@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b50hw2um6kpkr"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/long_note.gd" id="1_1pwat"]
+[ext_resource type="PackedScene" uid="uid://chr1imkolokdq" path="res://scenes/ritmo/beam.tscn" id="2_3fmtc"]
+[ext_resource type="Material" uid="uid://clx0al7qrhf5a" path="res://scenes/ritmo/notas/blue_note_mat.tres" id="2_sn7am"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hi2io"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4wgnn"]
+size = Vector3(0.52002, 0.442658, 0.550447)
+
+[node name="LongNote" type="Node3D"]
+script = ExtResource("1_1pwat")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+material_override = ExtResource("2_sn7am")
+mesh = SubResource("BoxMesh_hi2io")
+
+[node name="Area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00367108, -0.000564933, -0.022965)
+shape = SubResource("BoxShape3D_4wgnn")
+
+[node name="Beam" parent="." instance=ExtResource("2_3fmtc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0859615, 0)

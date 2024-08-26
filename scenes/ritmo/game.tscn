@@ -1,16 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://je8byx1acgwv"]
+[gd_scene load_steps=4 format=3 uid="uid://je8byx1acgwv"]
 
 [ext_resource type="PackedScene" uid="uid://brc2ifjosg6f5" path="res://scenes/ritmo/road.tscn" id="1_r4vk8"]
+[ext_resource type="Script" path="res://scripts/ritmo/game.gd" id="1_sb3vt"]
+[ext_resource type="PackedScene" uid="uid://bgausvhhvi8ht" path="res://scenes/ritmo/music.tscn" id="3_0uhbx"]
 
 [node name="Game" type="Node3D"]
+script = ExtResource("1_sb3vt")
 
 [node name="Road" parent="." instance=ExtResource("1_r4vk8")]
-script = null
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.783683, 0.621162, 0, -0.621162, 0.783683, 0, 2.791, 0.814)
 current = true
-far = 100.0
+far = 13.35
 
 [node name="Camera3D2" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.705, -3.929)
+
+[node name="Music" parent="." instance=ExtResource("3_0uhbx")]

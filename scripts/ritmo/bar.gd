@@ -1,36 +1,35 @@
 extends Node3D
 
-var note_scn = preload("res://scenes/ritmo/note.tscn")
+var short_note_scn = preload("res://scenes/ritmo/short_note.tscn")
+var long_note_scn = preload("res://scenes/ritmo/long_note.tscn")
 
-var notes_data = [
-	{
-		"pos": 0,
-		"len": 100
-	},
-	{
-		"pos": 400,
-		"len": 100
-	},
-	{
-		"pos": 800,
-		"len": 100
-	},
-	{
-		"pos": 1200,
-		"len": 100
-	},
-]
-
-var note_scale = 0.005
+var note_scale 
+var bar_data
+var speed
 
 func _ready() -> void:
 	add_notes()
 
-
 func add_notes():
-	for note_data in notes_data:
-		randomize()
-		var note = note_scn.instantiate()
-		note.line = (randi() % 3) + 1
-		note.position.z = int(note_data.pos)*note_scale
-		add_child(note)
+	var line = 1
+	for line_data in bar_data:
+		var notes_data = line_data.notes
+		for note_data in notes_data:
+			add_note(line, note_data)
+		line += 1
+
+func add_note(line, data):
+	var note_scn
+	if int(data.len) >= 400:
+		note_scn = long_note_scn
+	else:
+		note_scn = short_note_scn
+
+	var note = note_scn.instantiate()
+	note.line = line
+	note.position.z = int(data.pos)
+
+	note.length = int(data.len)
+	note.length_scale = note_scale
+	note.speed = speed
+	add_child(note)

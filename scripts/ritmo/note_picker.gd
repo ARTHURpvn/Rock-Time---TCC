@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 	else :
 		self.scale = Vector3(1, 1, 1)
 
-func _input(event: InputEvent) -> void:
+func _input(event):
 	match line:
 		1:
 			if event.is_action_pressed("ui_left"):
