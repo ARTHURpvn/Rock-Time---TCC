@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgausvhhvi8ht"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/music.gd" id="1_3trhs"]
+
+[sub_resource type="Animation" id="Animation_4ja1e"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_u8ukg"]
+resource_name = "sound_on"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ei4n8"]
+_data = {
+"RESET": SubResource("Animation_4ja1e"),
+"sound_on": SubResource("Animation_u8ukg")
+}
+
+[node name="Music" type="Node3D"]
+script = ExtResource("1_3trhs")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ei4n8")
+}

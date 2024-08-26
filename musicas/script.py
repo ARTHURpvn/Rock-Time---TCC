@@ -18,7 +18,7 @@ def bandpass_filter(data, lowcut, highcut, fs, order=5):
     return y
 
 # Detecção de notas de guitarra
-def detectar_notas_de_guitarra(audio_path, output_json):
+def detectar_notas_de_guitarra(audio_path):
     # Carregar o arquivo de áudio
     y, sr = librosa.load(audio_path)
     
@@ -33,21 +33,13 @@ def detectar_notas_de_guitarra(audio_path, output_json):
     # Converter os frames das batidas para tempos (em segundos)
     beat_times = librosa.frames_to_time(beat_frames, sr=sr)
     
-    # Criar uma lista para armazenar as notas de guitarra detectadas
-    notas_guitarra = [{"time": int(beat_time), "value": 1} for i, beat_time in enumerate(beat_times)]
     
     # Verificar se o BPM é um único valor ou um array
     if isinstance(tempo, (list, tuple, np.ndarray)):
-        tempo = tempo[0]  # Pega o primeiro valor, ou você pode decidir uma forma de lidar com múltiplos BPMs
+        tempo = tempo[0]
 
-    # Exportar para um arquivo JSON
-    with open(output_json, "w") as f:
-        json.dump(notas_guitarra, f, indent=4)
-    
     print(f"BPM: {tempo:.2f}")
-    print(f"Dados exportados para {output_json}")
 
 # Exemplo de uso
-audio_path = "teste.mp3"  # Substitua pelo caminho da sua música
-output_json = "guitar_notes.json"
-detectar_notas_de_guitarra(audio_path, output_json)
+audio_path = "teste.mp3"
+detectar_notas_de_guitarra(audio_path)

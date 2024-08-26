@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://chr1imkolokdq"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/beam.gd" id="1_havjc"]
+[ext_resource type="Material" uid="uid://cafctetd7ulwy" path="res://scenes/ritmo/notas/blue_beam_mat.tres" id="2_v5gvn"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hyvqg"]
+
+[node name="Beam" type="Node3D"]
+script = ExtResource("1_havjc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.500227)
+material_override = ExtResource("2_v5gvn")
+mesh = SubResource("QuadMesh_hyvqg")
