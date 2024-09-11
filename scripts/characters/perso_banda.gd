@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 	
 	isNight = time.return_night()
 	$PointLight2D.visible = isNight
+	
 	var player_pos = player.position
 	direction = (player_pos - position).normalized()
 	

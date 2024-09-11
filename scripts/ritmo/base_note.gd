@@ -13,7 +13,6 @@ var speed
 var is_colliding = false
 var collected = false
 var picker
-
 func _ready() -> void:
 	_on_ready()
 
