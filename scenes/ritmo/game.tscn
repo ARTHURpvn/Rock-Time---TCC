@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=6 format=3 uid="uid://je8byx1acgwv"]
+[gd_scene load_steps=4 format=3 uid="uid://je8byx1acgwv"]
 
 [ext_resource type="PackedScene" uid="uid://brc2ifjosg6f5" path="res://scenes/ritmo/road.tscn" id="1_r4vk8"]
 [ext_resource type="Script" path="res://scripts/ritmo/game.gd" id="1_sb3vt"]
@@ -20,10 +22,8 @@ far = 13.35
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.705, -3.929)
 
 [node name="Music" parent="." instance=ExtResource("3_0uhbx")]
-
 [node name="Points" parent="." instance=ExtResource("4_rgxue")]
 transform = Transform3D(0.996807, 0.036683, -0.0709262, 0, 0.888233, 0.459394, 0.079851, -0.457927, 0.885396, -3.26342, 0.545813, -2.96444)
 
 [node name="Special" parent="." instance=ExtResource("5_aj8sv")]
 transform = Transform3D(0.970135, -4.63466e-16, -0.242565, 0.242565, 1.85362e-15, 0.970135, 0, -1, 1.91069e-15, 2.40152, -0.202431, -1.40235)
-visible = false

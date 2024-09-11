@@ -5,7 +5,6 @@ var green_mat = preload("res://scenes/ritmo/notas/green_note_mat.tres")
 var blue_mat = preload("res://scenes/ritmo/notas/blue_note_mat.tres")
 
 @onready var point = get_node("/root/Game/Points")
-
 @export var line: int = 2
 var length
 var length_scale
@@ -14,7 +13,6 @@ var speed
 var is_colliding = false
 var collected = false
 var picker
-
 
 func _ready() -> void:
 	_on_ready()

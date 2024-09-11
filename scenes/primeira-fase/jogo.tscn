@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=16 format=4 uid="uid://0bjx16a64f4b"]
 
 [ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="1_8uai2"]
@@ -95,7 +96,6 @@ _data = {
 "dia": SubResource("Animation_nmc4n"),
 "noite": SubResource("Animation_8yfw5")
 }
-
 [sub_resource type="Resource" id="Resource_oe1wf"]
 script = ExtResource("8_o1u3k")
 duration = 1.0
@@ -126,6 +126,7 @@ autostart = true
 position = Vector2(351, 291)
 
 [node name="npc" parent="." instance=ExtResource("2_ixgf5")]
+
 z_index = 5
 position = Vector2(475, 321)
 
@@ -145,6 +146,9 @@ zoom = Vector2(3, 3)
 tween_resource = SubResource("Resource_oe1wf")
 follow_damping = true
 follow_damping_value = Vector2(0.4, 0.4)
+
+[node name="Perso Banda" parent="." instance=ExtResource("3_krf6o")]
+position = Vector2(327, 264)
 
 [connection signal="animation_finished" from="dia_noite/AnimationPlayer" to="dia_noite" method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

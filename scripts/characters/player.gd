@@ -23,7 +23,6 @@ func _physics_process(_delta: float) -> void:
 	
 	isNight = time.return_night()
 	$PointLight2D.visible = isNight
-
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("correr"):
 		_move_speed = _move_speed * 1.5
