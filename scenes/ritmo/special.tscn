@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwsfl2lcgljad"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00ti6"]
+albedo_color = Color(0.273873, 0.273873, 0.273873, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w4vqq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddkp5"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="Special" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_00ti6")
+mesh = SubResource("CylinderMesh_w4vqq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.3, 0, 0, 0, 0.1, 0, 0.869678, 0.0794141)
+material_override = SubResource("StandardMaterial3D_ddkp5")
+mesh = SubResource("CylinderMesh_w4vqq")
+skeleton = NodePath("../MeshInstance3D")

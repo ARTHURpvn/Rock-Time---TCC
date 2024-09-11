@@ -41,5 +41,5 @@ def detectar_notas_de_guitarra(audio_path):
     print(f"BPM: {tempo:.2f}")
 
 # Exemplo de uso
-audio_path = "teste.mp3"
+audio_path = "beggin.mp3"
 detectar_notas_de_guitarra(audio_path)

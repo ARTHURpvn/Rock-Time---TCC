@@ -442,6 +442,7 @@ graph_offset = Vector2(66, -1)
 
 [node name="Perso Banda" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 y_sort_enabled = true
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_ctmys")
 _animation_tree = NodePath("AnimationTree")
 

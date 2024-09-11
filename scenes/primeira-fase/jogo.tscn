@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://0bjx16a64f4b"]
+[gd_scene load_steps=16 format=4 uid="uid://0bjx16a64f4b"]
 
 [ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="1_8uai2"]
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="1_bppjc"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://qfxvf7exkx3p" path="res://scenes/player/perso_banda.tscn" id="3_krf6o"]
 [ext_resource type="PackedScene" uid="uid://bbsxiilbp8cu3" path="res://scenes/tilemaps/tile_maps.tscn" id="4_q1ybk"]
 [ext_resource type="Script" path="res://scripts/sitema_de_dia_noite.gd" id="6_c3lua"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="7_c618p"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="8_o1u3k"]
 
 [sub_resource type="Animation" id="Animation_pekg5"]
 length = 0.001
@@ -94,6 +96,12 @@ _data = {
 "noite": SubResource("Animation_8yfw5")
 }
 
+[sub_resource type="Resource" id="Resource_oe1wf"]
+script = ExtResource("8_o1u3k")
+duration = 1.0
+transition = 0
+ease = 2
+
 [node name="Jogo" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_bppjc")
@@ -118,10 +126,25 @@ autostart = true
 position = Vector2(351, 291)
 
 [node name="npc" parent="." instance=ExtResource("2_ixgf5")]
+z_index = 5
 position = Vector2(475, 321)
 
 [node name="Perso Banda" parent="." instance=ExtResource("3_krf6o")]
+z_index = 5
 position = Vector2(327, 264)
+
+[node name="Cameras" type="Node" parent="."]
+
+[node name="Camera Player" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
+position = Vector2(351, 291)
+script = ExtResource("7_c618p")
+priority = 5
+follow_mode = 2
+follow_target = NodePath("../../Player")
+zoom = Vector2(3, 3)
+tween_resource = SubResource("Resource_oe1wf")
+follow_damping = true
+follow_damping_value = Vector2(0.4, 0.4)
 
 [connection signal="animation_finished" from="dia_noite/AnimationPlayer" to="dia_noite" method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

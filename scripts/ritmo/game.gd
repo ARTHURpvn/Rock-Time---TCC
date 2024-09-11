@@ -5,7 +5,7 @@ extends Node3D
 
 var audio
 @export var audio_file = "res://musicas/teste.mp3"
-@export var map_file = "res://musicas/solo2.mboy"
+@export var map_file = "res://musicas/solo.mboy"
 
 var map
 var tempo

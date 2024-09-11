@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://o7re3kb3vesh"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/points.gd" id="1_pa1uy"]
+
+[node name="Points" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0786633, 0)
+script = ExtResource("1_pa1uy")
+
+[node name="Label" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265142, 0.419806, 0.001)
+text = "Points"
+font_size = 90
+outline_size = 6
+
+[node name="Points" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940131, 0, 0.002)
+font_size = 90
+outline_size = 6
+horizontal_alignment = 0

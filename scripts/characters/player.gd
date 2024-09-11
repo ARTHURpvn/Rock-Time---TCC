@@ -15,7 +15,6 @@ var time
 func _ready() -> void:
 	_state_machine = _animation_tree["parameters/playback"]
 	time = get_node("/root/Jogo/dia_noite")
-	print("estou pronto PLAYER")
 
 func _physics_process(_delta: float) -> void:
 	_animate()
@@ -24,6 +23,12 @@ func _physics_process(_delta: float) -> void:
 	
 	isNight = time.return_night()
 	$PointLight2D.visible = isNight
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("correr"):
+		_move_speed = _move_speed * 1.5
+	elif event.is_action_released("correr"):
+		_move_speed = _move_speed / 1.5
 
 func _move() -> void:
 	var _direction: Vector2 = Vector2(
