@@ -4,7 +4,6 @@ var time_day_hour = 18
 var time_day_min = 50
 var time_day = "00:00"
 
-
 func timer():
 		if time_day_min == 59:
 			if time_day_hour == 23:

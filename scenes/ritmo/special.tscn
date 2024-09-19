@@ -1,22 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwsfl2lcgljad"]
+[gd_scene load_steps=5 format=3 uid="uid://dwsfl2lcgljad"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/special.gd" id="1_8tgaj"]
+[ext_resource type="Material" uid="uid://du1pwo4pddbg5" path="res://scenes/special.tres" id="2_ftkae"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00ti6"]
 albedo_color = Color(0.273873, 0.273873, 0.273873, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_w4vqq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddkp5"]
-albedo_color = Color(1, 0, 0, 1)
-
 [node name="Special" type="Node3D"]
+script = ExtResource("1_8tgaj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0, 1, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.55, 0, 0, 0, 0.2, 0, 0.54766, 0)
 material_override = SubResource("StandardMaterial3D_00ti6")
 mesh = SubResource("CylinderMesh_w4vqq")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.3, 0, 0, 0, 0.1, 0, 0.869678, 0.0794141)
-material_override = SubResource("StandardMaterial3D_ddkp5")
+[node name="tiles" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.45, 0, 0, 0, 0.3, 0, 0, 0, 0.2, 0, 0.541428, 0.0794141)
+material_override = ExtResource("2_ftkae")
 mesh = SubResource("CylinderMesh_w4vqq")
 skeleton = NodePath("../MeshInstance3D")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

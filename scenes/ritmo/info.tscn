@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwh8pc8b0gs14"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/info.gd" id="1_180db"]
+
+[node name="Info" type="Node3D"]
+script = ExtResource("1_180db")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00712667, 0.186245, 0)
+modulate = Color(1, 0, 0, 1)
+text = "X"
+font_size = 90
+outline_size = 6
+horizontal_alignment = 0

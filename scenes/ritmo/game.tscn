@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://je8byx1acgwv"]
+[gd_scene load_steps=7 format=3 uid="uid://je8byx1acgwv"]
 
 [ext_resource type="PackedScene" uid="uid://brc2ifjosg6f5" path="res://scenes/ritmo/road.tscn" id="1_r4vk8"]
 [ext_resource type="Script" path="res://scripts/ritmo/game.gd" id="1_sb3vt"]
 [ext_resource type="PackedScene" uid="uid://bgausvhhvi8ht" path="res://scenes/ritmo/music.tscn" id="3_0uhbx"]
 [ext_resource type="PackedScene" uid="uid://o7re3kb3vesh" path="res://scenes/ritmo/points.tscn" id="4_rgxue"]
 [ext_resource type="PackedScene" uid="uid://dwsfl2lcgljad" path="res://scenes/ritmo/special.tscn" id="5_aj8sv"]
+[ext_resource type="PackedScene" uid="uid://co24x66omj461" path="res://scenes/ritmo/acertos.tscn" id="6_uo155"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_sb3vt")
@@ -25,5 +26,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.7
 transform = Transform3D(0.996807, 0.036683, -0.0709262, 0, 0.888233, 0.459394, 0.079851, -0.457927, 0.885396, -3.26342, 0.545813, -2.96444)
 
 [node name="Special" parent="." instance=ExtResource("5_aj8sv")]
-transform = Transform3D(0.970135, -4.63466e-16, -0.242565, 0.242565, 1.85362e-15, 0.970135, 0, -1, 1.91069e-15, 2.40152, -0.202431, -1.40235)
-visible = false
+transform = Transform3D(0.970135, -4.63466e-16, -0.242565, 0.242565, 1.85362e-15, 0.970135, 0, -1, 1.91069e-15, 2.46821, -0.202431, -1.40235)
+
+[node name="acertos" parent="." instance=ExtResource("6_uo155")]
+transform = Transform3D(1, 0, 0, 0, 0.872052, 0.489413, 0, -0.489413, 0.872052, 2.796, 0.803029, -3.14072)

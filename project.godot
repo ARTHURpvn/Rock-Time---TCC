@@ -22,9 +22,7 @@ Questify="*res://addons/questify/quest_manager.gd"
 
 [dialogic]
 
-directories/dch_directory={
-"castiel": "res://castiel.dch"
-}
+directories/dch_directory={}
 layout/default_style="res://scenes/dialogue/teste.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -53,9 +51,7 @@ translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
 save/autosave=false
-directories/dtl_directory={
-"timeline": "res://timeline.dtl"
-}
+directories/dtl_directory={}
 
 [display]
 

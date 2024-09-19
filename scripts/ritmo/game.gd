@@ -4,8 +4,8 @@ extends Node3D
 @onready var road_node = $Road
 
 var audio
-@export var audio_file = "res://musicas/teste.mp3"
-@export var map_file = "res://musicas/solo.mboy"
+@export var audio_file = "res://musicas/back_in_black.mp3"
+@export var map_file = "res://musicas/back_in_black.mboy"
 
 var map
 var tempo

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b50hw2um6kpkr"]
+[gd_scene load_steps=7 format=3 uid="uid://b50hw2um6kpkr"]
 
-[ext_resource type="Script" path="res://scripts/ritmo/long_note.gd" id="1_1pwat"]
+[ext_resource type="Script" path="res://scripts/ritmo/notes/long_note.gd" id="1_1pwat"]
 [ext_resource type="PackedScene" uid="uid://chr1imkolokdq" path="res://scenes/ritmo/beam.tscn" id="2_3fmtc"]
 [ext_resource type="Material" uid="uid://clx0al7qrhf5a" path="res://scenes/ritmo/notas/blue_note_mat.tres" id="2_sn7am"]
+[ext_resource type="AudioStream" uid="uid://bmaoft5ireg7k" path="res://musicas/error.mp3" id="4_x5aup"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hi2io"]
 
@@ -25,3 +26,7 @@ shape = SubResource("BoxShape3D_4wgnn")
 
 [node name="Beam" parent="." instance=ExtResource("2_3fmtc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0859615, 0)
+
+[node name="error_song" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0170778, 0.609239, -0.0446108)
+stream = ExtResource("4_x5aup")

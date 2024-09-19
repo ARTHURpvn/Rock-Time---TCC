@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://co24x66omj461"]
+
+[ext_resource type="Script" path="res://scripts/ritmo/acertos.gd" id="1_na21p"]
+
+[node name="acertos" type="Node3D"]
+script = ExtResource("1_na21p")
+
+[node name="teclasAcertadas" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00785413, 0.203334, 0.002)
+text = "x"
+font_size = 90
+outline_size = 6
+horizontal_alignment = 2
