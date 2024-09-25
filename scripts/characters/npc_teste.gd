@@ -22,13 +22,13 @@ enum {
 
 func _ready():
 	randomize()
-	time = get_node("/root/Jogo/dia_noite")
+	time = GlobalTime.time
 	start_pos = position
 	_state_machine = _animation_tree["parameters/playback"]
 	
 	
 func _process(delta):
-	isNight = time.return_night()
+	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
 	
 	if current_state == 0 or current_state == 1:

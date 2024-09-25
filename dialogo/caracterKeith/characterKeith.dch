@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.0148315, 0.051331, 0.949219, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Keith",
+"description": "Ele é o baterista da banda ",
+"display_name": "Keith",
+"mirror": false,
+"nicknames": ["Keith"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Keith": {
+"export_overrides": {
+"image": "\"res://caracterKeith/keith.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

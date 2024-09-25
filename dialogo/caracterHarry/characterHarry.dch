@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.029541, 0.945313, 0.0867767, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Harry",
+"description": "Ele é o vocalista da banda ",
+"display_name": "Harry",
+"mirror": false,
+"nicknames": ["Harry"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Harry": {
+"export_overrides": {
+"image": "\"res://caracterHarry/harry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

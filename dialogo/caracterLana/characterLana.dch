@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.487231, 0.0346069, 0.984375, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Lana",
+"description": "Ela é a baixista do banda",
+"display_name": "Lana",
+"mirror": false,
+"nicknames": ["Lana"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Lana": {
+"export_overrides": {
+"image": "\"res://caracterLana/lana.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

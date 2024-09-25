@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.0105286, 0.898438, 0.690334, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Mozart",
+"description": "Ele é um boss ",
+"display_name": "Mozart",
+"mirror": false,
+"nicknames": ["Mozart"],
+"offset": Vector2(0, 0),
+"portraits": {
+"Mozart": {
+"export_overrides": {
+"image": "\"res://caracterMozart/mozart.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

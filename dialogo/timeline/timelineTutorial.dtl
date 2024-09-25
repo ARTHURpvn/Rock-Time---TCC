@@ -1,0 +1,11 @@
+[style name="style1"]
+characterLana (Castiel): Castiel você tá fazendo tudo errado cara! Não é assim que se toca o solo!
+castiel: Vocês querem que eu toque um solo que não conheço ai fica difícil!
+characterHanna: Então vamo lá, tudo de novo gente sem briga.
+set {playing} = true
+[wait time="0.5"]
+
+characterHarry: Vamos começar com o básico! Acerte suas primeiras notas da música!
+[wait time="21.5"]
+if {special} == true:
+	"caracterNarrador ": Aperte 'F' Para ativar seu especial

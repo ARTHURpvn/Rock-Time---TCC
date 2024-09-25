@@ -22,3 +22,4 @@ func _on_timer_timeout() -> void:
 			
 		if tiles <= 0:
 			special = false
+			Dialogic.VAR.special = false

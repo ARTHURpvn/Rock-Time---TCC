@@ -4,17 +4,16 @@ var isDay = false
 var isNight = false
 var isDaytoNight = false
 var isNighttoDay = false
+var hour 
 
-var timer 
-var hour
-
-@export_category("Dia e Noite")
+@export var sala: String
+@export_category("Horas")
 @export var anoitecendo = 19
 @export var amanhecendo = 5
 
 func _ready() -> void:
-	timer = get_node("/root/Jogo")
-	hour = timer.return_hour()
+	# Certifique-se de que GlobalTime está acessível
+	hour = GlobalTime.hour
 
 	if hour:
 		if hour < anoitecendo or hour > amanhecendo:
@@ -26,13 +25,13 @@ func _ready() -> void:
 			isNight = true
 
 func _process(_delta: float) -> void:
-	hour = timer.return_hour()
+	hour = GlobalTime.hour
 
 	if hour == amanhecendo and !isNighttoDay:
 		print("amanhecendo")
 		$AnimationPlayer.play("amanhecendo")
 		isNighttoDay = true
-		isNight = false
+		GlobalTime.isNight = false
 
 	if hour == anoitecendo and !isDaytoNight:
 		print("anoitecendo")
@@ -46,18 +45,13 @@ func _process(_delta: float) -> void:
 	if isNight:
 		$AnimationPlayer.play("noite")
 
-
-
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if(anim_name == "amanhecendo"):
 		isDay = true
-		isNight = false
+		GlobalTime.isNight = false
 		isDaytoNight = false
 
 	if(anim_name == "anoitecendo"):
 		isDay = false
-		isNight = true
+		GlobalTime.isNight = true
 		isNighttoDay = false
-
-func return_night():
-	return isNight

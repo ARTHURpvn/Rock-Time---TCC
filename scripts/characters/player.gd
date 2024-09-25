@@ -8,20 +8,20 @@ var time
 @export var _move_speed: float = 64.0
 @export var _friction: float = 0.8
 @export var _acceleration: float = 0.4
+@export var sala: String
 
 @export_category("Objects")
 @export var _animation_tree: AnimationTree = null
 
 func _ready() -> void:
 	_state_machine = _animation_tree["parameters/playback"]
-	time = get_node("/root/Jogo/dia_noite")
-
+	time = GlobalTime.time
 func _physics_process(_delta: float) -> void:
 	_animate()
 	_move()
 	move_and_slide()
 	
-	isNight = time.return_night()
+	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("correr"):

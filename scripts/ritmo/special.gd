@@ -17,3 +17,4 @@ func _process(_delta):
 		$tiles.material_override = activeStyle
 		if !point.special && Input.is_action_just_pressed("special"):
 			point.special = true
+			Dialogic.VAR.special - true
