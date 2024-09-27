@@ -445,7 +445,7 @@ graph_offset = Vector2(66, -1)
 z_index = 5
 y_sort_enabled = true
 script = ExtResource("1_kjade")
-_animation_tree = NodePath("AnimationTree")
+_animation_tree = NodePath("AnimationPlayer/AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.5, -19)
@@ -463,9 +463,10 @@ libraries = {
 "": SubResource("AnimationLibrary_4g11p")
 }
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
+root_node = NodePath("../..")
 tree_root = SubResource("AnimationNodeStateMachine_16cl8")
-anim_player = NodePath("../AnimationPlayer")
+anim_player = NodePath("..")
 parameters/Idle/blend_position = Vector2(-0.450082, 0.138298)
 parameters/Walk/blend_position = Vector2(0, 0)
 

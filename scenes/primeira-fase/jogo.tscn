@@ -60662,10 +60662,9 @@ libraries = {
 autoplay = "dia"
 
 [node name="Player" parent="." instance=ExtResource("1_8uai2")]
-position = Vector2(-57, -20)
+position = Vector2(-651, 24)
 
 [node name="Perso Banda" parent="." instance=ExtResource("31_8qghp")]
-z_index = 5
 
 [node name="npc" parent="." instance=ExtResource("32_74ogb")]
 z_index = 5

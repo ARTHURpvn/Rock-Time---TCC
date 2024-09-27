@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://23qm3g2lw3ly" path="res://assets/tilesets/WIP_Theme/Condo_6_Garage_Door_16x16.png" id="5_wwsck"]
 [ext_resource type="Texture2D" uid="uid://cld0trdyhtisc" path="res://assets/tilesets/WIP_Theme/Condo_6_Garage_Door_48x48.png" id="6_8uf8i"]
 [ext_resource type="Texture2D" uid="uid://dp8l046vugv1v" path="res://assets/tilesets/WIP_Theme/Condo_6_Roof_Door_16x16.png" id="7_0iv30"]
-[ext_resource type="PackedScene" uid="uid://c7vunb0ds57yj" path="res://scenes/player/npc_teste.tscn" id="9_cni4u"]
 [ext_resource type="Texture2D" uid="uid://cp5o0oum58yi1" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_83_MV.png" id="9_k5ewc"]
 [ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="9_klcr4"]
+[ext_resource type="PackedScene" uid="uid://bdgiyveoav8t0" path="res://scenes/player/static_npc.tscn" id="13_jw4d6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52edg"]
 texture = ExtResource("1_wi3gq")
@@ -10684,6 +10684,14 @@ tile_set = SubResource("TileSet_ahvjb")
 tile_set = SubResource("TileSet_8uum8")
 
 [node name="Player" parent="." instance=ExtResource("9_klcr4")]
+position = Vector2(-36, 212)
 
-[node name="npc" parent="." instance=ExtResource("9_cni4u")]
-position = Vector2(42, -27)
+[node name="Lana" parent="." instance=ExtResource("13_jw4d6")]
+position = Vector2(-43, 79)
+npc_name = "Lana"
+npc_pos = Vector2(1, 0)
+
+[node name="Harry" parent="." instance=ExtResource("13_jw4d6")]
+position = Vector2(210, 69)
+npc_name = "Harry"
+npc_pos = Vector2(0, 1)

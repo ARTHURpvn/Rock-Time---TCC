@@ -1,11 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://qfxvf7exkx3p"]
+[gd_scene load_steps=26 format=3 uid="uid://bdgiyveoav8t0"]
 
-[ext_resource type="Script" path="res://scripts/characters/perso_banda.gd" id="1_ctmys"]
-[ext_resource type="Texture2D" uid="uid://b5ubbg7vnj6go" path="res://assets/personagens/harry.png" id="2_fqird"]
-[ext_resource type="Texture2D" uid="uid://b6mahm3elynp8" path="res://assets/light/light2D-gradient.png" id="3_ape21"]
+[ext_resource type="Script" path="res://scripts/characters/static_npc.gd" id="1_a2ky5"]
+[ext_resource type="Texture2D" uid="uid://cei21wbs4kh2j" path="res://assets/personagens/lana.png" id="1_xs57v"]
+[ext_resource type="Texture2D" uid="uid://b6mahm3elynp8" path="res://assets/light/light2D-gradient.png" id="2_i7gd7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa7lx"]
-size = Vector2(12, 4)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbogn"]
+size = Vector2(15, 6)
 
 [sub_resource type="Animation" id="Animation_hv1lr"]
 length = 0.001
@@ -387,77 +387,74 @@ _data = {
 "walk_up": SubResource("Animation_8qbwh")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0i02u"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_15kai"]
 animation = &"idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4nb7b"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r05yp"]
 animation = &"idle_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qh8cl"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lwnw7"]
 animation = &"idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_me1xg"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g5k7c"]
 animation = &"idle_left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_2nd60"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_0i02u")
+blend_point_0/node = SubResource("AnimationNodeAnimation_15kai")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_4nb7b")
+blend_point_1/node = SubResource("AnimationNodeAnimation_r05yp")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_qh8cl")
+blend_point_2/node = SubResource("AnimationNodeAnimation_lwnw7")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_me1xg")
+blend_point_3/node = SubResource("AnimationNodeAnimation_g5k7c")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3gcao"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y7wd1"]
 animation = &"walk_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aeahx"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4h3fv"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5bayj"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8xdbd"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uxn7a"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rs8wk"]
 animation = &"walk_left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_gwrt5"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_3gcao")
+blend_point_0/node = SubResource("AnimationNodeAnimation_y7wd1")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_aeahx")
+blend_point_1/node = SubResource("AnimationNodeAnimation_4h3fv")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_5bayj")
+blend_point_2/node = SubResource("AnimationNodeAnimation_8xdbd")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_uxn7a")
+blend_point_3/node = SubResource("AnimationNodeAnimation_rs8wk")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_uodwk"]
-states/End/position = Vector2(558, 100)
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_d1rfm"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_2nd60")
-states/Idle/position = Vector2(459, 55)
-states/Start/position = Vector2(363, 100)
+states/Idle/position = Vector2(459, 79)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_gwrt5")
-states/Walk/position = Vector2(459, 148)
+states/Walk/position = Vector2(454, 145)
 graph_offset = Vector2(66, -1)
 
-[node name="Perso Banda" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
+[node name="static_npc" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 z_index = 5
 y_sort_enabled = true
-script = ExtResource("1_ctmys")
+script = ExtResource("1_a2ky5")
 _animation_tree = NodePath("AnimationPlayer/AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.5, -19)
-texture = ExtResource("2_fqird")
+texture = ExtResource("1_xs57v")
 hframes = 6
 vframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-show_behind_parent = true
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_pa7lx")
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_pbogn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -466,16 +463,16 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
 root_node = NodePath("../..")
-tree_root = SubResource("AnimationNodeStateMachine_uodwk")
+tree_root = SubResource("AnimationNodeStateMachine_d1rfm")
 anim_player = NodePath("..")
 parameters/Idle/blend_position = Vector2(0, 0)
-parameters/Walk/blend_position = Vector2(0, 0)
+parameters/Walk/blend_position = Vector2(-0.467409, -0.617021)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(2.38419e-07, -8)
+position = Vector2(-1.21169e-27, -11)
 scale = Vector2(3.29297, 2.85352)
 color = Color(0.840715, 0.680536, 0.140492, 1)
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
-texture = ExtResource("3_ape21")
+texture = ExtResource("2_i7gd7")
 texture_scale = 0.06

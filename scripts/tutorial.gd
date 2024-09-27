@@ -6,11 +6,12 @@ var endAnim = false
 func _ready():
 	Dialogic.start_timeline("res://dialogo/timeline/timelineTutorial.dtl")
 
-
 func _process(_delta):
 	var isPLaiyng = Dialogic.VAR.playing
 
-	zoom += 0.005
+	if $Camera2D.zoom.x <= 2.5:
+		zoom += 0.005
+
 	$Camera2D.zoom.x = zoom
 	$Camera2D.zoom.y = zoom
 
@@ -19,7 +20,7 @@ func _process(_delta):
 		get_tree().change_scene_to_file("res://scenes/ritmo/game.tscn")
 
 	if Dialogic.VAR.musicEnd == true:
-		print("Musica Acabou")
+		get_tree().change_scene_to_file("res://scenes/primeira-fase/garagem.tscn")
 		Dialogic.VAR.quest = 2
 
 	if Dialogic.VAR.quest >= 1:
@@ -32,3 +33,6 @@ func _process(_delta):
 	if endAnim and !Dialogic.VAR.Logo:
 		$Logo.visible = false
 		$City.visible = false
+
+	if Dialogic.VAR.special:
+		Dialogic.start_timeline("res://dialogo/timeline/timelineTutorial.dtl")

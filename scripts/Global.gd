@@ -4,6 +4,7 @@ var hour: int = 18
 var min: int = 50
 var isNight: bool = false
 var time: String = str(hour)+":"+str(min)
+var points : int
 
 
 func timer():

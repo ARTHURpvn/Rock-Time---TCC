@@ -20,6 +20,6 @@ func _process(_delta: float) -> void:
 		$teclasAcertadas.text = "4x"
 		point.combo = 4
 	
-	else:
+	elif acertos >= 45:
 		$teclasAcertadas.text = "5x"
 		point.combo = 5

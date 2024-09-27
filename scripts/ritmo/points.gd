@@ -14,6 +14,7 @@ func add_points(point):
 	if tiles <= 0.5 and !special:
 		tiles += 0.01
 	$Points.text = str(points)
+	GlobalTime.points = points
 
 func _on_timer_timeout() -> void:
 	if special:

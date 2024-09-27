@@ -2,9 +2,10 @@ extends Node3D
 
 @onready var music_node = $Music
 @onready var road_node = $Road
+@export var music: String = "back_in_black"
 
 var audio
-@export var audio_file = "res://musicas/back_in_black.mp3"
+@export var audio_file = "res://musicas/"+music+".mp3"
 @export var map_file = "res://musicas/back_in_black.mboy"
 
 var map

@@ -10,4 +10,8 @@ set {playing} = true
 [wait time="0.5"]
 
 characterHarry: Vamos começar com o básico! Acerte suas primeiras notas da música!
+label special
+"caracterNarrador ": aperte "F" para ativar o especial
+[wait time="65.0"]
+set {musicEnd} = true
 [end_timeline]

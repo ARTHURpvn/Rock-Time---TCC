@@ -6,20 +6,18 @@ var long_note_scn = preload("res://scenes/ritmo/long_note.tscn")
 var note_scale 
 var bar_data
 var speed
+var line = 1
 
 func _ready() -> void:
 	add_notes()
 
 func add_notes():
-	var line = 1
 	for line_data in bar_data:
 		var notes_data = line_data.notes
 		for note_data in notes_data:
 			add_note(line, note_data)
 		line += 1
 
-	print("testou testando aqui")
-	Dialogic.VAR.musicEnd = true
 
 func add_note(line, data):
 	var note_scn
@@ -29,6 +27,7 @@ func add_note(line, data):
 		note_scn = short_note_scn
 
 	var note = note_scn.instantiate()
+
 	note.line = line
 	note.position.z = int(data.pos)
 
