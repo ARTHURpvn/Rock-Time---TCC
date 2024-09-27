@@ -8,7 +8,6 @@ var time
 @export var _move_speed: float = 64.0
 @export var _friction: float = 0.8
 @export var _acceleration: float = 0.4
-@export var sala: String
 
 @export_category("Objects")
 @export var _animation_tree: AnimationTree = null

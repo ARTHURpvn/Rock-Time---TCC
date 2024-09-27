@@ -19,10 +19,24 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Questify="*res://addons/questify/quest_manager.gd"
+GlobalTime="*res://scenes/global.tscn"
+Quest="*res://scenes/quest.tscn"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"caracterNarrador ": "res://dialogo/caracterNarrador/caracterNarrador .dch",
+"castiel": "res://castiel.dch",
+"characterCastiel": "res://dialogo/caracterCastiel/characterCastiel.dch",
+"characterCecilia": "res://dialogo/caracterCecilia/characterCecilia.dch",
+"characterFinn": "res://dialogo/caracterFinn/characterFinn.dch",
+"characterHanna": "res://dialogo/caracterHanna/characterHanna.dch",
+"characterHarry": "res://dialogo/caracterHarry/characterHarry.dch",
+"characterKeith": "res://dialogo/caracterKeith/characterKeith.dch",
+"characterLana": "res://dialogo/caracterLana/characterLana.dch",
+"characterMozart": "res://dialogo/caracterMozart/characterMozart.dch",
+"characterNPC": "res://dialogo/caracterNPC/characterNPC.dch"
+}
 layout/default_style="res://scenes/dialogue/teste.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -43,7 +57,12 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-variables={}
+variables={
+"musicEnd": false,
+"playing": false,
+"quest": 0,
+"special": false
+}
 translation/enabled=false
 translation/original_locale="pt_BR"
 translation/file_mode=1
@@ -51,7 +70,15 @@ translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
 save/autosave=false
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline": "res://timeline.dtl",
+"timelineIntroducao1": "res://dialogo/timeline/timelineIntroducao1.dtl",
+"timelineIntroducao2": "res://dialogo/timeline/timelineIntroducao2.dtl",
+"timelineNovoMundo1": "res://dialogo/timeline/timelineNovoMundo1.dtl",
+"timelineNovoMundo2": "res://dialogo/timeline/timelineNovoMundo2.dtl",
+"timelineTutorial": "res://dialogo/timeline/timelineTutorial.dtl"
+}
+layout/style_list=["res://dialogo/estilo/style1.tres"]
 
 [display]
 
@@ -106,6 +133,11 @@ dialogic_default_action={
 correr={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+special={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
 ]
 }
 

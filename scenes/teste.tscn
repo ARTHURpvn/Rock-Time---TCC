@@ -98,16 +98,13 @@ _data = {
 script = ExtResource("1_j3nik")
 
 [node name="Perso Banda" parent="." instance=ExtResource("2_w0th1")]
-sala = "Teste"
 
 [node name="Player" parent="." instance=ExtResource("2_bq4d2")]
-sala = "Teste"
 
 [node name="Tempo" parent="." instance=ExtResource("3_p5am0")]
 
 [node name="dia_noite" type="CanvasModulate" parent="."]
 script = ExtResource("4_284fo")
-sala = "Teste"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dia_noite"]
 libraries = {

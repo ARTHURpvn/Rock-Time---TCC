@@ -5,14 +5,11 @@ var isNight = false
 var isDaytoNight = false
 var isNighttoDay = false
 var hour 
-
-@export var sala: String
 @export_category("Horas")
 @export var anoitecendo = 19
 @export var amanhecendo = 5
 
 func _ready() -> void:
-	# Certifique-se de que GlobalTime está acessível
 	hour = GlobalTime.hour
 
 	if hour:
@@ -28,13 +25,11 @@ func _process(_delta: float) -> void:
 	hour = GlobalTime.hour
 
 	if hour == amanhecendo and !isNighttoDay:
-		print("amanhecendo")
 		$AnimationPlayer.play("amanhecendo")
 		isNighttoDay = true
 		GlobalTime.isNight = false
 
 	if hour == anoitecendo and !isDaytoNight:
-		print("anoitecendo")
 		$AnimationPlayer.play("anoitecendo")
 		isDaytoNight = true
 		isDay = false

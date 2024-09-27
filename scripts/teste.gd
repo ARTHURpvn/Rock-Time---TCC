@@ -1,1 +1,1 @@
-extends "res://scripts/tempo.gd"
+extends Node2D

@@ -18,9 +18,12 @@ func add_notes():
 			add_note(line, note_data)
 		line += 1
 
+	print("testou testando aqui")
+	Dialogic.VAR.musicEnd = true
+
 func add_note(line, data):
 	var note_scn
-	if int(data.len) >= 400:
+	if int(data.len) >= 300:
 		note_scn = long_note_scn
 	else:
 		note_scn = short_note_scn

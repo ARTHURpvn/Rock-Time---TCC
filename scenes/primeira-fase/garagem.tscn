@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=4 uid="uid://d1ufhuuw3eqa3"]
+[gd_scene load_steps=25 format=4 uid="uid://d1ufhuuw3eqa3"]
 
+[ext_resource type="Script" path="res://scripts/garagem.gd" id="1_am2cl"]
 [ext_resource type="Texture2D" uid="uid://d1ymvswah8tjj" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_65_MV.png" id="1_wi3gq"]
 [ext_resource type="Texture2D" uid="uid://dgkdeti4xlf7a" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_106_MV.png" id="2_u06u0"]
 [ext_resource type="Texture2D" uid="uid://rvhaa467loyx" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_108_MV.png" id="3_are32"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dp8l046vugv1v" path="res://assets/tilesets/WIP_Theme/Condo_6_Roof_Door_16x16.png" id="7_0iv30"]
 [ext_resource type="PackedScene" uid="uid://c7vunb0ds57yj" path="res://scenes/player/npc_teste.tscn" id="9_cni4u"]
 [ext_resource type="Texture2D" uid="uid://cp5o0oum58yi1" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_83_MV.png" id="9_k5ewc"]
+[ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="9_klcr4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52edg"]
 texture = ExtResource("1_wi3gq")
@@ -10666,12 +10668,7 @@ sources/2 = SubResource("TileSetAtlasSource_omihv")
 [sub_resource type="TileSet" id="TileSet_8uum8"]
 
 [node name="garagem" type="Node2D"]
-
-[node name="npc2" parent="." instance=ExtResource("9_cni4u")]
-position = Vector2(-8.05497, -2)
-scale = Vector2(1.02768, 1)
-
-[node name="Camera2D" type="Camera2D" parent="npc2"]
+script = ExtResource("1_am2cl")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-4, -1)
@@ -10685,3 +10682,8 @@ tile_set = SubResource("TileSet_ahvjb")
 
 [node name="porta" type="TileMapLayer" parent="TileMapLayer/instrumentos"]
 tile_set = SubResource("TileSet_8uum8")
+
+[node name="Player" parent="." instance=ExtResource("9_klcr4")]
+
+[node name="npc" parent="." instance=ExtResource("9_cni4u")]
+position = Vector2(42, -27)

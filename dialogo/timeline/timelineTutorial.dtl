@@ -6,6 +6,4 @@ set {playing} = true
 [wait time="0.5"]
 
 characterHarry: Vamos começar com o básico! Acerte suas primeiras notas da música!
-[wait time="21.5"]
-if {special} == true:
-	"caracterNarrador ": Aperte 'F' Para ativar seu especial
+[end_timeline]

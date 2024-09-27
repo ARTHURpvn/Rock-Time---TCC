@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7b6j6yelj3lj"]
+
+[ext_resource type="Script" path="res://scripts/quest.gd" id="1_t504b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_22ec8"]
+font_size = 26
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iycno"]
+font_size = 20
+
+[node name="Quest" type="Node"]
+script = ExtResource("1_t504b")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasModulate"]
+offset_left = 6.0
+offset_top = 54.0
+offset_right = 17.0
+offset_bottom = 65.0
+color = Color(1, 0, 0, 1)
+
+[node name="ToDo" type="Label" parent="CanvasModulate"]
+offset_left = 23.0
+offset_top = 47.0
+offset_right = 63.0
+offset_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasModulate"]
+offset_left = 6.0
+offset_right = 88.0
+offset_bottom = 36.0
+text = "Name:"
+label_settings = SubResource("LabelSettings_22ec8")
+
+[node name="Name" type="Label" parent="CanvasModulate/Label"]
+offset_left = 87.0
+offset_top = 6.0
+offset_right = 208.0
+offset_bottom = 34.0
+label_settings = SubResource("LabelSettings_iycno")
+vertical_alignment = 1

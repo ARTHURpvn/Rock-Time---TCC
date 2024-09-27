@@ -12,7 +12,6 @@ var time
 @export var _friction: float = 0.1
 @export var _acceleration: float = 0.5
 @export var distance_behind: float = 20.0
-@export var sala: String
 
 @export_category("Objects")
 @export var _animation_tree: AnimationTree = null
@@ -20,7 +19,7 @@ var _state_machine
 
 func _ready() -> void:
 	_state_machine = _animation_tree["parameters/playback"]
-	player = get_node("/root/"+sala+"/Player")
+	player = get_node("../Player")
 	time = GlobalTime.time
 
 func _process(delta: float) -> void:

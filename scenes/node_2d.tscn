@@ -94,11 +94,9 @@ _data = {
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_d4mti")]
-sala = "Node2d"
 
 [node name="dia_noite" type="CanvasModulate" parent="."]
 script = ExtResource("2_oqc50")
-sala = "Teste"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dia_noite"]
 libraries = {

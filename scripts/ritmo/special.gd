@@ -15,6 +15,11 @@ func _process(_delta):
 
 	else:
 		$tiles.material_override = activeStyle
+
 		if !point.special && Input.is_action_just_pressed("special"):
 			point.special = true
-			Dialogic.VAR.special - true
+
+	if tile >= 0.5:
+		Dialogic.VAR.special = true
+	else:
+		Dialogic.VAR.special = false
