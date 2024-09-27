@@ -17,7 +17,7 @@
 "portraits": {
 "Cecília": {
 "export_overrides": {
-"image": "\"res://caracterCecilia/pocoyo.png\""
+"image": "\"res://dialogo/caracterCecilia/pocoyo.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

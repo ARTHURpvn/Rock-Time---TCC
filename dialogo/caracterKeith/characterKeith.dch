@@ -17,7 +17,7 @@
 "portraits": {
 "Keith": {
 "export_overrides": {
-"image": "\"res://caracterKeith/keith.png\""
+"image": "\"res://dialogo/caracterKeith/keith.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

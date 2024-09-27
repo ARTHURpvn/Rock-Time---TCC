@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjhxripgwdwmt"]
+
+[ext_resource type="Texture2D" uid="uid://d1vqqw18nfk4l" path="res://assets/wallpaper.jpg" id="1_ctlp8"]
+[ext_resource type="Script" path="res://scripts/inicial.gd" id="1_wr4m3"]
+
+[node name="Inicial" type="Node2D"]
+script = ExtResource("1_wr4m3")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasModulate"]
+position = Vector2(640.111, 359.5)
+scale = Vector2(0.333796, 0.333796)
+texture = ExtResource("1_ctlp8")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+position = Vector2(641, 266)
+
+[node name="Iniciar" type="Button" parent="CanvasGroup"]
+offset_left = -39.0
+offset_top = 15.0
+offset_right = 58.0
+offset_bottom = 60.0
+text = "INICIAR"
+
+[node name="Sair" type="Button" parent="CanvasGroup"]
+offset_left = -12.0
+offset_top = 62.0
+offset_right = 31.0
+offset_bottom = 93.0
+disabled = true
+text = "SAIR"

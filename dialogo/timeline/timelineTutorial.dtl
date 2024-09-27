@@ -1,6 +1,10 @@
 [style name="style1"]
+[wait time="5.0"]
+set {Logo} = true
+[wait time="3.0"]
+set {Logo} = false
 characterLana (Castiel): Castiel você tá fazendo tudo errado cara! Não é assim que se toca o solo!
-castiel: Vocês querem que eu toque um solo que não conheço ai fica difícil!
+characterCastiel: Vocês querem que eu toque um solo que não conheço ai fica difícil!
 characterHanna: Então vamo lá, tudo de novo gente sem briga.
 set {playing} = true
 [wait time="0.5"]

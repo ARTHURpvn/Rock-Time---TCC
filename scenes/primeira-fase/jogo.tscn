@@ -60661,9 +60661,6 @@ libraries = {
 }
 autoplay = "dia"
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
 [node name="Player" parent="." instance=ExtResource("1_8uai2")]
 position = Vector2(-57, -20)
 
@@ -60675,4 +60672,3 @@ z_index = 5
 position = Vector2(-40, -1)
 
 [connection signal="animation_finished" from="dia_noite/AnimationPlayer" to="dia_noite" method="_on_animation_player_animation_finished"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

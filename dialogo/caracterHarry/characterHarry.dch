@@ -17,7 +17,7 @@
 "portraits": {
 "Harry": {
 "export_overrides": {
-"image": "\"res://caracterHarry/harry.png\""
+"image": "\"res://dialogo/caracterHarry/harry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
