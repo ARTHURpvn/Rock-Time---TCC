@@ -38,3 +38,8 @@ func load_map():
 	file.close()
 	var json_result = JSON.parse_string(json_text)
 	return json_result
+
+func _process(_delta: float) -> void:
+	if Dialogic.VAR.Ritmo.musicEnd == true:
+		print("foi")
+		get_tree().change_scene_to_file("res://scenes/pontuacao.tscn")

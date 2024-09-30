@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bdgiyveoav8t0"]
+[gd_scene load_steps=27 format=3 uid="uid://bdgiyveoav8t0"]
 
 [ext_resource type="Script" path="res://scripts/characters/static_npc.gd" id="1_a2ky5"]
 [ext_resource type="Texture2D" uid="uid://cei21wbs4kh2j" path="res://assets/personagens/lana.png" id="1_xs57v"]
@@ -440,6 +440,9 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_gwrt5")
 states/Walk/position = Vector2(454, 145)
 graph_offset = Vector2(66, -1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pu0m1"]
+size = Vector2(64, 59)
+
 [node name="static_npc" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 z_index = 5
 y_sort_enabled = true
@@ -476,3 +479,16 @@ shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
 texture = ExtResource("2_i7gd7")
 texture_scale = 0.06
+
+[node name="area" type="Area2D" parent="."]
+z_index = 2
+position = Vector2(-1102, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
+position = Vector2(1103, 280)
+shape = SubResource("RectangleShape2D_pu0m1")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="area" to="." method="_on_area_body_exited"]

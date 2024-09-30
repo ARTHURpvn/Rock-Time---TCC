@@ -25,7 +25,6 @@ offset_left = 350.0
 offset_top = 188.0
 offset_right = 864.0
 offset_bottom = 291.0
-text = "99999"
 label_settings = SubResource("LabelSettings_rkl2o")
 vertical_alignment = 1
 

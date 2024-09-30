@@ -20,6 +20,6 @@ func _process(_delta):
 			point.special = true
 
 	if tile >= 0.5:
-		Dialogic.VAR.special = true
+		Dialogic.VAR.Ritmo.special = true
 	else:
-		Dialogic.VAR.special = false
+		Dialogic.VAR.Ritmo.special = false

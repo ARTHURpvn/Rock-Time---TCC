@@ -20,13 +20,11 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Questify="*res://addons/questify/quest_manager.gd"
 GlobalTime="*res://scenes/global.tscn"
-Quest="*res://scenes/quest.tscn"
 
 [dialogic]
 
 directories/dch_directory={
 "caracterNarrador ": "res://dialogo/caracterNarrador/caracterNarrador .dch",
-"castiel": "res://castiel.dch",
 "characterCastiel": "res://dialogo/caracterCastiel/characterCastiel.dch",
 "characterCecilia": "res://dialogo/caracterCecilia/characterCecilia.dch",
 "characterFinn": "res://dialogo/caracterFinn/characterFinn.dch",
@@ -37,7 +35,7 @@ directories/dch_directory={
 "characterMozart": "res://dialogo/caracterMozart/characterMozart.dch",
 "characterNPC": "res://dialogo/caracterNPC/characterNPC.dch"
 }
-layout/default_style="res://scenes/dialogue/teste.tres"
+layout/default_style="res://dialogo/estilo/style2.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -59,10 +57,14 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 variables={
 "Logo": false,
+"Ritmo": {
 "musicEnd": false,
 "playing": false,
-"quest": 0,
 "special": false
+},
+"isTalking": false,
+"name": "",
+"quest": 2
 }
 translation/enabled=false
 translation/original_locale="pt_BR"
@@ -72,14 +74,18 @@ translation/save_mode=0
 translation/add_separator=false
 save/autosave=false
 directories/dtl_directory={
-"timeline": "res://timeline.dtl",
 "timelineIntroducao1": "res://dialogo/timeline/timelineIntroducao1.dtl",
 "timelineIntroducao2": "res://dialogo/timeline/timelineIntroducao2.dtl",
+"timelineIntroducao21": "res://dialogo/timeline/timelineIntroducao21.dtl",
 "timelineNovoMundo1": "res://dialogo/timeline/timelineNovoMundo1.dtl",
 "timelineNovoMundo2": "res://dialogo/timeline/timelineNovoMundo2.dtl",
 "timelineTutorial": "res://dialogo/timeline/timelineTutorial.dtl"
 }
-layout/style_list=["res://dialogo/estilo/style1.tres"]
+layout/style_list=["res://dialogo/estilo/style1.tres", "res://dialogo/estilo/style2.tres"]
+glossary/default_case_sensitive=true
+text/autocolor_names=true
+text/split_at_new_lines=false
+text/autoadvance_enabled=true
 
 [display]
 
@@ -89,7 +95,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/post_processing/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/post_processing/plugin.cfg")
 
 [global_group]
 

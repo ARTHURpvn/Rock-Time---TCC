@@ -30,3 +30,5 @@ offset_right = 31.0
 offset_bottom = 93.0
 disabled = true
 text = "SAIR"
+
+[connection signal="pressed" from="CanvasGroup/Iniciar" to="." method="_on_iniciar_pressed"]

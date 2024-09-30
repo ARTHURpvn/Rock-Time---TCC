@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://4u0qpkn4ukfj"]
+[gd_scene load_steps=3 format=3 uid="uid://4u0qpkn4ukfj"]
 
 [ext_resource type="Script" path="res://scripts/characters/hud.gd" id="1_khn1u"]
+[ext_resource type="PackedScene" uid="uid://c7b6j6yelj3lj" path="res://scenes/quest.tscn" id="2_swoxf"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_khn1u")
@@ -13,3 +14,5 @@ offset_left = -9.5
 offset_right = 9.5
 offset_bottom = 23.0
 grow_horizontal = 2
+
+[node name="Quest" parent="." instance=ExtResource("2_swoxf")]

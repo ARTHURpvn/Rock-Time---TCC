@@ -13,7 +13,7 @@ script = ExtResource("1_sb3vt")
 [node name="Road" parent="." instance=ExtResource("1_r4vk8")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.783683, 0.621162, 0, -0.621162, 0.783683, 0, 2.791, 0.814)
+transform = Transform3D(1, 0, 0, 0, 0.783683, 0.621162, 0, -0.621162, 0.783683, 0, 2.791, 1.3639)
 current = true
 far = 13.35
 
@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.7
 transform = Transform3D(0.996807, 0.036683, -0.0709262, 0, 0.888233, 0.459394, 0.079851, -0.457927, 0.885396, -3.26342, 0.545813, -2.96444)
 
 [node name="Special" parent="." instance=ExtResource("5_aj8sv")]
-transform = Transform3D(0.970135, -4.63466e-16, -0.242565, 0.242565, 1.85362e-15, 0.970135, 0, -1, 1.91069e-15, 2.46821, -0.202431, -1.40235)
+transform = Transform3D(0.970135, -4.63466e-16, -0.242565, 0.242565, 1.85362e-15, 0.970135, 0, -1, 1.91069e-15, 2.54942, -0.202431, -0.126075)
 
 [node name="acertos" parent="." instance=ExtResource("6_uo155")]
 transform = Transform3D(1, 0, 0, 0, 0.872052, 0.489413, 0, -0.489413, 0.872052, 2.796, 0.803029, -3.14072)

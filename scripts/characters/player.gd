@@ -15,13 +15,16 @@ var time
 func _ready() -> void:
 	_state_machine = _animation_tree["parameters/playback"]
 	time = GlobalTime.time
+
 func _physics_process(_delta: float) -> void:
-	_animate()
-	_move()
-	move_and_slide()
+	if !Dialogic.VAR.isTalking:
+		_animate()
+		_move()
+		move_and_slide()
 	
 	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("correr"):
 		_move_speed = _move_speed * 1.5

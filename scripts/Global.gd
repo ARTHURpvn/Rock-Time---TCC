@@ -6,6 +6,8 @@ var isNight: bool = false
 var time: String = str(hour)+":"+str(min)
 var points : int
 
+var quest : int = 0
+var questEnded : bool = false
 
 func timer():
 	if min == 59:
@@ -38,6 +40,7 @@ func _on_timer_timeout() -> void:
 	timer()
 
 func _process(_delta: float) -> void:
+	quest = Dialogic.VAR.quest
 	GlobalTime.hour = hour
 	GlobalTime.min = min
 	GlobalTime.time = time

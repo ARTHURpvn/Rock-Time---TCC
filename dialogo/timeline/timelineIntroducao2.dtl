@@ -1,28 +1,40 @@
+[style name="style1"]
+set {isTalking} = true
+jump Depois
+if {quest} == 2:
+	jump QuestHarry
 characterKeith: Isso ai gente! Só a gente manter o ritmo.
 characterHanna: Único problema são os amplificadores que o Castiel tinha prometido arranjar uns novos. Certo... Castiel?
-caracterCastiel/character: Galera não se preocupa já to devendo eles a um bom tempo e hoje mesmo vou buscar eles.
+characterCastiel: Galera não se preocupa já to devendo eles a um bom tempo e hoje mesmo vou buscar eles.
 characterLana: Hoje??? Mas você não tinha falado nada disso pra gente.
-caracterCastiel/character: Não se preocupem eu arranjei um cara que arrumou pra mim uns amplificadores de bom pakas, sem falar que são baratos hehe.
-characterKeith: Já buscou as caixas bro?
-characterLana: Não me disse que as caixas de som eram invisíveis!
-characterHanna: Tá cansando minha beleza Castiel.
-characterHarry: Tem como me fazer um favor se tiver com tempo?
-caracterCastiel/character: Claro Harry o que seria?
-characterHarry: Tem como buscar minha irmã na escola e trazer aqui pro estudio? To praticando minha parte naquela musica que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as musicas favoritas dela ela é um saco pra cuidar.
-caracterCastiel/character: Beleza conta comigo.
+characterCastiel: Não se preocupem eu arranjei um cara que arrumou pra mim uns amplificadores de bom pakas, sem falar que são baratos hehe.
+set {quest} = 1
+set {isTalking} = false
+[end_timeline]
+label QuestHarry
+set {isTalking} = true
+if {name} == "Harry":
+	characterHarry: Tem como buscar minha irmã na escola e trazer aqui pro estudio? To praticando minha parte naquela musica que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as musicas favoritas dela ela é um saco pra cuidar.
+	characterCastiel: Beleza conta comigo.
+	set {quest} = 3
+	set {isTalking} = false
+	[end_timeline]
+label QuestCeci
 characterCecilia: Quem é você?! Cadê o meu maninho? Ele tinha combinado de me buscar hoje. Eu não vou embora com um estranho.
-caracterCastiel/character: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer infelizmente seu irmão teve um imprevisto então pediu para eu vir te buscar.
+characterCastiel: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer infelizmente seu irmão teve um imprevisto então pediu para eu vir te buscar.
 characterCecilia: Você está querendo insinuar que esse imprevisto é mais importante do que eu? Seu boçal, e que história é essa de amigo eu não caio nesse papinho não se você não for embora eu vou gritar bem alto.
-caracterCastiel/character: Calma por favor não grite o que eu posso fazer para te convencer a vir comigo?
+characterCastiel: Calma por favor não grite o que eu posso fazer para te convencer a vir comigo?
 characterCecilia: Humm? Já sei cante uma música da “Katy Perry ” comigo, só assim eu vou com você.
-caracterCastiel/character: Perai oque!!! Não acredito que você goste desse tipo de múscia.
+characterCastiel: Perai oque!!! Não acredito que você goste desse tipo de múscia.
 characterCecilia: Então veja com seus próprios olhos o que meu maninho me ensinou.
-caracterCastiel/character: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
+characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
 characterCecilia: Claro meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim então vamos quero ver meu maninho logo.
-caracterCastiel/character: Vamos seu irmão deve estar preocupado com a nossa demora.
+characterCastiel: Vamos seu irmão deve estar preocupado com a nossa demora.
 characterHarry: Até que enfim vocês chegaram que demora em, estavam fazendo o que?
-caracterCastiel/character: A gente estav...
+characterCastiel: A gente estav...
 characterCecilia: Estava na sorveteria maninho o tiel comprou um sorvete de morango para mim.
-caracterCastiel/character: Sim acabamos passando lá na sorveteria e eu esqueci de te avisar desculpa pela demora Harry.
+characterCastiel: Sim acabamos passando lá na sorveteria e eu esqueci de te avisar desculpa pela demora Harry.
 characterHarry: A sim, tudo bem então ela não te deu trabalho não né?
-caracterCastiel/character: Ela foi um amorzinho kkkkkk
+characterCastiel: Ela foi um amorzinho kkkkkk
+set {isTalking} = false
+[end_timeline]

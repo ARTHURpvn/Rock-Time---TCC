@@ -6,12 +6,10 @@ set {Logo} = false
 characterLana (Castiel): Castiel você tá fazendo tudo errado cara! Não é assim que se toca o solo!
 characterCastiel: Vocês querem que eu toque um solo que não conheço ai fica difícil!
 characterHanna: Então vamo lá, tudo de novo gente sem briga.
-set {playing} = true
+set {Ritmo.playing} = true
 [wait time="0.5"]
 
 characterHarry: Vamos começar com o básico! Acerte suas primeiras notas da música!
-label special
-"caracterNarrador ": aperte "F" para ativar o especial
-[wait time="65.0"]
-set {musicEnd} = true
+[wait time="62.0"]
+set {Ritmo.musicEnd} = true
 [end_timeline]
