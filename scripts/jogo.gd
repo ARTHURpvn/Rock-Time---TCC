@@ -16,7 +16,7 @@ func _on_quest_body_entered(_body: Node2D) -> void:
 		GlobalTime.questEnded = true 
 
 func _process(_delta: float) -> void:
-	if Dialogic.VAR.quest == 2 and !created:
+	if Dialogic.VAR.quest == 3 and !created:
 		created = true
 		
 		if !follow:

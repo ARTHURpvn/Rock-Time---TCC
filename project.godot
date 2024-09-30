@@ -64,7 +64,7 @@ variables={
 },
 "isTalking": false,
 "name": "",
-"quest": 2
+"quest": 1
 }
 translation/enabled=false
 translation/original_locale="pt_BR"

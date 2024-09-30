@@ -46,8 +46,8 @@ func _process(_delta: float) -> void:
 	$PointLight2D.visible = isNight
 
 	if inArea and Input.is_action_just_pressed("dialog"):
+		Dialogic.VAR.name = npc_name
 		if Dialogic.VAR.quest == 1:
-			Dialogic.VAR.name = npc_name
 			Dialogic.start("res://dialogo/timeline/timelineIntroducao21.dtl").register_character(load("res://dialogo/caracter"+npc_name+"/character"+npc_name+".dch"), $".")
 			
 		elif Dialogic.VAR.quest == 2 and !Dialogic.VAR.isTalking:

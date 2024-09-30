@@ -1,6 +1,5 @@
 [style name="style1"]
 set {isTalking} = true
-jump Depois
 if {quest} == 2:
 	jump QuestHarry
 characterKeith: Isso ai gente! Só a gente manter o ritmo.
@@ -18,6 +17,8 @@ if {name} == "Harry":
 	characterCastiel: Beleza conta comigo.
 	set {quest} = 3
 	set {isTalking} = false
+	[end_timeline]
+else:
 	[end_timeline]
 label QuestCeci
 characterCecilia: Quem é você?! Cadê o meu maninho? Ele tinha combinado de me buscar hoje. Eu não vou embora com um estranho.
