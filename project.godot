@@ -18,7 +18,6 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Questify="*res://addons/questify/quest_manager.gd"
 GlobalTime="*res://scenes/global.tscn"
 
 [dialogic]
@@ -58,13 +57,15 @@ text/autopauses={}
 variables={
 "Logo": false,
 "Ritmo": {
+"music": "firework",
 "musicEnd": false,
 "playing": false,
 "special": false
 },
+"follow": false,
 "isTalking": false,
 "name": "",
-"quest": 1
+"quest": 3
 }
 translation/enabled=false
 translation/original_locale="pt_BR"

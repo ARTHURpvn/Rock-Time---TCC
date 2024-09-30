@@ -28,4 +28,4 @@ name = "style2"
 base_scene = ExtResource("1_uv12e")
 base_overrides = {}
 layers = Array[ExtResource("2_j6o3b")]([SubResource("Resource_jv21s"), SubResource("Resource_3uro8")])
-metadata/_latest_layer = -1
+metadata/_latest_layer = 1

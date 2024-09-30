@@ -2,6 +2,9 @@
 set {isTalking} = true
 if {quest} == 2:
 	jump QuestHarry
+if {quest} == 3:
+	jump QuestCeci
+	characterCastiel: Perai oque!!! Não acredito que você goste desse tipo de múscia.
 characterKeith: Isso ai gente! Só a gente manter o ritmo.
 characterHanna: Único problema são os amplificadores que o Castiel tinha prometido arranjar uns novos. Certo... Castiel?
 characterCastiel: Galera não se preocupa já to devendo eles a um bom tempo e hoje mesmo vou buscar eles.
@@ -21,16 +24,20 @@ if {name} == "Harry":
 else:
 	[end_timeline]
 label QuestCeci
+set {isTalking} = true
 characterCecilia: Quem é você?! Cadê o meu maninho? Ele tinha combinado de me buscar hoje. Eu não vou embora com um estranho.
 characterCastiel: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer infelizmente seu irmão teve um imprevisto então pediu para eu vir te buscar.
 characterCecilia: Você está querendo insinuar que esse imprevisto é mais importante do que eu? Seu boçal, e que história é essa de amigo eu não caio nesse papinho não se você não for embora eu vou gritar bem alto.
 characterCastiel: Calma por favor não grite o que eu posso fazer para te convencer a vir comigo?
 characterCecilia: Humm? Já sei cante uma música da “Katy Perry ” comigo, só assim eu vou com você.
-characterCastiel: Perai oque!!! Não acredito que você goste desse tipo de múscia.
 characterCecilia: Então veja com seus próprios olhos o que meu maninho me ensinou.
 characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
 characterCecilia: Claro meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim então vamos quero ver meu maninho logo.
 characterCastiel: Vamos seu irmão deve estar preocupado com a nossa demora.
+set {follow} = true
+set {isTalking} = false
+[end_timeline]
+label FimCeci
 characterHarry: Até que enfim vocês chegaram que demora em, estavam fazendo o que?
 characterCastiel: A gente estav...
 characterCecilia: Estava na sorveteria maninho o tiel comprou um sorvete de morango para mim.

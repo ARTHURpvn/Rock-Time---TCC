@@ -7,7 +7,7 @@ var select_quest : Dictionary
 @onready var quests = [
 		{"name": "Caixa de Som", "finished": false, "todo": "Pegue as caixas de som"}, 
 		{"name": "Garagem", "finished": false, "todo": "Volte para a garagem e fale com o Harry"},
-		{"name": "Buscar irmã do Harry ", "finished": false, "todo": "Busque a irmã do Harry na escola ao norte"}
+		{"name": "Buscar irmã do Harry ", "finished": false, "todo": "Busque a irmã do Harry na escola ao norte"},
 	]
 
 func _process(_delta: float) -> void:

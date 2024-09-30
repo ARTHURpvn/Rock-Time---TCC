@@ -1,6 +1,5 @@
 
 [style]
-set {style} = 2
 if {name} == "Keith":
 	set {isTalking} = true
 	characterKeith: Já buscou as caixas bro?

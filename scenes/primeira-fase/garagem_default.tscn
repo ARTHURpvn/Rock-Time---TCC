@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b4mewlause07i"]
+[gd_scene load_steps=26 format=4 uid="uid://b4mewlause07i"]
 
 [ext_resource type="Script" path="res://scripts/garagem_default.gd" id="1_w0nrr"]
 [ext_resource type="Texture2D" uid="uid://d1ymvswah8tjj" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_65_MV.png" id="2_1wqan"]
@@ -10670,9 +10670,6 @@ sources/2 = SubResource("TileSetAtlasSource_omihv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xtpk"]
 size = Vector2(138, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iryn5"]
-size = Vector2(45, 44)
-
 [node name="garagem_default" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_w0nrr")
@@ -10694,7 +10691,7 @@ tile_set = SubResource("TileSet_8uum8")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("10_2fldw")]
-position = Vector2(11, 50)
+position = Vector2(231, 184)
 
 [node name="Lana" parent="." instance=ExtResource("11_0k8yi")]
 position = Vector2(-63, 3)
@@ -10718,13 +10715,4 @@ position = Vector2(94, 197)
 position = Vector2(107, 15)
 shape = SubResource("RectangleShape2D_1xtpk")
 
-[node name="quest2" type="Area2D" parent="."]
-position = Vector2(188, 394)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="quest2"]
-position = Vector2(-35, -328)
-shape = SubResource("RectangleShape2D_iryn5")
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="quest2" to="." method="_on_quest_2_body_entered"]
-[connection signal="body_exited" from="quest2" to="." method="_on_quest_2_body_exited"]

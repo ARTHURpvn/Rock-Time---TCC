@@ -22,22 +22,20 @@ func _ready() -> void:
 	match npc_name:
 		"Lana":
 			texture = load('res://assets/personagens/lana.png')
-			$Sprite2D.texture = texture
 			
 		"Keith":
 			texture = load('res://assets/personagens/keith.png')
-			$Sprite2D.texture = texture
 		
 		"Hanna":	
 			texture = load('res://assets/personagens/lana.png')
-			$Sprite2D.texture = texture
 		
 		"Harry":
 			texture = load('res://assets/personagens/harry.png')
-			$Sprite2D.texture = texture
 	
 		"Cecilia":
-			pass
+			texture = load('res://assets/personagens/cecilia.png')
+			
+	$Sprite2D.texture = texture
 	_animation_tree["parameters/Idle/blend_position"] = npc_pos
 
 
@@ -52,6 +50,10 @@ func _process(_delta: float) -> void:
 			
 		elif Dialogic.VAR.quest == 2 and !Dialogic.VAR.isTalking:
 			Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao2.dtl")
+
+		elif Dialogic.VAR.quest == 3 and npc_name == "Cecilia" and !Dialogic.VAR.isTalking:
+			Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao2.dtl")
+
 
 func _on_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
