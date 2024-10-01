@@ -2,11 +2,11 @@ extends Node3D
 
 @onready var music_node = $Music
 @onready var road_node = $Road
-@export var music: String = "back_in_black"
+var music =  "back_in_black"
 
 var audio
-@export var audio_file = "res://musicas/"+music+".mp3"
-@export var map_file = "res://musicas/back_in_black.mboy"
+@onready var audio_file = "res://musicas/"+music+".mp3"
+@onready var map_file = "res://musicas/"+music+".mboy"
 
 var map
 var tempo
@@ -17,6 +17,7 @@ var note_scale
 var start_pos_in_sec
 
 func _ready() -> void:
+	print(Dialogic.VAR.music)
 	audio = load(audio_file)
 	map = load_map()
 	calc_params()
@@ -40,6 +41,5 @@ func load_map():
 	return json_result
 
 func _process(_delta: float) -> void:
-	if Dialogic.VAR.Ritmo.musicEnd == true:
-		print("foi")
+	if GlobalTime.musicEnded:
 		get_tree().change_scene_to_file("res://scenes/pontuacao.tscn")

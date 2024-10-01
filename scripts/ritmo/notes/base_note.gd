@@ -6,6 +6,8 @@ var blue_mat = preload("res://scenes/ritmo/notas/blue_note_mat.tres")
 var info_text = preload("res://scenes/ritmo/info.tscn")
 
 @onready var point = get_node("/root/Game/Points")
+@onready var life = get_node("/root/Game/Vida")
+
 @export var line: int = 2
 var length
 var length_scale
@@ -58,7 +60,8 @@ func add_listeners():
 func collect() -> void:
 	collected = true
 	picker.is_collecting = false
-	
+	if life.life < 100:
+		life.life += 1
 	hide()
 
 func _on_area_entered(area) -> void:
@@ -71,4 +74,6 @@ func _on_area_exited(area) -> void:
 	if area.is_in_group("picker"):
 		is_colliding = false
 		if !collected:
+			point.tiles = 0
+			life.life -= 10
 			$error_song.play()

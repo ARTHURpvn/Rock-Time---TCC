@@ -6,7 +6,7 @@ var activeStyle = preload("res://scenes/specialActive.tres")
 var tile: float
 
 func _process(_delta):
-	tile = point.tiles
+	tile = point.acertos
 	$tiles.scale.y = tile
 
 	if tile <= 0.5 and !point.special:

@@ -1,5 +1,5 @@
 [style name="style1"]
-[wait time="5.0"]
+set {Ritmo.music} = back_in_black
 set {Logo} = true
 [wait time="3.0"]
 set {Logo} = false
@@ -8,8 +8,5 @@ characterCastiel: Vocês querem que eu toque um solo que não conheço ai fica d
 characterHanna: Então vamo lá, tudo de novo gente sem briga.
 set {Ritmo.playing} = true
 [wait time="0.5"]
-
 characterHarry: Vamos começar com o básico! Acerte suas primeiras notas da música!
-[wait time="62.0"]
-set {Ritmo.musicEnd} = true
 [end_timeline]

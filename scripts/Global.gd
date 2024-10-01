@@ -5,6 +5,7 @@ var min: int = 50
 var isNight: bool = false
 var time: String = str(hour)+":"+str(min)
 var points : int
+var musicEnded : bool = false
 
 var quest : int = 0
 var questEnded : bool = false

@@ -19,7 +19,7 @@ albedo_color = Color(0.544974, 0.544974, 0.544974, 1)
 script = ExtResource("1_8f0kf")
 
 [node name="Botoes" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0.891304)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0.02, 0.891)
 material_override = SubResource("StandardMaterial3D_ipa58")
 mesh = SubResource("PlaneMesh_l65rr")
 skeleton = NodePath("../RoadTrip")
@@ -30,21 +30,21 @@ material_override = SubResource("StandardMaterial3D_wuxrw")
 mesh = SubResource("PlaneMesh_l65rr")
 
 [node name="botoesToRoad" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0.011, -1.121)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0.021, -1.121)
 mesh = SubResource("PlaneMesh_l65rr")
 
 [node name="linha1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 1, 0, 0, 0, 7.2, -1.2, 0.01, -8.4)
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 7.2, -1.2, 0.01, -8.4)
 material_override = SubResource("StandardMaterial3D_i0wym")
 mesh = SubResource("PlaneMesh_l65rr")
 
 [node name="linha2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 1, 0, 0, 0, 7.2, 0, 0.01, -8.4)
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 7.2, 0, 0.01, -8.4)
 material_override = SubResource("StandardMaterial3D_i0wym")
 mesh = SubResource("PlaneMesh_l65rr")
 
 [node name="linha3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 1, 0, 0, 0, 7.2, 1.2, 0.01, -8.4)
+transform = Transform3D(0.03, 0, 0, 0, 1, 0, 0, 0, 7.2, 1.2, 0.01, -8.4)
 material_override = SubResource("StandardMaterial3D_i0wym")
 mesh = SubResource("PlaneMesh_l65rr")
 

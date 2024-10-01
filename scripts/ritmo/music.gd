@@ -22,8 +22,14 @@ func start() -> void:
 	anim.play("sound_on")
 
 func _process(delta: float) -> void:
-	if not started: 
+	if !started: 
 		pre_start_duration -= speed*delta
 		if  pre_start_duration <= 0:
 			start()
 			return
+	else:
+		if !player.playing:
+			GlobalTime.musicEnded = true
+
+		else:
+			GlobalTime.musicEnded = false

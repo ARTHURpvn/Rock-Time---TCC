@@ -38,11 +38,9 @@ set {follow} = true
 set {isTalking} = false
 [end_timeline]
 label FimCeci
-characterHarry: Até que enfim vocês chegaram que demora em, estavam fazendo o que?
-characterCastiel: A gente estav...
-characterCecilia: Estava na sorveteria maninho o tiel comprou um sorvete de morango para mim.
-characterCastiel: Sim acabamos passando lá na sorveteria e eu esqueci de te avisar desculpa pela demora Harry.
-characterHarry: A sim, tudo bem então ela não te deu trabalho não né?
+set {isTalking} = true
+characterHarry: Ela não te deu trabalho não né?
 characterCastiel: Ela foi um amorzinho kkkkkk
+set {follow} = true
 set {isTalking} = false
 [end_timeline]

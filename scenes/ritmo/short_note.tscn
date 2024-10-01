@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cd4rl7grebm4f"]
 
 [ext_resource type="Script" path="res://scripts/ritmo/notes/short_note.gd" id="1_1ep8q"]
-[ext_resource type="AudioStream" uid="uid://bmaoft5ireg7k" path="res://musicas/error.mp3" id="2_8re8v"]
+[ext_resource type="AudioStream" uid="uid://c5odajp2gyj84" path="res://musicas/error.mp3" id="2_8re8v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr0wl"]
 
@@ -27,3 +27,4 @@ shape = SubResource("BoxShape3D_74wv8")
 [node name="error_song" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.0170778, 1.23005, -0.451643)
 stream = ExtResource("2_8re8v")
+volume_db = 10.0

@@ -55,15 +55,15 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={
+"Cecilia": false,
 "Logo": false,
 "Ritmo": {
-"music": "firework",
-"musicEnd": false,
 "playing": false,
 "special": false
 },
 "follow": false,
 "isTalking": false,
+"music": "",
 "name": "",
 "quest": 3
 }

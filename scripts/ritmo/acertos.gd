@@ -1,10 +1,15 @@
 extends Node3D
 @onready var point = get_node("/root/Game/Points")
 
+
 func _process(_delta: float) -> void:
-	var acertos = point.tiles * 100
+	var acertos = point.tiles 
 
 	if acertos < 10:
+		$teclasAcertadas.text = "1x"
+		point.combo = 1
+
+	elif acertos >= 10 and acertos < 15:
 		$teclasAcertadas.text = "1.5x"
 		point.combo = 1.5
 
