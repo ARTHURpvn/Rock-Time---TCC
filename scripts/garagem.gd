@@ -25,15 +25,21 @@ func _process(_delta: float) -> void:
 			instantiate.position = positions[i - 1]
 			add_child(instantiate)
 
-
 	if GlobalTime.quests[1].finished and !isDialog:
 		isDialog = true
 		Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao1.dtl")
-		
+	
+	if Dialogic.VAR.quest == 5 and !Dialogic.VAR.isTalking:
+		Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao1.dtl")
+
 
 func remove_existing_npcs():
-	var npcs = get_children()  # Pega todos os filhos
+	var npcs = get_children()
 	for npc in npcs:
 		if npc is StaticBody2D:  
 			remove_child(npc)
-			npc.queue_free()  # Remove o NPC da árvore e limpa da memória
+			npc.queue_free()
+			
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		get_tree().change_scene_to_file("res://scenes/primeira-fase/jogo.tscn")

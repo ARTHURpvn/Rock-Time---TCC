@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://d1ufhuuw3eqa3"]
+[gd_scene load_steps=25 format=4 uid="uid://d1ufhuuw3eqa3"]
 
 [ext_resource type="Script" path="res://scripts/garagem.gd" id="1_am2cl"]
 [ext_resource type="Texture2D" uid="uid://d1ymvswah8tjj" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_65_MV.png" id="1_wi3gq"]
@@ -10666,6 +10666,9 @@ sources/2 = SubResource("TileSetAtlasSource_omihv")
 
 [sub_resource type="TileSet" id="TileSet_8uum8"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8ggs"]
+size = Vector2(138, 20)
+
 [node name="garagem" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_am2cl")
@@ -10688,3 +10691,12 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("9_klcr4")]
 position = Vector2(43, 89)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(94, 197)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(107, 15)
+shape = SubResource("RectangleShape2D_a8ggs")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

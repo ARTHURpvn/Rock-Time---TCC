@@ -31,6 +31,9 @@ func _ready() -> void:
 	
 		"Cecilia":
 			texture = load('res://assets/personagens/cecilia.png')
+
+		"Finn":
+			texture = load('res://assets/personagens/cecilia.png')
 			
 	$Sprite2D.texture = texture
 	_animation_tree["parameters/Idle/blend_position"] = npc_pos
@@ -55,7 +58,8 @@ func _process(_delta: float) -> void:
 		if  Dialogic.VAR.quest == 2 and npc_name == "Harry" and !Dialogic.VAR.isTalking:
 			Dialogic.start_timeline("res://dialogo/timeline/fimQuestCeci.dtl")
 
-
+		if Dialogic.VAR.quest == 4 and npc_name == "Finn" and !Dialogic.VAR.isTalking:
+			Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao1.dtl")
 
 func _on_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

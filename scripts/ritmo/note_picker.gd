@@ -37,11 +37,11 @@ func _input(event):
 				is_pressed = false
 				is_collecting = false
 		2:
-			if event.is_action_pressed("ui_up"):
+			if event.is_action_pressed("ui_down"):
 				is_pressed = true
 				is_collecting = true
 
-			elif event.is_action_released("ui_up"):
+			elif event.is_action_released("ui_down"):
 				is_pressed = false
 				is_collecting = false
 		3: 

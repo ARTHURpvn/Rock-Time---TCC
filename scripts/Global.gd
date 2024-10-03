@@ -13,6 +13,7 @@ var quests = [
 	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Volte para a Garagem e Encontre Harry"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Vá para o Estacionamento"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Converse Com o Cara Misterioso"},
+	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Volte para Casa com os Amplificadores"},
 ]
 
 var quest : int = 0
@@ -42,6 +43,12 @@ func timer():
 		else:
 			time = str(hour) + ':' + '0' + str(min)
 		
+	if hour >= 19 and hour <= 4:
+		isNight = true
+	
+	else:
+		isNight = false
+
 	$Timer.wait_time = 1
 	$Timer.start()
 

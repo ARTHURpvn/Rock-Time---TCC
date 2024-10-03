@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=4 uid="uid://0bjx16a64f4b"]
+[gd_scene load_steps=77 format=4 uid="uid://0bjx16a64f4b"]
 
 [ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="1_8uai2"]
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="1_bppjc"]
@@ -60624,8 +60624,11 @@ _data = {
 "noite": SubResource("Animation_8yfw5")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xx0ul"]
+size = Vector2(73, 27)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xib26"]
-size = Vector2(138, 20)
+size = Vector2(138, 39)
 
 [node name="Jogo" type="Node2D"]
 y_sort_enabled = true
@@ -60667,15 +60670,15 @@ libraries = {
 autoplay = "dia"
 
 [node name="Player" parent="." instance=ExtResource("1_8uai2")]
-position = Vector2(-1082, -144)
+position = Vector2(-1085, -149)
 
 [node name="quest" type="Area2D" parent="."]
 z_index = 2
 position = Vector2(-1102, -290)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="quest"]
-position = Vector2(-2, 29)
-shape = SubResource("RectangleShape2D_xib26")
+position = Vector2(29, -14.5)
+shape = SubResource("RectangleShape2D_xx0ul")
 
 [node name="garagem" type="Area2D" parent="."]
 z_index = 2

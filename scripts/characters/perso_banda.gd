@@ -38,7 +38,7 @@ func _ready() -> void:
 			texture = load('res://assets/personagens/harry.png')
 	
 		"Cecilia":
-			texture = load('res://assets/personagens/cecilia.png')
+			texture = load('res://assets/personagens/Finn.png')
 
 	$Sprite2D.texture = texture
 
@@ -49,6 +49,7 @@ func _process(delta: float) -> void:
 
 	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
+	
 	var player_pos = player.position
 	direction = (player_pos - position).normalized()
 	

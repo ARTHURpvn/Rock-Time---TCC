@@ -21,5 +21,6 @@ func _process(_delta: float) -> void:
 			$".".visible = false
 		
 		if todo:
+			Dialogic.VAR.questEnded = false
 			todo = false
 			select_quest.finished = true
