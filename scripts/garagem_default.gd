@@ -1,6 +1,5 @@
 extends Node2D
 var follow_npc = preload("res://scenes/player/perso_banda.tscn")
-var inRange : bool = false
 var created : bool = false
 var instanciate
 
@@ -17,3 +16,6 @@ func _process(_delta: float) -> void:
 			instanciate.npc_name = npc_name
 			instanciate.position = Vector2(231, 184)
 			add_child(instanciate)
+
+	if Dialogic.VAR.Cecilia:
+		get_tree().change_scene_to_file("res://scenes/cenas/outro_dia.tscn")

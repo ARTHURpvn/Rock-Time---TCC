@@ -30,6 +30,9 @@ func _process(delta: float) -> void:
 			add_bar()
 
 func add_bar():
+	if curr_bar_index >= tracks_data[0].bars.size():
+		return  
+
 	var bar = bar_scn.instantiate()
 	bar.set_position(Vector3(curr_location.x, curr_location.y, curr_location.z))
 	bar.note_scale = note_scale

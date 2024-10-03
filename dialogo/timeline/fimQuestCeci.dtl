@@ -1,0 +1,24 @@
+[style name="style1"]
+if {quest} == 2 and {follow} == true:
+	jump FimCeci
+set {isTalking} = true
+
+characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
+characterCecilia: Claro meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim então vamos quero ver meu maninho logo.
+characterCastiel: Vamos seu irmão deve estar preocupado com a nossa demora.
+set {questEnded} = true
+set {quest} = 2
+set {follow} = true
+set {isTalking} = false
+[end_timeline]
+
+label FimCeci
+set {isTalking} = true
+set {follow} = false
+characterHarry: Ela não te deu trabalho não né?
+characterCastiel: Ela foi um amorzinho kkkkkk
+set {isTalking} = false
+[wait time="1.0"]
+set {Cecilia} = true
+set {questEnded} = true
+[end_timeline]

@@ -10691,7 +10691,7 @@ tile_set = SubResource("TileSet_8uum8")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("10_2fldw")]
-position = Vector2(231, 184)
+position = Vector2(212, 192)
 
 [node name="Lana" parent="." instance=ExtResource("11_0k8yi")]
 position = Vector2(-63, 3)

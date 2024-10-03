@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://3wod30rfetll"]
+
+[ext_resource type="Script" path="res://scripts/outro_dia.gd" id="1_q13qe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wouts"]
+font_size = 120
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="outroDia" type="CanvasLayer"]
+script = ExtResource("1_q13qe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1283.0
+offset_bottom = 724.0
+color = Color(0, 0, 0, 0.564706)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 264.0
+offset_top = 232.0
+offset_right = 1006.0
+offset_bottom = 397.0
+text = "No outro Dia"
+label_settings = SubResource("LabelSettings_wouts")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

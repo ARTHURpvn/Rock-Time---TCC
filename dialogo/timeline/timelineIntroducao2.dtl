@@ -1,46 +1,26 @@
 [style name="style1"]
+if {quest} == 1:
+	jump quest1
+
+if {Logo} == true:
+	jump Quest1.2
+
 set {isTalking} = true
-if {quest} == 2:
-	jump QuestHarry
-if {quest} == 3:
-	jump QuestCeci
-	characterCastiel: Perai oque!!! Não acredito que você goste desse tipo de múscia.
-characterKeith: Isso ai gente! Só a gente manter o ritmo.
-characterHanna: Único problema são os amplificadores que o Castiel tinha prometido arranjar uns novos. Certo... Castiel?
-characterCastiel: Galera não se preocupa já to devendo eles a um bom tempo e hoje mesmo vou buscar eles.
-characterLana: Hoje??? Mas você não tinha falado nada disso pra gente.
-characterCastiel: Não se preocupem eu arranjei um cara que arrumou pra mim uns amplificadores de bom pakas, sem falar que são baratos hehe.
+characterHarry: Tem como buscar minha irmã na escola e trazer aqui pro estudio? To praticando minha parte naquela musica que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as musicas favoritas dela ela é um saco pra cuidar.
+characterCastiel: Beleza conta comigo.
 set {quest} = 1
 set {isTalking} = false
 [end_timeline]
-label QuestHarry
+label quest1
 set {isTalking} = true
-if {name} == "Harry":
-	characterHarry: Tem como buscar minha irmã na escola e trazer aqui pro estudio? To praticando minha parte naquela musica que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as musicas favoritas dela ela é um saco pra cuidar.
-	characterCastiel: Beleza conta comigo.
-	set {quest} = 3
-	set {isTalking} = false
-	[end_timeline]
-else:
-	[end_timeline]
-label QuestCeci
-set {isTalking} = true
+
 characterCecilia: Quem é você?! Cadê o meu maninho? Ele tinha combinado de me buscar hoje. Eu não vou embora com um estranho.
 characterCastiel: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer infelizmente seu irmão teve um imprevisto então pediu para eu vir te buscar.
 characterCecilia: Você está querendo insinuar que esse imprevisto é mais importante do que eu? Seu boçal, e que história é essa de amigo eu não caio nesse papinho não se você não for embora eu vou gritar bem alto.
 characterCastiel: Calma por favor não grite o que eu posso fazer para te convencer a vir comigo?
-characterCecilia: Humm? Já sei cante uma música da “Katy Perry ” comigo, só assim eu vou com você.
 characterCecilia: Então veja com seus próprios olhos o que meu maninho me ensinou.
-characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
-characterCecilia: Claro meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim então vamos quero ver meu maninho logo.
-characterCastiel: Vamos seu irmão deve estar preocupado com a nossa demora.
-set {follow} = true
-set {isTalking} = false
-[end_timeline]
-label FimCeci
-set {isTalking} = true
-characterHarry: Ela não te deu trabalho não né?
-characterCastiel: Ela foi um amorzinho kkkkkk
-set {follow} = true
+characterCecilia: Humm? Já sei cante uma música da “Katy Perry ” comigo, só assim eu vou com você.
+set {music} = "error"
+set {Ritmo.playing} = true
 set {isTalking} = false
 [end_timeline]

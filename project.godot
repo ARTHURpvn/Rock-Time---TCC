@@ -61,11 +61,12 @@ variables={
 "playing": false,
 "special": false
 },
-"follow": false,
+"follow": true,
 "isTalking": false,
 "music": "",
 "name": "",
-"quest": 3
+"quest": 3,
+"questEnded": false
 }
 translation/enabled=false
 translation/original_locale="pt_BR"
@@ -75,9 +76,9 @@ translation/save_mode=0
 translation/add_separator=false
 save/autosave=false
 directories/dtl_directory={
+"fimQuestCeci": "res://dialogo/timeline/fimQuestCeci.dtl",
 "timelineIntroducao1": "res://dialogo/timeline/timelineIntroducao1.dtl",
 "timelineIntroducao2": "res://dialogo/timeline/timelineIntroducao2.dtl",
-"timelineIntroducao21": "res://dialogo/timeline/timelineIntroducao21.dtl",
 "timelineNovoMundo1": "res://dialogo/timeline/timelineNovoMundo1.dtl",
 "timelineNovoMundo2": "res://dialogo/timeline/timelineNovoMundo2.dtl",
 "timelineTutorial": "res://dialogo/timeline/timelineTutorial.dtl"

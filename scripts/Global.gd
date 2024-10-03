@@ -6,9 +6,17 @@ var isNight: bool = false
 var time: String = str(hour)+":"+str(min)
 var points : int
 var musicEnded : bool = false
+var player_position : Vector2 = Vector2(-1060, -146)
+
+var quests = [
+	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe ate a Escola e Busque a Cecilia"},
+	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Volte para a Garagem e Encontre Harry"},
+	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Vá para o Estacionamento"},
+	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Converse Com o Cara Misterioso"},
+]
 
 var quest : int = 0
-var questEnded : bool = false
+var questEnded : bool 
 
 func timer():
 	if min == 59:
@@ -41,6 +49,7 @@ func _on_timer_timeout() -> void:
 	timer()
 
 func _process(_delta: float) -> void:
+	questEnded = Dialogic.VAR.questEnded
 	quest = Dialogic.VAR.quest
 	GlobalTime.hour = hour
 	GlobalTime.min = min

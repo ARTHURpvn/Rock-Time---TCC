@@ -60667,7 +60667,7 @@ libraries = {
 autoplay = "dia"
 
 [node name="Player" parent="." instance=ExtResource("1_8uai2")]
-position = Vector2(-1058, -148)
+position = Vector2(-1082, -144)
 
 [node name="quest" type="Area2D" parent="."]
 z_index = 2

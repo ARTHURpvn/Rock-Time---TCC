@@ -1,0 +1,52 @@
+set {isTalking} = true
+if {quest} == 1:
+	jump quest1
+
+if {Cecilia} == true:
+	jump quest1.2
+
+if {follow} == true:
+	jump fimQuest1
+
+characterHarry: Castiel, Tem como buscar minha irmã na escola e trazer aqui pro estúdio? Estou praticando minha parte naquela música que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as músicas favoritas dela ela é um saco pra cuidar...
+characterCastiel: Beleza conta comigo!
+
+set {quest} = 1
+set {isTalking} = false
+[end_timeline]
+
+label quest1
+set {isTalking} = true
+
+characterCecilia: Quem é você! Cadê o meu maninho ele tinha combinado de me buscar hoje eu não vou embora com um estranho.
+characterCastiel: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer infelizmente seu irmão teve um imprevisto então pediu para eu vir te buscar.
+characterCecilia: Você está querendo insinuar que esse imprevisto é mais importante do que eu, seu boçal, e que história é essa de amigo eu não caio nesse papinho não se você não for embora eu vou gritar bem alto.
+characterCastiel: Calma por favor não grite o que eu posso fazer para te convencer a vir comigo?
+characterCecilia: Humm? Já sei cante uma música da “Katty Perry ” comigo, só assim eu vou com você.
+characterCastiel: Perai oque!!! Não acredito que você goste desse tipo de música.
+characterCecilia: Então veja com seus próprios olhos o que meu maninho me ensinou.
+
+set {music} = firework
+set {Ritmo.playing} = true
+set {isTalking} = false
+[end_timeline]
+
+label quest1.2
+set {isTalking} = true
+characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
+characterCecilia: Claro meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim então vamos quero ver meu maninho logo.
+characterCastiel: Vamos seu irmão deve estar preocupado com a nossa demora.
+set {quest} = 2
+set {follow} = true
+set {isTalking} = false
+[end_timeline]
+
+label fimQuest1
+set {isTalking} = true
+characterHarry: Até que enfim vocês chegaram que demora
+characterCastiel: Desculpa a demora Harry ela teve um imprevisto no banheiro.
+characterCecilia: Sim maninho eu acabei passando no banheiro.
+characterHarry: A sim, tudo bem então ela não te deu trabalho não né?
+characterCastiel: Ela foi um amorzinho kksksksks.
+set {isTalking} = false
+[end_timeline]

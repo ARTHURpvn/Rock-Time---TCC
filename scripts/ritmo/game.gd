@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var music_node = $Music
 @onready var road_node = $Road
-var music =  "back_in_black"
+@onready var music =  Dialogic.VAR.music
 
 var audio
 @onready var audio_file = "res://musicas/"+music+".mp3"

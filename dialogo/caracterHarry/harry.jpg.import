@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dorh3i6p7ftsf"
-path="res://.godot/imported/harry.png-13bf60afb2c6b69bd811df38b8a8f6f5.ctex"
+uid="uid://dod2owrxwhul7"
+path="res://.godot/imported/harry.jpg-0e313e66aaa8293e4ccddbe2fe9503b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogo/caracterHarry/harry.png"
-dest_files=["res://.godot/imported/harry.png-13bf60afb2c6b69bd811df38b8a8f6f5.ctex"]
+source_file="res://dialogo/caracterHarry/harry.jpg"
+dest_files=["res://.godot/imported/harry.jpg-0e313e66aaa8293e4ccddbe2fe9503b8.ctex"]
 
 [params]
 
