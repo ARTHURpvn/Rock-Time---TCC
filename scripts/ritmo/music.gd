@@ -29,6 +29,9 @@ func _process(delta: float) -> void:
 			return
 	else:
 		if !player.playing:
+			if Dialogic.VAR.quest == 1:
+				Dialogic.VAR.Cecilia = true
+				
 			GlobalTime.musicEnded = true
 
 		else:

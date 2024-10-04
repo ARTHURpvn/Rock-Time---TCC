@@ -18,9 +18,9 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if !Dialogic.VAR.isTalking:
-		_animate()
 		_move()
 		move_and_slide()
+	_animate()
 	
 	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
@@ -48,6 +48,10 @@ func _move() -> void:
 	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _friction)
 
 func _animate() -> void:
+	if Dialogic.VAR.isTalking:
+		_state_machine.travel("Idle")
+		return
+
 	if velocity.length() > 5:
 		_state_machine.travel("Walk")
 		return

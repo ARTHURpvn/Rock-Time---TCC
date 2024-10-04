@@ -9,7 +9,7 @@ var musicEnded : bool = false
 var player_position : Vector2 = Vector2(-1060, -146)
 
 var quests = [
-	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe ate a Escola e Busque a Cecilia"},
+	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe até a Escola e Busque a Cecilia"},
 	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Volte para a Garagem e Encontre Harry"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Vá para o Estacionamento"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Converse Com o Cara Misterioso"},
@@ -42,9 +42,9 @@ func timer():
 		else:
 			time = str(hour) + ':' + '0' + str(min)
 		
-	if hour >= 19 and hour <= 4:
+	if hour >= 19 or hour <= 4:
 		isNight = true
-	
+
 	else:
 		isNight = false
 

@@ -5,7 +5,6 @@ var static_npc = preload("res://scenes/player/static_npc.tscn")
 
 var names = ["Harry", "Keith", "Lana"]
 var positions = [Vector2(-4, 79), Vector2(97, 68), Vector2(41, 39)]
-
 var createdStatic : bool = false
 
 func _ready() -> void:

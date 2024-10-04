@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=4 uid="uid://0bjx16a64f4b"]
+[gd_scene load_steps=78 format=4 uid="uid://0bjx16a64f4b"]
 
 [ext_resource type="PackedScene" uid="uid://8cktn02h16m7" path="res://scenes/player/player.tscn" id="1_8uai2"]
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="1_bppjc"]
@@ -30,8 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://b4kubrwj8g6rc" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_17_MV.png" id="26_dgufd"]
 [ext_resource type="Texture2D" uid="uid://cey51gxd74yfg" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_36_MV.png" id="27_tlyug"]
 [ext_resource type="PackedScene" uid="uid://c1ycvoy3l0sm3" path="res://scenes/minimap.tscn" id="30_7fwhu"]
-[ext_resource type="PackedScene" uid="uid://nn8ibxkeymw" path="res://scenes/alert.tscn" id="31_1gejc"]
-[ext_resource type="PackedScene" uid="uid://bjk5u7lqbtbro" path="res://scenes/area.tscn" id="32_o5kbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0f7uq"]
 2:0/0 = 0
@@ -60539,7 +60537,7 @@ libraries = {
 autoplay = "dia"
 
 [node name="Player" parent="." instance=ExtResource("1_8uai2")]
-position = Vector2(-1085, -149)
+position = Vector2(-1080, -152)
 
 [node name="quest" type="Area2D" parent="."]
 z_index = 2
@@ -60554,12 +60552,12 @@ z_index = 2
 position = Vector2(-1102, -290)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="garagem"]
-position = Vector2(-6, 165)
+position = Vector2(-9, 179)
 shape = SubResource("RectangleShape2D_xib26")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MiniMap2" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("30_7fwhu")]
+[node name="MiniMap" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("30_7fwhu")]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -60573,20 +60571,8 @@ grow_horizontal = 0
 grow_vertical = 0
 player = NodePath("../../Player")
 
-[node name="alert" parent="." instance=ExtResource("31_1gejc")]
-visible = false
-z_index = 5
-position = Vector2(-928, -50)
-
-[node name="alert3" parent="." instance=ExtResource("31_1gejc")]
-visible = false
-z_index = 5
-position = Vector2(237, 74)
-
-[node name="area" parent="." instance=ExtResource("32_o5kbh")]
-z_index = 5
-position = Vector2(-595, -412)
-
 [connection signal="animation_finished" from="dia_noite/AnimationPlayer" to="dia_noite" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="quest" to="." method="_on_quest_body_entered"]
+[connection signal="body_exited" from="quest" to="." method="_on_quest_body_exited"]
 [connection signal="body_entered" from="garagem" to="." method="_on_garagem_body_entered"]
+[connection signal="body_exited" from="garagem" to="." method="_on_garagem_body_exited"]

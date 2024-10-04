@@ -55,4 +55,5 @@ Música 5\: Stairway to Heaven - Led Zeppelin
 characterCastiel: Blz, então vou ligar o amplificador na guitarra pra gente começar a tocar.
 [wait time="5.0"]
 set {isTalking} = false
+set {Cecilia} = true
 [end_timeline]

@@ -50,10 +50,7 @@ func _process(_delta: float) -> void:
 	if inArea and Input.is_action_just_pressed("dialog"):
 		Dialogic.VAR.name = npc_name
 		if Dialogic.VAR.quest == 1 and npc_name == "Cecilia" and !Dialogic.VAR.isTalking:
-			if Dialogic.VAR.Logo:
-				Dialogic.start_timeline("res://dialogo/timeline/fimQuestCeci.dtl")
-			else:
-				Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao2.dtl")
+			Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao2.dtl")
 		
 		if  Dialogic.VAR.quest == 2 and npc_name == "Harry" and !Dialogic.VAR.isTalking:
 			Dialogic.start_timeline("res://dialogo/timeline/fimQuestCeci.dtl")

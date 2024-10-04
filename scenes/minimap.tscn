@@ -44,7 +44,13 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_4wtmq")
 
 [node name="AlertMaker" type="Sprite2D" parent="MarginContainer/Grid"]
-visible = false
-position = Vector2(130, 99)
+position = Vector2(316, 110)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_iuf1b")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
