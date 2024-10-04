@@ -1,6 +1,5 @@
 [style name="style1"]
 set {isTalking} = true
-set {questEnded} = false
 if {quest} == 3:
 	jump InicioQuest
 if {quest} == 4:
@@ -13,10 +12,13 @@ characterKeith: Você sempre arruma compromissos demais Castiel desse jeito fica
 characterLana: Olha gente, porque a gente não vai junto buscar os amplificadores.
 characterHanna: Concordo com a Lana.
 characterHarry: Vamos lá então.
+
 set {follow} = true
 set {quest} = 3
 set {isTalking} = false
 [end_timeline]
+
+
 label InicioQuest
 set {isTalking} = true
 characterHarry: Castiel você não disse que esse cara vendia em uma vã.
@@ -25,6 +27,8 @@ characterCastiel: Calma gente vai dar tudo certo
 set {isTalking} = false
 set {quest} = 4
 [end_timeline]
+
+
 label TalkFinn
 set {isTalking} = true
 characterCastiel: Oi você que é o Finn?
@@ -34,9 +38,12 @@ characterFinn: Eles já estão na parte de trás da vã. Como combinamos $450,00
 characterCastiel: Nossa são baratos mesmo mas eles estão funcionando certinho?
 characterFinn: Logico meus produtos são de qualidade.
 characterCastiel: Tá bom vou levar.
+
 set {quest} = 5
 set {isTalking} = false
 [end_timeline]
+
+
 label FimQuest
 set {isTalking} = true
 characterLana: Então galera essas são as músicas que iremos tocar
@@ -48,3 +55,4 @@ Música 5\: Stairway to Heaven - Led Zeppelin
 characterCastiel: Blz, então vou ligar o amplificador na guitarra pra gente começar a tocar.
 [wait time="5.0"]
 set {isTalking} = false
+[end_timeline]

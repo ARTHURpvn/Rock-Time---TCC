@@ -20,5 +20,4 @@ characterCastiel: Ela foi um amorzinho kkkkkk
 set {isTalking} = false
 [wait time="1.0"]
 set {Cecilia} = true
-set {questEnded} = true
 [end_timeline]

@@ -1,5 +1,5 @@
 [style name="style1"]
-set {music} = "back_in_black"
+set {music} = "error"
 set {Logo} = true
 [wait time="3.0"]
 set {Logo} = false

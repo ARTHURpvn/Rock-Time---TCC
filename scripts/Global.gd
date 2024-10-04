@@ -17,7 +17,6 @@ var quests = [
 ]
 
 var quest : int = 0
-var questEnded : bool 
 
 func timer():
 	if min == 59:
@@ -56,7 +55,6 @@ func _on_timer_timeout() -> void:
 	timer()
 
 func _process(_delta: float) -> void:
-	questEnded = Dialogic.VAR.questEnded
 	quest = Dialogic.VAR.quest
 	GlobalTime.hour = hour
 	GlobalTime.min = min

@@ -61,11 +61,11 @@ variables={
 "playing": false,
 "special": false
 },
-"follow": true,
+"follow": false,
 "isTalking": false,
 "music": "",
 "name": "",
-"quest": 3,
+"quest": 0,
 "questEnded": false
 }
 translation/enabled=false
@@ -102,6 +102,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/phan
 [global_group]
 
 picker=""
+minimap_objects=""
 
 [input]
 

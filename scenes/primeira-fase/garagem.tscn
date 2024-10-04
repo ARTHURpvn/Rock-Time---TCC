@@ -10669,7 +10669,7 @@ sources/2 = SubResource("TileSetAtlasSource_omihv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8ggs"]
 size = Vector2(138, 20)
 
-[node name="garagem" type="Node2D"]
+[node name="garagem" type="Node2D" groups=["minimap_objects"]]
 y_sort_enabled = true
 script = ExtResource("1_am2cl")
 
