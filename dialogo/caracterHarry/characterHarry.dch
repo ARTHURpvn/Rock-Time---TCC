@@ -17,7 +17,7 @@
 "portraits": {
 "Harry": {
 "export_overrides": {
-"image": "\"res://dialogo/caracterHarry/harry.jpg\""
+"image": "\"res://assets/porta retrato/harry.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,

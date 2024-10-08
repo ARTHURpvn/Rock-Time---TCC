@@ -12,7 +12,7 @@ var time
 @export var _move_speed: float = 60.0
 @export var _friction: float = 0.1
 @export var _acceleration: float = 0.5
-@export var distance_behind: float = 30.0
+@export var distance_behind: float = 20.0
 
 @export var npc_name: String
 
@@ -30,18 +30,18 @@ func _ready() -> void:
 			
 		"Keith":
 			texture = load('res://assets/personagens/keith.png')
+			distance_behind = 30
 		
 		"Hanna":	
 			texture = load('res://assets/personagens/lana.png')
+			distance_behind = 40
 		
 		"Harry":
 			texture = load('res://assets/personagens/harry.png')
+			distance_behind = 35
 	
 		"Cecilia":
 			texture = load('res://assets/personagens/cecilia.png')
-
-		"Finn":
-			texture = load('res://assets/personagens/finn.png')
 
 	$Sprite2D.texture = texture
 

@@ -17,7 +17,7 @@
 "portraits": {
 "Lana": {
 "export_overrides": {
-"image": "\"res://dialogo/caracterLana/lana.png\""
+"image": "\"res://assets/porta retrato/lana.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

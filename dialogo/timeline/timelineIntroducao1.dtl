@@ -7,9 +7,9 @@ if {quest} == 4:
 if {quest} == 5:
 	jump FimQuest
 
-characterCastiel: Foi mal galera tive que ir buscar a irmã do Harry na escola não consegui pegar os amplificadores.
-characterKeith: Você sempre arruma compromissos demais Castiel desse jeito fica difícil deixar uma missão nas suas mãos.
-characterLana: Olha gente, porque a gente não vai junto buscar os amplificadores.
+characterCastiel: Foi mal galera, tive que ir buscar a irmã do Harry na escola e não consegui pegar os amplificadores.
+characterKeith: Você sempre arruma compromissos demais Castiel, desse jeito fica difícil deixar uma missão nas suas mãos.
+characterLana: Olha gente, porque a gente não vai junto buscar os amplificadores?
 characterHanna: Concordo com a Lana.
 characterHarry: Vamos lá então.
 
@@ -21,9 +21,9 @@ set {isTalking} = false
 
 label InicioQuest
 set {isTalking} = true
-characterHarry: Castiel você não disse que esse cara vendia em uma vã.
+characterHarry: Castiel, você não disse que esse cara vendia em uma vã.
 characterHanna: Uma vã preta bem sinistra.
-characterCastiel: Calma gente vai dar tudo certo
+characterCastiel: Calma gente, vai dar tudo certo
 set {isTalking} = false
 set {quest} = 4
 [end_timeline]
@@ -31,29 +31,27 @@ set {quest} = 4
 
 label TalkFinn
 set {isTalking} = true
-characterCastiel: Oi você que é o Finn?
+characterCastiel: Oi, você que é o Finn?
 characterFinn: Eu mesmo.
 characterCastiel: Eu sou o Castiel, sou o cara que pediu os amplificadores.
 characterFinn: Eles já estão na parte de trás da vã. Como combinamos $450,00 e você leva.
-characterCastiel: Nossa são baratos mesmo mas eles estão funcionando certinho?
-characterFinn: Logico meus produtos são de qualidade.
-characterCastiel: Tá bom vou levar.
+characterCastiel: Nossa são baratos mesmo, mas eles estão funcionando certinho?
+characterFinn: Lógico, meus produtos são de qualidade.
+characterCastiel: Tá bom, vou levar.
 
 set {quest} = 5
 set {isTalking} = false
 [end_timeline]
 
-
 label FimQuest
 set {isTalking} = true
-characterLana: Então galera essas são as músicas que iremos tocar
-characterLana: Música 1\: Violino n°4 - Mozart \
-Música 2\: Pianon nº2 - Beethoven \
-Música 3\: I Say a Little Prayer - Aretha Franklin \
-Música 4\: Dancing in the Street - Eddie Van Halen \
-Música 5\: Stairway to Heaven - Led Zeppelin
+characterLana: Então galera, essas são as músicas que iremos tocar
+characterLana: Música 1\: Violino n°4 - Mozart;
+Música 2\: Pianon nº2 - Beethoven;
+Música 3\: I Say a Little Prayer - Aretha Franklin;
+Música 4\: Dancing in the Street - Eddie Van Halen;
+Música 5\: Stairway to Heaven - Led Zeppelin.
 characterCastiel: Blz, então vou ligar o amplificador na guitarra pra gente começar a tocar.
-[wait time="5.0"]
 set {isTalking} = false
-set {Cecilia} = true
+set {Logo} = true
 [end_timeline]

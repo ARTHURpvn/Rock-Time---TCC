@@ -28,7 +28,8 @@ overrides = {
 "box_panel": "\"default_stylebox.tres\"",
 "box_size": "Vector2(900, 160)",
 "name_label_color_mode": "1",
-"portrait_bg_modulate": "Color(0, 0, 0, 0.513726)"
+"name_label_hide_when_no_character": "true",
+"portrait_bg_modulate": "Color(0, 0, 0, 0.690196)"
 }
 
 [sub_resource type="Resource" id="Resource_r4vla"]
@@ -55,7 +56,7 @@ overrides = {}
 script = ExtResource("9_7a4x8")
 name = "style1"
 base_overrides = {
-"global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
+"global_bg_color": "Color(0, 0, 0, 1)"
 }
 layers = Array[ExtResource("1_i2d73")]([SubResource("Resource_liw8u"), SubResource("Resource_uanff"), SubResource("Resource_ojplf"), SubResource("Resource_r4vla"), SubResource("Resource_1syid"), SubResource("Resource_gvxph"), SubResource("Resource_oj2qo")])
-metadata/_latest_layer = -1
+metadata/_latest_layer = 2

@@ -25,7 +25,7 @@ shader = ExtResource("2_1mhvf")
 shader_parameter/radius = 200.0
 shader_parameter/box_size = Vector2(100, 100)
 shader_parameter/box_padding = 10.0
-shader_parameter/wobble_amount = 0.75
+shader_parameter/wobble_amount = 0.0
 shader_parameter/wobble_speed = 10.0
 shader_parameter/wobble_detail = 0.51
 shader_parameter/deformation_sampler = SubResource("NoiseTexture2D_kr7hw")
@@ -50,6 +50,8 @@ script = ExtResource("1_jdhpk")
 
 [node name="Tail" type="Line2D" parent="Group"]
 unique_name_in_owner = true
+position = Vector2(19.8989, -20.3564)
+scale = Vector2(0.771277, 0.771277)
 points = PackedVector2Array(-9, 7, -29, 118, -95, 174, -193, 195)
 width = 96.0
 width_curve = SubResource("Curve_0j8nu")

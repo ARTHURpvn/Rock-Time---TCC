@@ -19,7 +19,7 @@ func add_notes():
 		line += 1
 
 
-func add_note(line, data):
+func add_note(lines, data):
 	var note_scn
 	if int(data.len) >= 300:
 		note_scn = long_note_scn
@@ -28,7 +28,7 @@ func add_note(line, data):
 
 	var note = note_scn.instantiate()
 
-	note.line = line
+	note.line = lines
 	note.position.z = int(data.pos)
 
 	note.length = int(data.len)

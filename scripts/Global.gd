@@ -1,12 +1,12 @@
 extends Node
 
-var hour: int = 18
-var min: int = 50
+var hour: int = 12
+var minu: int = 0
 var isNight: bool = false
-var time: String = str(hour)+":"+str(min)
+var time: String = str(hour)+":"+str(minu)
 var points : int
 var musicEnded : bool = false
-var player_position : Vector2 = Vector2(-1060, -146)
+var player_position : Vector2 = Vector2(-1060, 114)
 
 var quests = [
 	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe até a Escola e Busque a Cecilia"},
@@ -19,37 +19,38 @@ var quests = [
 var quest : int = 0
 
 func timer():
-	if min == 59:
-		if hour == 23:
-			hour = 0
+	if Dialogic.VAR.quest >= 1:
+		if minu == 59:
+			if hour == 23:
+				hour = 0
 
+			else:
+				hour += 1
+				
+			minu = 0
 		else:
-			hour += 1
-			
-		min = 0
-	else:
-		min += 1
-	
-	if hour < 10:
-		if min > 9 :
-			time = '0' + str(hour) + ':' + str(min)
-		else:
-			time = '0' + str(hour) + ':' + '0' + str(min)
-	else:
-		time = str(hour) + ':' + str(min)
-		if min > 9 :
-			time = str(hour) + ':' + str(min)
-		else:
-			time = str(hour) + ':' + '0' + str(min)
+			minu += 1
 		
-	if hour >= 19 or hour <= 4:
-		isNight = true
+		if hour < 10:
+			if minu > 9 :
+				time = '0' + str(hour) + ':' + str(minu)
+			else:
+				time = '0' + str(hour) + ':' + '0' + str(minu)
+		else:
+			time = str(hour) + ':' + str(minu)
+			if minu > 9 :
+				time = str(hour) + ':' + str(minu)
+			else:
+				time = str(hour) + ':' + '0' + str(minu)
+			
+		if hour >= 19 or hour <= 4:
+			isNight = true
 
-	else:
-		isNight = false
+		else:
+			isNight = false
 
-	$Timer.wait_time = 1
-	$Timer.start()
+		$Timer.wait_time = 1
+		$Timer.start()
 
 func _on_timer_timeout() -> void:
 	timer()
@@ -57,5 +58,5 @@ func _on_timer_timeout() -> void:
 func _process(_delta: float) -> void:
 	quest = Dialogic.VAR.quest
 	GlobalTime.hour = hour
-	GlobalTime.min = min
+	GlobalTime.minu = minu
 	GlobalTime.time = time

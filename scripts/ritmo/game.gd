@@ -42,4 +42,4 @@ func load_map():
 
 func _process(_delta: float) -> void:
 	if GlobalTime.musicEnded:
-		get_tree().change_scene_to_file("res://scenes/pontuacao.tscn")
+		get_tree().change_scene_to_file("res://scenes/cenas/pontuacao.tscn")

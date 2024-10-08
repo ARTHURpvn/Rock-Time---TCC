@@ -17,7 +17,7 @@
 "portraits": {
 "Castiel": {
 "export_overrides": {
-"image": "\"res://dialogo/caracterCastiel/castiel.png\""
+"image": "\"res://assets/porta retrato/castiel.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

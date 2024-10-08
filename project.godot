@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rock Time"
-run/main_scene="res://scenes/primeira-fase/jogo.tscn"
+run/main_scene="res://scenes/cenas/mapa/inicial.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [autoload]
@@ -34,7 +34,7 @@ directories/dch_directory={
 "characterMozart": "res://dialogo/caracterMozart/characterMozart.dch",
 "characterNPC": "res://dialogo/caracterNPC/characterNPC.dch"
 }
-layout/default_style="res://dialogo/estilo/style2.tres"
+layout/default_style="res://dialogo/estilo/style1.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -88,6 +88,7 @@ glossary/default_case_sensitive=true
 text/autocolor_names=true
 text/split_at_new_lines=false
 text/autoadvance_enabled=true
+glossary/glossary_files=["res://dialogo/glossary/glossary.tres"]
 
 [display]
 

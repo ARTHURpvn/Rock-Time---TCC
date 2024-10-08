@@ -16,8 +16,10 @@ Design: Alex <br>
 * [x] Quando terminar "firework" (musica da quest da cecilia) iniciar instantaneo o dialogo
 * [x] Consertar quando comecar dialogo, player nao ficar na animacao de andando
 * [x] Consertar luz do player
-* [ ] Melhorar mecanica dos personagens seguirem
+* [X] Consertar cecilia ficar spawnando sempre
+* [X] Consertar cena que aparece "mais tarde"
+* [x] Melhorar mecanica dos personagens seguirem
+* [x] Adicionar "tela" onde mostra os botoes para quando pode interagir
 * [ ] Consertar cena garagem (npc nasce ja seguindo player, mesmo quando no primeiro dialogo)
-* [ ] Adicionar "tela" onde mostra os botoes para quando pode interagir
-* [ ] Consertar cena que aparece "mais tarde"
 * [ ] Consertar npc empurrando player quando esta encostado neles
+* [ ] Consertar NPC seguindo ficar de costas qnd para

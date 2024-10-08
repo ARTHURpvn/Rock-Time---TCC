@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjk5u7lqbtbro"]
+
+[ext_resource type="Texture2D" uid="uid://bwm2rfd2jl2tk" path="res://assets/minimap/range.png" id="2_7lwi1"]
+
+[node name="area" type="Node2D" groups=["minimap_objects"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("2_7lwi1")
