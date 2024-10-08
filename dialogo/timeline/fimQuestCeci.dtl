@@ -2,7 +2,6 @@
 if {quest} == 2 and {follow} == true:
 	jump FimCeci
 set {isTalking} = true
-
 characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
 characterCecilia: Claro, meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim, então vamos, quero ver meu maninho logo.
 characterCastiel: Vamos, seu irmão deve estar preocupado com a nossa demora.

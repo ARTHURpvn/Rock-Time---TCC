@@ -8,5 +8,5 @@ characterCastiel: Vocês querem que eu toque um solo que não conheço ai fica d
 characterHanna: Então vamo lá, tudo de novo gente sem briga.
 set {Ritmo.playing} = true
 [wait time="0.5"]
-Vamos começar com o básico! Acerte suas primeiras notas da música!
+"caracterNarrador ": Vamos começar com o básico! Acerte suas primeiras notas da música!
 [end_timeline]

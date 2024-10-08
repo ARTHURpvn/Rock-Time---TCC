@@ -91,9 +91,9 @@ func _process(_delta: float) -> void:
 	if isPlayer and  Input.is_action_just_pressed("dialog"):
 		GlobalTime.player_position = Vector2(GlobalTime.player_position.x, 114)
 		if Dialogic.VAR.quest == 5:
-			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem.tscn") 
+			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem.tscn")
 			return
-		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn") 
+		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
 
 
 func _on_quest_body_entered(body: Node2D) -> void:		

@@ -65,7 +65,7 @@ variables={
 "isTalking": false,
 "music": "",
 "name": "",
-"quest": 0,
+"quest": 5,
 "questEnded": false
 }
 translation/enabled=false

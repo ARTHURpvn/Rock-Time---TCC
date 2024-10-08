@@ -28,7 +28,6 @@ set {isTalking} = false
 set {quest} = 4
 [end_timeline]
 
-
 label TalkFinn
 set {isTalking} = true
 characterCastiel: Oi, você que é o Finn?
@@ -46,10 +45,12 @@ set {isTalking} = false
 label FimQuest
 set {isTalking} = true
 characterLana: Então galera, essas são as músicas que iremos tocar
-characterLana: Música 1\: Violino n°4 - Mozart;
-Música 2\: Pianon nº2 - Beethoven;
+characterLana: Música 1\: Violino n°4 - Mozart;\
+Música 2\: Pianon nº2 - Beethoven;\
+Música 3\: I Say a Little Prayer - Aretha Franklin;\
+Música 4\: Dancing in the Street - Eddie Van Halen;\
+Música 5\: Stairway to Heaven - Led Zeppelin.
 Música 3\: I Say a Little Prayer - Aretha Franklin;
-Música 4\: Dancing in the Street - Eddie Van Halen;
 Música 5\: Stairway to Heaven - Led Zeppelin.
 characterCastiel: Blz, então vou ligar o amplificador na guitarra pra gente começar a tocar.
 set {isTalking} = false

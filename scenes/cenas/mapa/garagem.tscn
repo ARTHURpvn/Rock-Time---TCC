@@ -10689,14 +10689,14 @@ metadata/_edit_lock_ = true
 tile_set = SubResource("TileSet_8uum8")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("9_klcr4")]
-position = Vector2(43, 89)
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(94, 197)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(107, 15)
 shape = SubResource("RectangleShape2D_a8ggs")
+
+[node name="Player" parent="." instance=ExtResource("9_klcr4")]
+position = Vector2(43, 89)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -10700,7 +10700,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Node/Player:position")
+tracks/2/path = NodePath("../Player:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -10766,7 +10766,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Node/Player:position")
+tracks/2/path = NodePath("../Player:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -10810,26 +10810,6 @@ _data = {
 y_sort_enabled = true
 script = ExtResource("1_8b8l5")
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Player" parent="Node" instance=ExtResource("10_2fldw")]
-position = Vector2(-23, 62)
-
-[node name="Lana" parent="Node" instance=ExtResource("11_0k8yi")]
-position = Vector2(-53, 5)
-npc_name = "Lana"
-npc_pos = Vector2(1, 0)
-
-[node name="Harry" parent="Node" instance=ExtResource("11_0k8yi")]
-position = Vector2(17, -51)
-npc_name = "Harry"
-npc_pos = Vector2(0, 1)
-
-[node name="Keith" parent="Node" instance=ExtResource("11_0k8yi")]
-position = Vector2(93, 6)
-npc_name = "Keith"
-npc_pos = Vector2(-1, 0)
-
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(24, 17)
 scale = Vector2(1.40625, 1.625)
@@ -10866,5 +10846,25 @@ anim_player = NodePath("AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_avthw")
 }
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Lana" parent="Node" instance=ExtResource("11_0k8yi")]
+position = Vector2(-53, 5)
+npc_name = "Lana"
+npc_pos = Vector2(1, 0)
+
+[node name="Harry" parent="Node" instance=ExtResource("11_0k8yi")]
+position = Vector2(17, -51)
+npc_name = "Harry"
+npc_pos = Vector2(0, 1)
+
+[node name="Keith" parent="Node" instance=ExtResource("11_0k8yi")]
+position = Vector2(93, 6)
+npc_name = "Keith"
+npc_pos = Vector2(-1, 0)
+
+[node name="Player" parent="." instance=ExtResource("10_2fldw")]
+position = Vector2(-23, 62)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

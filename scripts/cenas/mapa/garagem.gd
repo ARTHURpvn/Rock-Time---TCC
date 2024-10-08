@@ -12,6 +12,7 @@ func _ready() -> void:
 		Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao2.dtl")
 
 func _process(_delta: float) -> void:
+	print(Dialogic.VAR.Logo)
 	if Dialogic.VAR.quest == 1:
 		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
 
@@ -23,6 +24,9 @@ func _process(_delta: float) -> void:
 			instantiate.npc_name = names[i - 1]
 			instantiate.position = positions[i - 1]
 			add_child(instantiate)
+
+	if Dialogic.VAR.quest == 5 and Dialogic.VAR.Logo:
+		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
 
 	if Dialogic.VAR.quest == 2 and !Dialogic.VAR.isTalking:
 		Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao1.dtl")
