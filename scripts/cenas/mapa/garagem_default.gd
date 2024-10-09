@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 	if Dialogic.VAR.quest == 5 and Dialogic.VAR.Logo and !teste:
 		teste = true
 		$AnimationTree/AnimationPlayer.active = true
-		$AnimationTree/AnimationPlayer.current_animation = "cutscene_amplificador"
+		$AnimationTree/AnimationPlayer.current_animation = "amplificador"
 
 	if teste and !$AnimationTree/AnimationPlayer.active:
 		pass
