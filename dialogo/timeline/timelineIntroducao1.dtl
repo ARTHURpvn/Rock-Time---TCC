@@ -45,14 +45,18 @@ set {isTalking} = false
 label FimQuest
 set {isTalking} = true
 characterLana: Então galera, essas são as músicas que iremos tocar
-characterLana: Música 1\: Violino n°4 - Mozart;\
-Música 2\: Pianon nº2 - Beethoven;\
-Música 3\: I Say a Little Prayer - Aretha Franklin;\
-Música 4\: Dancing in the Street - Eddie Van Halen;\
-Música 5\: Stairway to Heaven - Led Zeppelin.
-Música 3\: I Say a Little Prayer - Aretha Franklin;
-Música 5\: Stairway to Heaven - Led Zeppelin.
+characterLana: Música 1\: Bohemian Rhapsody - Queen\
+\
+Música 2\: Michael Jackson - Billie Jean\
+\
+Música 3\: Nirvana - Smells Like Spirit\
+\
+Música 4\: Link Park - Numb\
+\
+Música 5\: Bruno Mars - Locked Out Of Heaven
 characterCastiel: Blz, então vou ligar o amplificador na guitarra pra gente começar a tocar.
 set {isTalking} = false
+set {cutscene} = "amplificador"
+set {isCutscene} = true
 set {Logo} = true
 [end_timeline]

@@ -1,10 +1,9 @@
-[gd_scene load_steps=30 format=4 uid="uid://b4mewlause07i"]
+[gd_scene load_steps=26 format=4 uid="uid://b4mewlause07i"]
 
 [ext_resource type="Script" path="res://scripts/cenas/mapa/garagem_default.gd" id="1_8b8l5"]
 [ext_resource type="Texture2D" uid="uid://d1ymvswah8tjj" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_65_MV.png" id="2_1wqan"]
 [ext_resource type="Texture2D" uid="uid://dgkdeti4xlf7a" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_106_MV.png" id="3_1p2jd"]
 [ext_resource type="Texture2D" uid="uid://rvhaa467loyx" path="res://assets/tilesets/Modern_Exteriors_RPG_Maker_MV/Tileset_108_MV.png" id="4_8tloc"]
-[ext_resource type="Texture2D" uid="uid://bp6dhawqcog1t" path="res://assets/teste.png" id="4_gcn1b"]
 [ext_resource type="Texture2D" uid="uid://bsycmfphrfqry" path="res://assets/tilesets/WIP_Theme/Condo_6_Door_16x16.png" id="5_cc2rc"]
 [ext_resource type="Texture2D" uid="uid://23qm3g2lw3ly" path="res://assets/tilesets/WIP_Theme/Condo_6_Garage_Door_16x16.png" id="6_mfley"]
 [ext_resource type="Texture2D" uid="uid://cld0trdyhtisc" path="res://assets/tilesets/WIP_Theme/Condo_6_Garage_Door_48x48.png" id="7_p5pju"]
@@ -10671,149 +10670,9 @@ sources/2 = SubResource("TileSetAtlasSource_omihv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xtpk"]
 size = Vector2(138, 20)
 
-[sub_resource type="Animation" id="Animation_2ih3u"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite2D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(27, 13)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Node/Lana:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-53, 5)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Player:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-23, 62)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Node/Keith:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(93, 6)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Node/Harry:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(17, -51)]
-}
-
-[sub_resource type="Animation" id="Animation_2yrgj"]
-resource_name = "cutscene_amplificador"
-length = 1.5
-loop_mode = 1
-step = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Sprite2D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(26, 14), Vector2(27, 15), Vector2(26, 15)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Node/Lana:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-53, 5), Vector2(-60, 11), Vector2(-71, 15)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Player:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-23, 62), Vector2(-39, 67), Vector2(-65, 68)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Node/Keith:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(93, 6), Vector2(113, 6), Vector2(138, 4)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Node/Harry:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(17, -51), Vector2(31, -64), Vector2(54, -70)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_avthw"]
-_data = {
-"RESET": SubResource("Animation_2ih3u"),
-"cutscene_amplificador": SubResource("Animation_2yrgj")
-}
-
 [node name="garagem_default" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_8b8l5")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(24, 17)
-scale = Vector2(1.40625, 1.625)
-texture = ExtResource("4_gcn1b")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-4, -1)
@@ -10837,15 +10696,6 @@ position = Vector2(94, 197)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(107, 15)
 shape = SubResource("RectangleShape2D_1xtpk")
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-root_node = NodePath(".")
-anim_player = NodePath("AnimationPlayer")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree"]
-libraries = {
-"": SubResource("AnimationLibrary_avthw")
-}
 
 [node name="Node" type="Node" parent="."]
 

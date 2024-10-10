@@ -7,6 +7,7 @@ var time: String = str(hour)+":"+str(minu)
 var points : int
 var musicEnded : bool = false
 var player_position : Vector2 = Vector2(-1060, 114)
+var year : int = 2010
 
 var quests = [
 	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe até a Escola e Busque a Cecilia"},

@@ -61,7 +61,9 @@ variables={
 "playing": false,
 "special": false
 },
+"cutscene": "",
 "follow": false,
+"isCutscene": false,
 "isTalking": false,
 "music": "",
 "name": "",

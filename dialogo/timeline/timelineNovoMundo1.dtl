@@ -1,11 +1,11 @@
-O que aconteceu onde estamos?
+characterCastiel: O que aconteceu onde estamos?
 characterKeith: Acho que estamos no parque Antônio Dias.
 characterHarry: Nossa parece até que voltamos no tempo haha.
 characterLana: Não isso é impossível.
 characterHanna: Castiel pergunta para aquela moça que ano estamos.
-Oii boa tarde, moça que ano estamos?
+characterCastiel: Oii boa tarde, moça que ano estamos?
 set {quest} = 1
-É que eu tô meio confuso.
+characterCastiel: É que eu tô meio confuso.
 characterLana: Como isso é possível?
 characterKeith: Não sei.
 characterHanna: Tá e o que vamos fazer agora?
