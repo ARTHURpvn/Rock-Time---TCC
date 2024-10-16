@@ -4,7 +4,7 @@ var zoom = 1
 var endAnim = false
 
 func _ready():
-	Dialogic.start_timeline("res://dialogo/timeline/timelineTutorial.dtl")
+	Dialogic.start_timeline("res://dialogo/timeline/tutorial.dtl")
 
 func _process(_delta):
 	var isPLaiyng = Dialogic.VAR.Ritmo.playing
@@ -27,4 +27,4 @@ func _process(_delta):
 		$City.visible = false
 
 	if Dialogic.VAR.Ritmo.special:
-		Dialogic.start_timeline("res://dialogo/timeline/timelineTutorial.dtl")
+		Dialogic.start_timeline("res://dialogo/timeline/tutorial.dtl")

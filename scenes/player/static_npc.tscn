@@ -488,7 +488,5 @@ position = Vector2(-1102, -290)
 position = Vector2(1103, 280)
 shape = SubResource("RectangleShape2D_pu0m1")
 
-[node name="Node2D" type="Node2D" parent="."]
-
 [connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
 [connection signal="body_exited" from="area" to="." method="_on_area_body_exited"]

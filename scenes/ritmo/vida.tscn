@@ -6,14 +6,14 @@
 script = ExtResource("1_kn334")
 
 [node name="Label" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0260613, 0.616076, 0.001)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0260613, 0.923456, 0.001)
 modulate = Color(1, 0, 0, 1)
 text = "Vida"
 font_size = 90
 outline_size = 6
 
 [node name="Life" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00642753, 0.19627, 0.002)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00642753, 0.310223, 0.002)
 text = "100"
 font_size = 90
 outline_size = 6

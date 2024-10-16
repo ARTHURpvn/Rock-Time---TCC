@@ -1,5 +1,5 @@
 extends Node3D
-@onready var point = get_node("/root/Game/Points")
+@onready var point = get_node("../Points")
 
 
 func _process(_delta: float) -> void:

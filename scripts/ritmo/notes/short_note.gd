@@ -6,5 +6,5 @@ func _on_process(delta: float) -> void:
 	if not collected:
 		if is_colliding and picker:
 			if picker.is_collecting:
-				point.add_points(15)
+				GlobalTime.add_points(15)
 				collect()

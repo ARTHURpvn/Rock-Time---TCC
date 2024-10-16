@@ -33,7 +33,13 @@ func _ready() -> void:
 			texture = load('res://assets/personagens/cecilia.png')
 
 		"Finn":
-			texture = load('res://assets/personagens/cecilia.png')
+			texture = load('res://assets/personagens/Finn.png')
+
+		"Bruno Mars":
+			texture = load('res://assets/personagens/brunoMars.png')
+
+		"Michael Jackson":
+			texture = load('res://assets/personagens/michaelJackson.png')
 			
 	$Sprite2D.texture = texture
 	_animation_tree["parameters/Idle/blend_position"] = npc_pos
@@ -50,18 +56,25 @@ func _process(_delta: float) -> void:
 	if inArea and Input.is_action_just_pressed("dialog"):
 		Dialogic.VAR.name = npc_name
 		if Dialogic.VAR.quest == 1 and npc_name == "Cecilia" and !Dialogic.VAR.isTalking:
-			Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao2.dtl")
+			Dialogic.start_timeline("res://dialogo/timeline/introducao2.dtl")
 		
 		if  Dialogic.VAR.quest == 2 and npc_name == "Harry" and !Dialogic.VAR.isTalking:
 			Dialogic.start_timeline("res://dialogo/timeline/fimQuestCeci.dtl")
 
 		if Dialogic.VAR.quest == 4 and npc_name == "Finn" and !Dialogic.VAR.isTalking:
-			Dialogic.start_timeline("res://dialogo/timeline/timelineIntroducao1.dtl")
+			Dialogic.start_timeline("res://dialogo/timeline/introducao1.dtl")
+
 
 func _on_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = true
 		
+		if Dialogic.VAR.quest == 6 and npc_name == "Bruno Mars" and !Dialogic.VAR.isTalking:
+			Dialogic.start_timeline("res://dialogo/timeline/questBruno.dtl")
+
+		if Dialogic.VAR.quest == 7 and npc_name == "Michael Jackson" and !Dialogic.VAR.isTalking:
+			Dialogic.start_timeline("res://dialogo/timeline/questMichael.dtl")
+
 func _on_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = false

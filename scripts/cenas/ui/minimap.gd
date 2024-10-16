@@ -10,9 +10,15 @@ class_name Minimap
 var grid_scale
 var markers = {}
 
+
 func _process(_delta: float) -> void:
 	if !player:
 		return
+		
+	# var img = $"../../Player/SubViewport".get_texture().get_image()
+	# var tex = ImageTexture.create_from_image(img)
+	# $MarginContainer/Grid.texture = tex
+	
 	player_marker.rotation = player.velocity.angle() + PI / 2
 	for item in markers:
 		var obj_position = (item.global_position - player.position) * grid_scale + grid.size / 2
@@ -20,6 +26,7 @@ func _process(_delta: float) -> void:
 			markers[item].scale = Vector2(1, 1)
 		else:
 			markers[item].scale = Vector2(0.75, 0.75)
+			
 		obj_position = obj_position.clamp(Vector2.ZERO, grid.size)
 		markers[item].position = obj_position
 

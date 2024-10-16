@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 @export var _animation_tree: AnimationTree = null
+@export var npc_name : String
 var _state_machine
+var inArea : bool = false
 
 const speed = 30
 var current_state = IDLE
@@ -25,13 +27,12 @@ func _ready():
 	time = GlobalTime.time
 	start_pos = position
 	_state_machine = _animation_tree["parameters/playback"]
-	
-	
+	print(npc_name)
+
 func _process(delta):
 	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
-	
-	if current_state == 0 or current_state == 1:
+	if current_state == 0 or current_state == 1 and Dialogic.VAR.isTalking:
 		_state_machine.travel("Idle")
 		
 	elif current_state == 2:
@@ -49,6 +50,9 @@ func _process(delta):
 			MOVE:
 				move(delta)
 				
+	if inArea and Input.is_action_just_pressed("dialog"):
+		if !Dialogic.VAR.isTalking and Dialogic.VAR.quest == 5 and npc_name == "Finn":
+			Dialogic.start_timeline("res://dialogo/timeline/novoMundo1.dtl")
 				
 func choose(array):
 	array.shuffle()
@@ -56,8 +60,15 @@ func choose(array):
 	
 func move(delta):
 	position += dir * speed * delta
-
 		
 func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
+
+func _on_area_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		inArea = true
+		
+func _on_area_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		inArea = false

@@ -11,6 +11,7 @@ position = Vector2(14, 1)
 script = ExtResource("1_hhoj5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = 6.0
 offset_top = 58.0
 offset_right = 17.0

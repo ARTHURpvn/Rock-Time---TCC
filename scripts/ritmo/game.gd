@@ -3,11 +3,11 @@ extends Node3D
 @onready var music_node = $Music
 @onready var road_node = $Road
 @onready var music =  Dialogic.VAR.music
-
-var audio
+@export var isPlayer : bool = true
 @onready var audio_file = "res://musicas/"+music+".mp3"
 @onready var map_file = "res://musicas/"+music+".mboy"
 
+var audio
 var map
 var tempo
 var bar_length_in_m
@@ -17,7 +17,6 @@ var note_scale
 var start_pos_in_sec
 
 func _ready() -> void:
-	print(Dialogic.VAR.music)
 	audio = load(audio_file)
 	map = load_map()
 	calc_params()

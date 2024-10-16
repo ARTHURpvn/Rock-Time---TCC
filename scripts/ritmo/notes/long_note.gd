@@ -17,7 +17,7 @@ func _on_ready() -> void:
 
 func _on_process(delta: float) -> void:
 	super._on_process(delta)
-	$Beam.set_material(line, point.special)
+	$Beam.set_material(line, special)
 
 	if !collected:
 		if is_colliding and picker and !hold_canceled:
@@ -35,7 +35,7 @@ func _on_process(delta: float) -> void:
 			else:
 				curr_length_in_m -= speed.z * delta
 				if curr_length_in_m <= 0:
-					point.add_points(100 * points)
+					GlobalTime.add_points(10 * points)
 					collect()
 
 				else:

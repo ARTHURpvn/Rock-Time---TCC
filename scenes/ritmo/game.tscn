@@ -18,19 +18,16 @@ transform = Transform3D(1, 0, 0, 0, 0.783683, 0.621162, 0, -0.621162, 0.783683, 
 current = true
 far = 13.35
 
-[node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.705, -3.929)
-
 [node name="Music" parent="." instance=ExtResource("3_0uhbx")]
 
 [node name="Points" parent="." instance=ExtResource("4_rgxue")]
-transform = Transform3D(0.996807, 0.036683, -0.0709262, 0, 0.888233, 0.459394, 0.079851, -0.457927, 0.885396, -3.26342, 0.545813, -2.96444)
+transform = Transform3D(0.999966, -0.00380045, 0.00734813, -2.37975e-09, 0.888233, 0.459394, -0.00827276, -0.459378, 0.888202, -2.6, 0.5, -3)
 
 [node name="Special" parent="." instance=ExtResource("5_aj8sv")]
-transform = Transform3D(0.970135, -4.63466e-16, -0.242565, 0.242565, 1.85362e-15, 0.970135, 0, -1, 1.91069e-15, 2.54942, -0.202431, -0.126075)
+transform = Transform3D(0.999004, 8.52411e-17, 0.0446136, -0.0446136, 1.90878e-15, 0.999004, 2.78341e-23, -1, 1.91069e-15, -2.24005, 0.146736, 0.0257316)
 
 [node name="acertos" parent="." instance=ExtResource("6_uo155")]
-transform = Transform3D(1, 0, 0, 0, 0.872052, 0.489413, 0, -0.489413, 0.872052, 2.796, 0.803029, -3.14072)
+transform = Transform3D(0.999962, -0.00427061, 0.00761014, 0, 0.872069, 0.489382, -0.00872654, -0.489364, 0.872036, 2.6, 0.8, -3)
 
 [node name="Vida" parent="." instance=ExtResource("7_4nddj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49131, -6.96691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04605, -10.6357)

@@ -1,0 +1,35 @@
+[style name="style1"]
+if {Cecilia} == true:
+	jump fimQuest
+set {isTalking} = true
+michaelJackson: Olá Jovens, preparados?
+michaelJackson: Por que vão preceisar, vocês estão no meu palco, será que aguentam a pressão?
+hanna: Claro, não duvide da nossa capacidade!
+harry: É galera, parece que agora vamos enfrentar mais um grande compositor.
+lana: Não tenham medo, a gente consegue.
+castiel: Vamos mostrar do que somos capazes!
+set {isTalking} = false
+set {music} = "error"
+set {Ritmo.playing} = true
+[end_timeline]
+label fimQuest
+set {isTalking} = true
+michaelJackson: Vocês são muito talentoso, mesmo sob pressão desta gigantesca plateia vocês conseguiram me vencer, o potencial de voês é imenso, boa sorte na carreira, vocês chegaram longe.
+hanna: Foi um prazer enfrentar o senhor, muito obrigado, a sua técnicia com o piano é de outro mundo!
+castiel: Bom, acho que deu nossa hora, Adeus.
+set {Cecilia} = false
+set {isTalking} = false
+set {end} = true
+[end_timeline]
+NPC: Mais uma grande vitória, vocês estão de parabéns.
+castiel: Ok, mas até quando vamos ficar nessa?
+NPC: Calma meu jogvem, a brincadeira está apenas no começo, agora a dificuldade será levemente aumentada, aliás, peguem essas roupas, vocês irão precisar!
+lana: Galera, que roupas são essas?
+hanna: Parece que estamos fantasiados.
+castiel: Não pode ser!! Eu sou o Coringa.
+harry: Eu sou o Goku!
+keith: Até que nao fiquei tão mal de Minato.
+lana: Você ficou estranha de Diabinha, Hanna.
+hanna: Nem parece que você esta fantasiada, você parece muito com a Ravena!
+set {isTalking} = false
+[end_timeline]

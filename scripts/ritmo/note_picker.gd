@@ -8,7 +8,6 @@ var red_mat = preload("res://scenes/ritmo/notas/red_picker_mat.tres")
 var green_mat = preload("res://scenes/ritmo/notas/green_picker_mat.tres")
 var blue_mat = preload("res://scenes/ritmo/notas/blue_picker_mat.tres")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_material()
 	pass

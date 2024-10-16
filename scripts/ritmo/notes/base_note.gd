@@ -5,8 +5,9 @@ var green_mat = preload("res://scenes/ritmo/notas/green_note_mat.tres")
 var blue_mat = preload("res://scenes/ritmo/notas/blue_note_mat.tres")
 var info_text = preload("res://scenes/ritmo/info.tscn")
 
-@onready var point = get_node("/root/Game/Points")
-@onready var life = get_node("/root/Game/Vida")
+@onready var point : int = GlobalTime.points
+@onready var life : int = GlobalTime.life
+@onready var special : bool = GlobalTime.special
 
 @export var line: int = 2
 var length
@@ -25,13 +26,16 @@ func _on_ready() -> void:
 	add_listeners()
 
 func _process(_delta: float) -> void:
+	point = GlobalTime.points
+	life = GlobalTime.life
+	special = GlobalTime.special
 	_on_process(_delta)
 
 func _on_process(_delta: float) -> void:
 	set_material() 
 
 func set_material() -> void:
-	if point.special:
+	if special:
 		match line:
 			1: $MeshInstance3D.material_override = blue_mat
 			2: $MeshInstance3D.material_override = blue_mat
@@ -60,8 +64,8 @@ func add_listeners():
 func collect() -> void:
 	collected = true
 	picker.is_collecting = false
-	if life.life < 100:
-		life.life += 1
+	if life < 100:
+		GlobalTime.life += 1
 	hide()
 
 func _on_area_entered(area) -> void:
@@ -74,6 +78,6 @@ func _on_area_exited(area) -> void:
 	if area.is_in_group("picker"):
 		is_colliding = false
 		if !collected:
-			point.tiles = 0
-			life.life -= 10
+			GlobalTime.tiles = 0
+			GlobalTime.life -= 10
 			$error_song.play()

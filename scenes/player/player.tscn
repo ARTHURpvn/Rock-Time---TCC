@@ -483,4 +483,13 @@ texture_scale = 0.06
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
+light_mask = 2
 zoom = Vector2(3, 3)
+limit_left = -1735
+limit_top = -1085
+limit_right = 2268
+limit_bottom = 415
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+rotation_smoothing_enabled = true

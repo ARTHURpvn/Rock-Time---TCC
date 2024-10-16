@@ -2,16 +2,16 @@ extends CharacterBody2D
 
 var player 
 var direction: Vector2 = Vector2.ZERO
-var follow_timer: float = 0.2
-var follow_delay: float = 0.2 
+var follow_timer: float = 0.1
+var follow_delay: float = 0.1 
 var texture
 
 var isNight
 var time 
 
-@export var _move_speed: float = 60.0
-@export var _friction: float = 0.1
-@export var _acceleration: float = 0.5
+@export var _move_speed: float = 64.0
+@export var _friction: float = 0.4
+@export var _acceleration: float = 0.4
 @export var distance_behind: float = 20.0
 
 @export var npc_name: String
@@ -34,11 +34,11 @@ func _ready() -> void:
 		
 		"Hanna":	
 			texture = load('res://assets/personagens/lana.png')
-			distance_behind = 40
+			distance_behind = 50
 		
 		"Harry":
 			texture = load('res://assets/personagens/harry.png')
-			distance_behind = 35
+			distance_behind = 40
 	
 		"Cecilia":
 			texture = load('res://assets/personagens/cecilia.png')

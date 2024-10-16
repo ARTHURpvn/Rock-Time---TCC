@@ -1,0 +1,12 @@
+[style name="style1"]
+set {music} = "error"
+set {Logo} = true
+[wait time="3.0"]
+set {Logo} = false
+lana: Castiel você tá fazendo tudo errado cara! Não é assim que se toca o solo!
+castiel: Vocês querem que eu toque um solo que não conheço ai fica difícil!
+hanna: Então vamo lá, tudo de novo gente sem briga.
+set {Ritmo.playing} = true
+[wait time="0.5"]
+narrador: Vamos começar com o básico! Acerte suas primeiras notas da música!
+[end_timeline]

@@ -23,16 +23,24 @@ GlobalTime="*res://scenes/global.tscn"
 [dialogic]
 
 directories/dch_directory={
-"caracterNarrador ": "res://dialogo/caracterNarrador/caracterNarrador .dch",
-"characterCastiel": "res://dialogo/caracterCastiel/characterCastiel.dch",
-"characterCecilia": "res://dialogo/caracterCecilia/characterCecilia.dch",
-"characterFinn": "res://dialogo/caracterFinn/characterFinn.dch",
-"characterHanna": "res://dialogo/caracterHanna/characterHanna.dch",
-"characterHarry": "res://dialogo/caracterHarry/characterHarry.dch",
-"characterKeith": "res://dialogo/caracterKeith/characterKeith.dch",
-"characterLana": "res://dialogo/caracterLana/characterLana.dch",
-"characterMozart": "res://dialogo/caracterMozart/characterMozart.dch",
-"characterNPC": "res://dialogo/caracterNPC/characterNPC.dch"
+"NPC": "res://dialogo/character/NPC.dch",
+"bradDelson": "res://dialogo/character/bradDelson.dch",
+"brianMay": "res://dialogo/character/brianMay.dch",
+"brunoMars": "res://dialogo/character/brunoMars.dch",
+"castiel": "res://dialogo/character/castiel.dch",
+"cecilia": "res://dialogo/character/cecilia.dch",
+"daveFarrel": "res://dialogo/character/daveFarrel.dch",
+"daveGrohl": "res://dialogo/character/daveGrohl.dch",
+"finn": "res://dialogo/character/finn.dch",
+"freddieMercury": "res://dialogo/character/freddieMercury.dch",
+"hanna": "res://dialogo/character/hanna.dch",
+"harry": "res://dialogo/character/harry.dch",
+"keith": "res://dialogo/character/keith.dch",
+"kurtCobain": "res://dialogo/character/kurtCobain.dch",
+"lana": "res://dialogo/character/lana.dch",
+"michaelJackson": "res://dialogo/character/michaelJackson.dch",
+"mikeShinoda": "res://dialogo/character/mikeShinoda.dch",
+"narrador": "res://dialogo/character/narrador.dch"
 }
 layout/default_style="res://dialogo/estilo/style1.tres"
 extensions_folder="res://addons/dialogic_additions"
@@ -62,10 +70,11 @@ variables={
 "special": false
 },
 "cutscene": "",
+"end": false,
 "follow": false,
 "isCutscene": false,
 "isTalking": false,
-"music": "",
+"music": "back_in_black",
 "name": "",
 "quest": 5,
 "questEnded": false
@@ -79,11 +88,16 @@ translation/add_separator=false
 save/autosave=false
 directories/dtl_directory={
 "fimQuestCeci": "res://dialogo/timeline/fimQuestCeci.dtl",
-"timelineIntroducao1": "res://dialogo/timeline/timelineIntroducao1.dtl",
-"timelineIntroducao2": "res://dialogo/timeline/timelineIntroducao2.dtl",
-"timelineNovoMundo1": "res://dialogo/timeline/timelineNovoMundo1.dtl",
-"timelineNovoMundo2": "res://dialogo/timeline/timelineNovoMundo2.dtl",
-"timelineTutorial": "res://dialogo/timeline/timelineTutorial.dtl"
+"introducao1": "res://dialogo/timeline/introducao1.dtl",
+"introducao2": "res://dialogo/timeline/introducao2.dtl",
+"novoMundo1": "res://dialogo/timeline/novoMundo1.dtl",
+"novoMundo2": "res://dialogo/timeline/novoMundo2.dtl",
+"questBruno": "res://dialogo/timeline/questBruno.dtl",
+"questLinkin": "res://dialogo/timeline/questLinkin.dtl",
+"questMichael": "res://dialogo/timeline/questMichael.dtl",
+"questNirvana": "res://dialogo/timeline/questNirvana.dtl",
+"questQueens": "res://dialogo/timeline/questQueens.dtl",
+"tutorial": "res://dialogo/timeline/tutorial.dtl"
 }
 layout/style_list=["res://dialogo/estilo/style1.tres", "res://dialogo/estilo/style2.tres"]
 glossary/default_case_sensitive=true

@@ -1,0 +1,24 @@
+[style name="style1"]
+if {quest} == 1:
+	jump quest1
+
+set {isTalking} = true
+harry: Tem como buscar minha irmã na escola e trazer aqui pro estudio? To praticando minha parte naquela musica que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as musicas favoritas dela ela é um saco pra cuidar.
+castiel: Beleza conta comigo.
+set {quest} = 1
+set {isTalking} = false
+[end_timeline]
+label quest1
+set {isTalking} = true
+
+cecilia: Quem é você?! Cadê o meu maninho? Ele tinha combinado de me buscar hoje, eu não vou embora com um estranho.
+castiel: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer, infelizmente seu irmão teve um imprevisto, então pediu para eu vir te buscar.
+cecilia: Você está querendo insinuar que esse imprevisto é mais importante do que eu? Seu boçal, e que história é essa de amigo eu não caio nesse papinho não se você não for embora eu vou gritar bem alto.
+castiel: Calma, por favor não grite, o que eu posso fazer para te convencer a vir comigo?
+cecilia: Então, veja com seus próprios olhos o que meu maninho me ensinou.
+cecilia: Humm? Já sei cante uma música da “Katy Perry ” comigo, só assim eu vou com você.
+set {music} = "error"
+set {Ritmo.playing} = true
+set {isTalking} = false
+set {Cecilia} = true
+[end_timeline]

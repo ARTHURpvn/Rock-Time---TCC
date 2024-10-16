@@ -4,10 +4,23 @@ var hour: int = 12
 var minu: int = 0
 var isNight: bool = false
 var time: String = str(hour)+":"+str(minu)
-var points : int
 var musicEnded : bool = false
 var player_position : Vector2 = Vector2(-1060, 114)
-var year : int = 2010
+var year : int = 1990
+
+var life : int = 100
+var points : int = 0
+var special : bool = false
+var tiles : int = 0
+var acertos: float = 0
+var combo: float = 1
+
+var life_adv : int = 100
+var points_adv : int = 0
+var special_adv : bool = false
+var tiles_adv : int = 0
+var acertos_adv: float = 0
+var combo_adv: float = 1
 
 var quests = [
 	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe até a Escola e Busque a Cecilia"},
@@ -15,9 +28,20 @@ var quests = [
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Vá para o Estacionamento"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Converse Com o Cara Misterioso"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Volte para Casa com os Amplificadores"},
+	{ "name": "Explore o Mapa", "finished": false, "todo": "Explore ao seu redor e ache o musico!"},
+	{ "name": "Procure pelo oponente", "finished": false, "todo": "Explore a cidade em busca de Informações para encontrar o oponente"},
 ]
-
 var quest : int = 0
+
+func add_points(point):
+	if special:
+		points += (point * combo) * 1.3
+	
+	points += (point * combo)
+
+	if acertos <= 0.5 and !special:
+		tiles += 1
+		acertos += 0.01
 
 func timer():
 	if Dialogic.VAR.quest >= 1:
@@ -57,7 +81,5 @@ func _on_timer_timeout() -> void:
 	timer()
 
 func _process(_delta: float) -> void:
-	quest = Dialogic.VAR.quest
-	GlobalTime.hour = hour
-	GlobalTime.minu = minu
-	GlobalTime.time = time
+	if Dialogic.VAR.end:
+		get_tree().change_scene_to_file("res://scenes/cenas/fim.tscn")

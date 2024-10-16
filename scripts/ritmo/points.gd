@@ -1,22 +1,11 @@
 extends Node3D
 
-var points: int
-var special = false
-var tiles: float
-var acertos: float
-var combo: float
+var points: int = GlobalTime.points
+var special : bool = GlobalTime.special
+var tiles: float = GlobalTime.tiles
+var acertos: float = GlobalTime.acertos
+var combo: float = GlobalTime.combo
 
-func add_points(point):
-	if special:
-		points += (point * combo) * 1.3
-	
-	points += (point * combo)
-
-	if acertos <= 0.5 and !special:
-		tiles += 1
-		acertos += 0.01
-	$Points.text = str(points)
-	GlobalTime.points = points
 
 func _on_timer_timeout() -> void:
 	if special:
@@ -26,3 +15,12 @@ func _on_timer_timeout() -> void:
 		if acertos <= 0:
 			special = false
 			Dialogic.VAR.Ritmo.special = false
+
+func _process(_delta: float) -> void:
+	points = GlobalTime.points
+	special = GlobalTime.special
+	tiles = GlobalTime.tiles
+	acertos = GlobalTime.acertos
+	combo = GlobalTime.combo
+
+	$Points.text = str(points)

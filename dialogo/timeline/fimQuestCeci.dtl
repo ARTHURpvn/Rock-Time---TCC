@@ -2,10 +2,10 @@
 if {quest} == 2 and {follow} == true:
 	jump FimCeci
 set {isTalking} = true
-characterCastiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
-characterCecilia: Claro, meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim, então vamos, quero ver meu maninho logo.
-characterCastiel: Vamos, seu irmão deve estar preocupado com a nossa demora.
-set {questEnded} = true
+set {Cecilia} = false
+castiel: Nossa! Você canta muito bem tinha que ser irmã do Harry mesmo.
+cecilia: Claro, meu maninho me dá aulas de canto eu sou a melhor da classe, mas você não é ruim, então vamos, quero ver meu maninho logo.
+castiel: Vamos, seu irmão deve estar preocupado com a nossa demora.
 set {quest} = 2
 set {follow} = true
 set {isTalking} = false
@@ -14,8 +14,8 @@ set {isTalking} = false
 label FimCeci
 set {isTalking} = true
 set {follow} = false
-characterHarry: Ela não te deu trabalho não né?
-characterCastiel: Ela foi um amorzinho kkkkkk
+harry: Ela não te deu trabalho não né?
+castiel: Ela foi um amorzinho kkkkkk
 set {isTalking} = false
 [wait time="1.0"]
 set {Cecilia} = true
