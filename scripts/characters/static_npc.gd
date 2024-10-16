@@ -10,6 +10,9 @@ var isNight : bool
 var time : String
 var inArea : bool = false
 var isPlaying : bool = false
+var menu = preload("res://scenes/cenas/ui/menu.tscn")
+var isMenu : bool
+var instMenu
 
 func _ready() -> void:
 	time = GlobalTime.time
@@ -69,6 +72,13 @@ func _on_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = true
 		
+		if !isMenu:
+			isMenu = true
+			instMenu = menu.instantiate()
+			instMenu.tecla = "F"
+			instMenu.text = "Conversar"
+			add_child(instMenu)
+		
 		if Dialogic.VAR.quest == 6 and npc_name == "Bruno Mars" and !Dialogic.VAR.isTalking:
 			Dialogic.start_timeline("res://dialogo/timeline/questBruno.dtl")
 
@@ -78,3 +88,7 @@ func _on_area_body_entered(body: Node2D) -> void:
 func _on_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = false
+
+		if isMenu:
+			isMenu = false
+			remove_child(instMenu)

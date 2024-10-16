@@ -2,11 +2,15 @@ extends Node2D
 var isDialog : bool = false
 var follow_npc = preload("res://scenes/player/perso_banda.tscn")
 var static_npc = preload("res://scenes/player/static_npc.tscn")
+var menu = preload("res://scenes/cenas/ui/menu.tscn")
 
 var cutscene : bool = false
 var names = ["Harry", "Keith", "Lana"]
 var positions = [Vector2(-4, 79), Vector2(97, 68), Vector2(41, 39)]
 var createdStatic : bool = false
+var isPlayer : bool
+var isMenu : bool = false
+var instMenu
 
 func _ready() -> void:
 	if Dialogic.VAR.quest == 0:
@@ -51,6 +55,10 @@ func _process(_delta: float) -> void:
 		GlobalTime.minu = 0
 		get_tree().change_scene_to_file("res://scenes/cenas/mapa/jogo.tscn")
 
+	
+	if isPlayer and Input.is_action_just_pressed("dialog"):
+		get_tree().change_scene_to_file("res://scenes/cenas/mapa/jogo.tscn")
+
 func remove_existing_npcs():
 	var npcs = get_children()
 	for npc in npcs:
@@ -60,4 +68,20 @@ func remove_existing_npcs():
 			
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		get_tree().change_scene_to_file("res://scenes/cenas/mapa/jogo.tscn")
+		isPlayer = true
+
+		if !isMenu:
+			isMenu = true
+			instMenu = menu.instantiate()
+			instMenu.tecla = "F"
+			instMenu.text = "Sair"
+			add_child(instMenu)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		isPlayer = true
+
+		if isMenu:
+			isMenu = false
+			remove_child(instMenu)

@@ -21,12 +21,12 @@ Design: Alex <br>
 * [x] Melhorar mecanica dos personagens seguirem
 * [x] Adicionar "tela" onde mostra os botoes para quando pode interagir
 * [x] Consertar NPC seguindo ficar de costas qnd para
+* [x] Remover icones "antigos" no mapa | quest de buscar cecilia fica o exclamacao mesmo quando ja buscou a cecilia
 
 * [ ] Consertar cena garagem (npc nasce ja seguindo player, mesmo quando no primeiro dialogo)
 * [ ] Consertar npc empurrando player quando esta encostado neles.
 * [ ] Arrumar posicoes inicias do player e quando sai da garagem.
 * [ ] Adicionar o Icone de garagem no mapa.
-* [ ] Remover icones "antigos" no mapa | quest de buscar cecilia fica o exclamacao mesmo quando ja buscou a cecilia
 * [ ] Resolver bug de sair da garagem e a velocidade do player diminuir
 * [ ] Fazer personagens correrem junto com o Castiel.
 * [ ] Fazer algum jeito de mapear onde os npcs podem andar

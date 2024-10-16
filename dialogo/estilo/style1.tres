@@ -27,6 +27,7 @@ overrides = {
 "box_modulate_custom_color": "Color(0, 0, 0, 1)",
 "box_panel": "\"default_stylebox.tres\"",
 "box_size": "Vector2(900, 160)",
+"custom_normal_font": "\"res://assets/Fonts/Little Malio 8-Bit For Dafont.otf\"",
 "name_label_color_mode": "1",
 "name_label_hide_when_no_character": "true",
 "portrait_bg_modulate": "Color(0, 0, 0, 0.690196)"

@@ -1,0 +1,48 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://lfk2mgv12gp7"]
+
+[ext_resource type="FontFile" uid="uid://ct84yothkwc8w" path="res://assets/Fonts/Little Malio 8-Bit For Dafont.otf" id="1_08baa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy74u"]
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1buc"]
+bg_color = Color(0, 0, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 25.0
+expand_margin_top = 10.0
+expand_margin_right = 25.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuoyp"]
+bg_color = Color(0, 0.0470588, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 15.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf5rr"]
+bg_color = Color(0.270588, 0.141176, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 16
+expand_margin_left = 15.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
+
+[resource]
+default_font = ExtResource("1_08baa")
+default_font_size = 15
+Button/styles/disabled = SubResource("StyleBoxFlat_vy74u")
+Button/styles/focus = SubResource("StyleBoxFlat_b1buc")
+Button/styles/hover = SubResource("StyleBoxFlat_nuoyp")
+Button/styles/normal = SubResource("StyleBoxFlat_nf5rr")

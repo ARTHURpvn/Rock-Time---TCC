@@ -10648,6 +10648,8 @@ texture = ExtResource("3_are32")
 37:20/0 = 0
 33:21/size_in_atlas = Vector2i(3, 3)
 33:21/0 = 0
+33:21/0/y_sort_origin = -5
+33:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.6881, -2.12132, 19.4454, -1.76777, 19.799, 22.2739, -23.3345, 22.981)
 28:22/size_in_atlas = Vector2i(4, 2)
 28:22/0 = 0
 27:26/size_in_atlas = Vector2i(3, 4)
@@ -11166,3 +11168,4 @@ npc_name = "Keith"
 npc_pos = Vector2(-1, 0)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

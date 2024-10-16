@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbstg71sun4po"
-path="res://.godot/imported/logo.jpg-7371fe58d8b3519eaee092b58194058b.ctex"
+uid="uid://wxruitikq37j"
+path="res://.godot/imported/tecla.png-9bdd42c094ecf8fc565b5ada03bfeea3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/logo.jpg"
-dest_files=["res://.godot/imported/logo.jpg-7371fe58d8b3519eaee092b58194058b.ctex"]
+source_file="res://assets/tecla.png"
+dest_files=["res://.godot/imported/tecla.png-9bdd42c094ecf8fc565b5ada03bfeea3.ctex"]
 
 [params]
 

@@ -76,7 +76,7 @@ variables={
 "isTalking": false,
 "music": "back_in_black",
 "name": "",
-"quest": 5,
+"quest": 3,
 "questEnded": false
 }
 translation/enabled=false

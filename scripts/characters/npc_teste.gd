@@ -4,6 +4,10 @@ extends CharacterBody2D
 @export var npc_name : String
 var _state_machine
 var inArea : bool = false
+var menu = preload("res://scenes/cenas/ui/menu.tscn")
+var isPlayer : bool
+var isMenu : bool
+var instMenu
 
 const speed = 30
 var current_state = IDLE
@@ -65,10 +69,22 @@ func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
 
-func _on_area_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = true
-		
-func _on_area_body_exited(body: Node2D) -> void:
+
+		if !isMenu:
+			isMenu = true
+			instMenu = menu.instantiate()
+			instMenu.tecla = "F"
+			instMenu.text = "Conversar"
+			add_child(instMenu)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		inArea = false
+		inArea = true
+
+		if isMenu:
+			isMenu = false
+			remove_child(instMenu)

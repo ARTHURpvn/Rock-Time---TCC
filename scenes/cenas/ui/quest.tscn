@@ -1,8 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7b6j6yelj3lj"]
+[gd_scene load_steps=5 format=3 uid="uid://c7b6j6yelj3lj"]
 
 [ext_resource type="Script" path="res://scripts/cenas/ui/quest.gd" id="1_hhoj5"]
+[ext_resource type="FontFile" uid="uid://ct84yothkwc8w" path="res://assets/Fonts/Little Malio 8-Bit For Dafont.otf" id="2_pjofh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_35f8e"]
+font = ExtResource("2_pjofh")
 
 [sub_resource type="LabelSettings" id="LabelSettings_iycno"]
+font = ExtResource("2_pjofh")
 font_size = 29
 font_color = Color(1, 0, 0, 1)
 
@@ -11,23 +16,25 @@ position = Vector2(14, 1)
 script = ExtResource("1_hhoj5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_left = 6.0
-offset_top = 58.0
+offset_top = 75.0
 offset_right = 17.0
-offset_bottom = 69.0
+offset_bottom = 86.0
 color = Color(1, 0, 0, 1)
 
 [node name="ToDo" type="Label" parent="."]
 offset_left = 23.0
-offset_top = 50.0
-offset_right = 89.0
-offset_bottom = 73.0
+offset_top = 62.0
+offset_right = 126.0
+offset_bottom = 95.0
+text = "aaaaaaa"
+label_settings = SubResource("LabelSettings_35f8e")
 
 [node name="Name" type="Label" parent="."]
 offset_left = 4.0
-offset_top = 6.0
-offset_right = 125.0
-offset_bottom = 34.0
+offset_top = -1.0
+offset_right = 191.0
+offset_bottom = 59.0
+text = "aaaadad"
 label_settings = SubResource("LabelSettings_iycno")
 vertical_alignment = 1

@@ -143,13 +143,15 @@ func _process(_delta: float) -> void:
 	if isPlayer and !isMenu:
 		isMenu = true
 		instMenu = menu.instantiate()
+		instMenu.tecla = "F"
+		instMenu.text = "Entrar"
 		add_child(instMenu)
 
 	if !isPlayer and isMenu:
 		isMenu = false
 		remove_child(instMenu)
 
-	if isPlayer and  Input.is_action_just_pressed("dialog"):
+	if isPlayer and Input.is_action_just_pressed("dialog"):
 		GlobalTime.player_position = Vector2(GlobalTime.player_position.x, 114)
 		if Dialogic.VAR.quest == 5:
 			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem.tscn")

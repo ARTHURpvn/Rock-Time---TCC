@@ -1,26 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://byc3f2er33epi"]
+[gd_scene load_steps=6 format=3 uid="uid://byc3f2er33epi"]
 
 [ext_resource type="Script" path="res://scripts/cenas/pontuacao.gd" id="1_jeglt"]
+[ext_resource type="FontFile" uid="uid://ct84yothkwc8w" path="res://assets/Fonts/Little Malio 8-Bit For Dafont.otf" id="2_44sbv"]
+[ext_resource type="Theme" uid="uid://lfk2mgv12gp7" path="res://new_theme.tres" id="3_5psv2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cy2sr"]
+font = ExtResource("2_44sbv")
 font_size = 90
 
 [sub_resource type="LabelSettings" id="LabelSettings_rkl2o"]
+font = ExtResource("2_44sbv")
 font_size = 55
-font_color = Color(1, 0, 0, 1)
+font_color = Color(0, 0, 1, 1)
 
-[node name="Pontuacao" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_jeglt")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 350.0
-offset_top = 64.0
-offset_right = 911.0
-offset_bottom = 188.0
-text = "PONTUAÇÃO"
+[node name="Pontuação" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="Pontuação"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -372.0
+offset_right = 372.0
+offset_bottom = 185.0
+grow_horizontal = 2
+text = "PONTUACAO"
 label_settings = SubResource("LabelSettings_cy2sr")
 
-[node name="points" type="Label" parent="."]
+[node name="points" type="Label" parent="Pontuação"]
 offset_left = 350.0
 offset_top = 188.0
 offset_right = 864.0
@@ -28,16 +37,17 @@ offset_bottom = 291.0
 label_settings = SubResource("LabelSettings_rkl2o")
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Pontuação"]
 modulate = Color(1, 1, 1, 0.415686)
 z_index = -1
 offset_right = 1285.0
 offset_bottom = 721.0
 color = Color(0, 0, 0, 1)
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="Pontuação"]
 offset_left = 512.0
 offset_top = 584.0
 offset_right = 688.0
 offset_bottom = 637.0
+theme = ExtResource("3_5psv2")
 text = "CONTINUAR"
