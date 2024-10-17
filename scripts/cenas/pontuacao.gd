@@ -8,20 +8,21 @@ func _process(_delta: float) -> void:
 	$Pontuacao/points.text = str(points)
 
 	if $Pontuacao/Button.button_pressed:
-		print("clicou")
 		print(Dialogic.VAR.quest, clicked)
 		if Dialogic.VAR.quest == 0 and !clicked:
-			print("passou aqui")
 			clicked = true
 			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem.tscn")
+			return
 
 		if Dialogic.VAR.quest == 1 or Dialogic.VAR.quest == 6 and !clicked:
 			clicked = true
 			Dialogic.VAR.Logo = true
 			get_tree().change_scene_to_file("res://scenes/cenas/mapa/jogo.tscn")
+			return
 
 		if Dialogic.VAR.quest == 7 and !clicked:
 			clicked = true
 			Dialogic.VAR.Cecilia = true
 			Dialogic.VAR.Logo = true
 			get_tree().change_scene_to_file("res://scenes/cenas/mapa/jogo.tscn")
+			return

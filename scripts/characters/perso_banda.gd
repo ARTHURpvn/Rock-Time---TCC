@@ -62,6 +62,12 @@ func _process(delta: float) -> void:
 	_move(target_pos)
 	move_and_slide() 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("correr"):
+		_move_speed = _move_speed * 1.5
+	elif event.is_action_released("correr"):
+		_move_speed = _move_speed / 1.5
+
 func _move(target_pos: Vector2) -> void:
 	var move_direction = (target_pos - position).normalized()
 	var distance_to_target = (target_pos - position).length()

@@ -8,6 +8,7 @@ var menu = preload("res://scenes/cenas/ui/menu.tscn")
 var isPlayer : bool
 var isMenu : bool
 var instMenu
+var isChatting : bool = false
 
 const speed = 30
 var current_state = IDLE
@@ -36,7 +37,7 @@ func _ready():
 func _process(delta):
 	isNight = GlobalTime.isNight
 	$PointLight2D.visible = isNight
-	if current_state == 0 or current_state == 1 and Dialogic.VAR.isTalking:
+	if current_state == 0 or current_state == 1:
 		_state_machine.travel("Idle")
 		
 	elif current_state == 2:
@@ -56,8 +57,12 @@ func _process(delta):
 				
 	if inArea and Input.is_action_just_pressed("dialog"):
 		if !Dialogic.VAR.isTalking and Dialogic.VAR.quest == 5 and npc_name == "Finn":
+			isChatting = true
 			Dialogic.start_timeline("res://dialogo/timeline/novoMundo1.dtl")
-				
+
+	if Dialogic.VAR.isTalking and isChatting:
+		current_state = IDLE
+
 func choose(array):
 	array.shuffle()
 	return array.front()
@@ -80,10 +85,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			instMenu.text = "Conversar"
 			add_child(instMenu)
 
-
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = true
+		isChatting = false
 
 		if isMenu:
 			isMenu = false

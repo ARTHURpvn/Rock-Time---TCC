@@ -22,15 +22,16 @@ Design: Alex <br>
 * [x] Adicionar "tela" onde mostra os botoes para quando pode interagir
 * [x] Consertar NPC seguindo ficar de costas qnd para
 * [x] Remover icones "antigos" no mapa | quest de buscar cecilia fica o exclamacao mesmo quando ja buscou a cecilia
+* [x] Consertar qnd vai para o parque ainda fica de noite, mesmo com o horario tendo mudado para de tarde
+* [x] Resolver bug de sair da garagem e a velocidade do player diminuir
+* [x] Fazer personagens correrem junto com o Castiel.
 
 * [ ] Consertar cena garagem (npc nasce ja seguindo player, mesmo quando no primeiro dialogo)
 * [ ] Consertar npc empurrando player quando esta encostado neles.
 * [ ] Arrumar posicoes inicias do player e quando sai da garagem.
 * [ ] Adicionar o Icone de garagem no mapa.
-* [ ] Resolver bug de sair da garagem e a velocidade do player diminuir
-* [ ] Fazer personagens correrem junto com o Castiel.
 * [ ] Fazer algum jeito de mapear onde os npcs podem andar
 * [ ] Reduzir velocidade do player e trocar para sprite com ele com o amplificador (quest especifica) - acontece apenas qnd muda de cena correndo
 * [ ] Consertar spawnar perso andando e parado na quest de pegar os amplificadores
-* [ ] Consertar qnd vai para o parque ainda fica de noite, mesmo com o horario tendo mudado para de tarde
+
 * [ ] NPC que anda parar quando comeca dialogo

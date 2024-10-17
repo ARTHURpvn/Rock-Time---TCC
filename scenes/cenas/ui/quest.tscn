@@ -29,6 +29,7 @@ size_flags_vertical = 3
 color = Color(0.180392, 0.180392, 0.180392, 0.619608)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 1.0
 offset_right = 170.0
@@ -64,4 +65,4 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "aaaa000000000000"
 label_settings = SubResource("LabelSettings_35f8e")
-autowrap_mode = 1
+autowrap_mode = 3

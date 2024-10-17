@@ -12,7 +12,6 @@ font_color = Color(0.641934, 0.641934, 0.641934, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_gu1wi"]
 font = ExtResource("3_wo8kg")
 font_size = 15
-font_color = Color(0.643137, 0.643137, 0.643137, 1)
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_hvm4i")

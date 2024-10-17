@@ -8,6 +8,9 @@ var musicEnded : bool = false
 var player_position : Vector2 = Vector2(-1060, 114)
 var year : int = 1990
 
+var isPlaying : bool = false
+var isEnd : bool = false
+
 var life : int = 100
 var points : int = 0
 var special : bool = false
@@ -81,5 +84,10 @@ func _on_timer_timeout() -> void:
 	timer()
 
 func _process(_delta: float) -> void:
-	if Dialogic.VAR.end:
+	if Dialogic.VAR.end and isEnd:
+		isEnd = true
 		get_tree().change_scene_to_file("res://scenes/cenas/fim.tscn")
+
+	if Dialogic.VAR.Ritmo.playing and !isPlaying:
+		isPlaying = true
+		get_tree().change_scene_to_file("res://scenes/ritmo/game.tscn")
