@@ -76,7 +76,7 @@ variables={
 "isTalking": false,
 "music": "back_in_black",
 "name": "",
-"quest": 3,
+"quest": 0,
 "questEnded": false
 }
 translation/enabled=false
@@ -108,9 +108,10 @@ glossary/glossary_files=["res://dialogo/glossary/glossary.tres"]
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1366
+window/size/viewport_height=768
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 

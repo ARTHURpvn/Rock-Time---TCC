@@ -3,10 +3,10 @@ set {music} = "error"
 set {Logo} = true
 [wait time="3.0"]
 set {Logo} = false
-lana: Castiel você tá fazendo tudo errado cara! Não é assim que se toca o solo!
-castiel: Vocês querem que eu toque um solo que não conheço ai fica difícil!
-hanna: Então vamo lá, tudo de novo gente sem briga.
+lana: Castiel voce esta fazendo tudo errado cara! Nao e assim que se toca o solo!
+castiel: Voces querem que eu toque um solo que nao conheço ai fica dificil!
+hanna: Entao vamo la, tudo de novo gente sem briga.
 set {Ritmo.playing} = true
 [wait time="0.5"]
-narrador: Vamos começar com o básico! Acerte suas primeiras notas da música!
+narrador: Vamos comecar com o basico! Acerte suas primeiras notas da musica!
 [end_timeline]

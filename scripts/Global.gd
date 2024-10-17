@@ -23,13 +23,13 @@ var acertos_adv: float = 0
 var combo_adv: float = 1
 
 var quests = [
-	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Caminhe até a Escola e Busque a Cecilia"},
-	{ "name": "Buscar Irmã do Harry", "finished": false, "todo": "Volte para a Garagem e Encontre Harry"},
-	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Vá para o Estacionamento"},
+	{ "name": "Buscar Irma do Harry", "finished": false, "todo": "Caminhe ate a Escola e Busque a Cecilia"},
+	{ "name": "Buscar Irma do Harry", "finished": false, "todo": "Volte para a Garagem e Encontre Harry"},
+	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Va para o Estacionamento"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Converse Com o Cara Misterioso"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Volte para Casa com os Amplificadores"},
 	{ "name": "Explore o Mapa", "finished": false, "todo": "Explore ao seu redor e ache o musico!"},
-	{ "name": "Procure pelo oponente", "finished": false, "todo": "Explore a cidade em busca de Informações para encontrar o oponente"},
+	{ "name": "Procure pelo oponente", "finished": false, "todo": "Explore a cidade em busca de Informacoes para encontrar o oponente"},
 ]
 var quest : int = 0
 

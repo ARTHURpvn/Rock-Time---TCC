@@ -11,11 +11,11 @@ func _process(_delta: float) -> void:
 	
 	if curr_quest != 0:
 		if !select_quest.finished:
-			$".".visible = true
-			$ColorRect.visible = true
-			$Name.text = select_quest.name
-			$ToDo.text = select_quest.todo
+			$CanvasLayer.visible = true
+			$CanvasLayer/ColorRect.visible = true
+			$CanvasLayer/ColorRect/VBoxContainer/Name.text = select_quest.name
+			$CanvasLayer/ColorRect/VBoxContainer/HBoxContainer/ToDo.text = select_quest.todo
 		else:
-			$".".visible = false
+			$CanvasLayer.visible = false
 	else:
-		$ColorRect.visible = false
+		$CanvasLayer/ColorRect.visible = false

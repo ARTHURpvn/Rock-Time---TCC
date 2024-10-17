@@ -76,7 +76,7 @@ func _on_area_body_entered(body: Node2D) -> void:
 			isMenu = true
 			instMenu = menu.instantiate()
 			instMenu.tecla = "F"
-			instMenu.text = "Conversar"
+			instMenu.texto = "Conversar"
 			add_child(instMenu)
 		
 		if Dialogic.VAR.quest == 6 and npc_name == "Bruno Mars" and !Dialogic.VAR.isTalking:

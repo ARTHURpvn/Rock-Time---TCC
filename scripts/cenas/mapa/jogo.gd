@@ -144,7 +144,7 @@ func _process(_delta: float) -> void:
 		isMenu = true
 		instMenu = menu.instantiate()
 		instMenu.tecla = "F"
-		instMenu.text = "Entrar"
+		instMenu.texto = "Entrar"
 		add_child(instMenu)
 
 	if !isPlayer and isMenu:
