@@ -5,13 +5,13 @@ if {Logo} == true:
 	jump fimQuest
 
 set {isTalking} = true
-brunoMars: Olá jovens, o que desejam?
-lana: Queremos enfrentar você em uma batalha!
-brunoMars: Vocês são muito atrevidos, mas eu aceito o desafio.
-hanna: Será que tempos chance?
-castiel: Claro que temos, nós somos uma equipe, se trabalharmos juntos a gente consegue.
+brunoMars: Ola jovens, o que desejam?
+lana: Queremos enfrentar voce em uma batalha!
+brunoMars: Voces sao muito atrevidos, mas eu aceito o desafio.
+hanna: Sera que tempos chance?
+castiel: Claro que temos, nos somos uma equipe, se trabalharmos juntos a gente consegue.
 lana: Concordo!
-harry: Isso ai, Vamos lá galera!
+harry: Isso ai, Vamos la galera!
 hanna: Bora Arrebentar!!
 set {music} = "error"
 set {Ritmo.playing} = true
@@ -20,18 +20,19 @@ set {isTalking} = false
 
 label fimQuest
 set {isTalking} = true
-brunoMars: Parabéns garotos, vocês realmente são muito bons, continuem nesse caminho que vocês vão longe.
-keith: Obrigado, foi uma honra competir contra você.
+brunoMars: Parabens garotos, voces realmente sao muito bons, continuem nesse caminho que voces vao longe.
+keith: Obrigado, foi uma honra competir contra voce.
 set {Cecilia} = true
 set {isTalking} = false
 [end_timeline]
 label falaFinal
 set {isTalking} = true
 [wait time="2.0"]
-castiel: Foi um aprendizado e tanto pessoal, com essa batalha nós conseguimos ver em que precisamos melhorar.
+castiel: Foi um aprendizado e tanto pessoal, com essa batalha nos conseguimos ver em que precisamos melhorar.
 harry: Sim! Mas e agora?
 hanna: Verdad....
-NPC: Parabéns jovens, Vocês são realmete incriveis,procurem o seu próximo desafio pelo mapa. Boa Sorte!
+NPC: Parabens jovens, Voces sao realmete incriveis, procurem o seu próximo desafio pelo mapa. Boa Sorte!\
+Dica\: as pessoas que estao na escola conseguem ver ele
 set {isTalking} = false
 set {Cecilia} = false
 set {quest} = 7

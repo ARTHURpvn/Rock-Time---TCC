@@ -25,6 +25,7 @@ Design: Alex <br>
 * [x] Consertar qnd vai para o parque ainda fica de noite, mesmo com o horario tendo mudado para de tarde
 * [x] Resolver bug de sair da garagem e a velocidade do player diminuir
 * [x] Fazer personagens correrem junto com o Castiel.
+* [x] NPC que anda parar quando comeca dialogo
 
 * [ ] Consertar cena garagem (npc nasce ja seguindo player, mesmo quando no primeiro dialogo)
 * [ ] Consertar npc empurrando player quando esta encostado neles.
@@ -33,5 +34,3 @@ Design: Alex <br>
 * [ ] Fazer algum jeito de mapear onde os npcs podem andar
 * [ ] Reduzir velocidade do player e trocar para sprite com ele com o amplificador (quest especifica) - acontece apenas qnd muda de cena correndo
 * [ ] Consertar spawnar perso andando e parado na quest de pegar os amplificadores
-
-* [ ] NPC que anda parar quando comeca dialogo

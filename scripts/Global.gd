@@ -11,6 +11,13 @@ var year : int = 1990
 var isPlaying : bool = false
 var isEnd : bool = false
 
+var harryPosition : Vector2 = Vector2(-67, -6)
+var hannaPosition : Vector2
+var lanaPosition : Vector2 = Vector2(-127, -11)
+var keithPosition : Vector2 = Vector2(-128, 69)
+var castPosition : Vector2 = Vector2(-63, 20)
+
+
 var life : int = 100
 var points : int = 0
 var special : bool = false
@@ -24,6 +31,7 @@ var special_adv : bool = false
 var tiles_adv : int = 0
 var acertos_adv: float = 0
 var combo_adv: float = 1
+var amplificador : bool = false
 
 var quests = [
 	{ "name": "Buscar Irma do Harry", "finished": false, "todo": "Caminhe ate a Escola e Busque a Cecilia"},
@@ -84,7 +92,7 @@ func _on_timer_timeout() -> void:
 	timer()
 
 func _process(_delta: float) -> void:
-	if Dialogic.VAR.end and isEnd:
+	if Dialogic.VAR.end and !isEnd:
 		isEnd = true
 		get_tree().change_scene_to_file("res://scenes/cenas/fim.tscn")
 

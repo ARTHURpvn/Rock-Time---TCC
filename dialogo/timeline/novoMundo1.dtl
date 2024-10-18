@@ -6,21 +6,21 @@ if {Cecilia} == true:
 
 set {isTalking} = true
 castiel: O que aconteceu, onde estamos?
-keith: Acho que estamos no parque Antônio Dias.
+keith: Acho que estamos no parque Antonio Dias.
 hanna: Sim, mas olha a vestimenta dessas pessoas.
-harry: Nossa! parece até que voltamos no tempo.
-lana: Não, isso é impossível.
-hanna: Castiel, pergunta para aquele moço em que ano estamos.
+harry: Nossa! parece ate que voltamos no tempo.
+lana: Nao, isso eh impossível.
+hanna: Castiel, pergunta para aquele moco em que ano estamos.
 set {isTalking} = false
 set {Cecilia} = true
 set {Logo} = false
 [end_timeline]
 label Quest1
 set {isTalking} = true
-castiel: Oii boa tarde moço, em que ano estamos?
-NPC: Olá viajantes, vocês estão no ano de 1773, os amplificadores os trouxeram para o passado, o seu desafio será encontrar e desaficar músicos deste tempo, boa sorte, vocês tem uma cidade enorme para explorar!
-castiel: Mas como nós iremos saber onde eles estão?
-castiel: Pergunte para os Cidadões, talvez eles saibam onde os artistas estão, ou vão estar.
+castiel: Oii boa tarde moco, em que ano estamos?
+NPC: Ola viajantes, voces estao no ano de 1773, os amplificadores os trouxeram para o passado, o seu desafio sera encontrar e desafiar musicos deste tempo, boa sorte, voces tem uma cidade enorme para explorar!
+castiel: Mas como nos iremos saber onde eles estao?
+castiel: Pergunte para os Cidadoes, talvez eles saibam onde os artistas estao, ou vao estar.
 set {isTalking} = false
 set {Logo} = true
 
@@ -31,7 +31,7 @@ set {isTalking} = true
 lana: O que faremos galera?
 keith: Vamos andar pelo parque e ver se achamos algum jeito de voltar para casa.
 hanna: Mas a gente nem sabe quem iremos enfrentar!
-castiel: Isso não importa, se ficarmos unidos a gente enfrenta qualquer desafio. A nossa aventura começa agora.
+castiel: Isso nao importa, se ficarmos unidos a gente enfrenta qualquer desafio. A nossa aventura comeca agora.
 set {quest} = 6
 set {isTalking} = false
 set {Logo} = false

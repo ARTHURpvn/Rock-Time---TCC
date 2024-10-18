@@ -2,11 +2,11 @@
 if {Cecilia} == true:
 	jump fimQuest
 set {isTalking} = true
-michaelJackson: Olá Jovens, preparados?
-michaelJackson: Por que vão preceisar, vocês estão no meu palco, será que aguentam a pressão?
-hanna: Claro, não duvide da nossa capacidade!
-harry: É galera, parece que agora vamos enfrentar mais um grande compositor.
-lana: Não tenham medo, a gente consegue.
+michaelJackson: Ola Jovens, preparados?
+michaelJackson: Por que vao preceisar, voces estao no meu palco, sera que aguentam a pressao?
+hanna: Claro, nao duvide da nossa capacidade!
+harry: Eh galera, parece que agora vamos enfrentar mais um grande compositor.
+lana: Nao tenham medo, a gente consegue.
 castiel: Vamos mostrar do que somos capazes!
 set {isTalking} = false
 set {music} = "error"
@@ -14,22 +14,22 @@ set {Ritmo.playing} = true
 [end_timeline]
 label fimQuest
 set {isTalking} = true
-michaelJackson: Vocês são muito talentoso, mesmo sob pressão desta gigantesca plateia vocês conseguiram me vencer, o potencial de voês é imenso, boa sorte na carreira, vocês chegaram longe.
-hanna: Foi um prazer enfrentar o senhor, muito obrigado, a sua técnicia com o piano é de outro mundo!
+michaelJackson: Voces sao muito talentoso, mesmo sob pressao desta gigantesca plateia voces conseguiram me vencer, o potencial de voces eh imenso, boa sorte na carreira, voces chegaram longe.
+hanna: Foi um prazer enfrentar o senhor, muito obrigado, a sua tecnicia com o piano e de outro mundo!
 castiel: Bom, acho que deu nossa hora, Adeus.
 set {Cecilia} = false
 set {isTalking} = false
 set {end} = true
 [end_timeline]
-NPC: Mais uma grande vitória, vocês estão de parabéns.
-castiel: Ok, mas até quando vamos ficar nessa?
-NPC: Calma meu jogvem, a brincadeira está apenas no começo, agora a dificuldade será levemente aumentada, aliás, peguem essas roupas, vocês irão precisar!
-lana: Galera, que roupas são essas?
+NPC: Mais uma grande vitoria, voces estao de parabens.
+castiel: Ok, mas ate quando vamos ficar nessa?
+NPC: Calma meu jogvem, a brincadeira esta apenas no comeco, agora a dificuldade sera levemente aumentada, alias, peguem essas roupas, voces irao precisar!
+lana: Galera, que roupas sao essas?
 hanna: Parece que estamos fantasiados.
-castiel: Não pode ser!! Eu sou o Coringa.
+castiel: Nao pode ser!! Eu sou o Coringa.
 harry: Eu sou o Goku!
-keith: Até que nao fiquei tão mal de Minato.
-lana: Você ficou estranha de Diabinha, Hanna.
-hanna: Nem parece que você esta fantasiada, você parece muito com a Ravena!
+keith: Ate que nao fiquei tao mal de Minato.
+lana: Voce ficou estranha de Diabinha, Hanna.
+hanna: Nem parece que voce esta fantasiada, voce parece muito com a Ravena!
 set {isTalking} = false
 [end_timeline]

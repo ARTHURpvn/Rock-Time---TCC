@@ -19,7 +19,17 @@ func _ready() -> void:
 	if Dialogic.VAR.quest == 5 and Dialogic.VAR.Logo:
 		Dialogic.VAR.Logo = false
 
+	$Lana.position = GlobalTime.lanaPosition
+	$Harry.position = GlobalTime.harryPosition
+	$Keith.position = GlobalTime.keithPosition
+	$Player.position = GlobalTime.castPosition
+
 func _process(_delta: float) -> void:
+	GlobalTime.lanaPosition = $Lana.position
+	GlobalTime.harryPosition = $Harry.position
+	GlobalTime.keithPosition = $Keith.position
+	GlobalTime.castPosition = $Player.position
+	
 	if Dialogic.VAR.quest == 1:
 		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
 

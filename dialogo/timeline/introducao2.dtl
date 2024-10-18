@@ -3,7 +3,7 @@ if {quest} == 1:
 	jump quest1
 
 set {isTalking} = true
-harry: Tem como buscar minha irmã na escola e trazer aqui pro estudio? To praticando minha parte naquela musica que a Hanna me pediu e não vai dar tempo pra mim, só não estressa ela, sem mim pra cantar as musicas favoritas dela ela é um saco pra cuidar.
+harry: Tem como buscar minha irma na escola e trazer aqui pra garagem? To praticando minha parte naquela musica que a Hanna me pediu e nao vai dar tempo pra mim, so nao estressa ela, sem mim pra cantar as musicas favoritas dela ela eh um saco pra cuidar.
 castiel: Beleza conta comigo.
 set {quest} = 1
 set {isTalking} = false
@@ -11,12 +11,12 @@ set {isTalking} = false
 label quest1
 set {isTalking} = true
 
-cecilia: Quem é você?! Cadê o meu maninho? Ele tinha combinado de me buscar hoje, eu não vou embora com um estranho.
-castiel: Eu sou amigo do seu irmão meu nome é Castiel prazer em te conhecer, infelizmente seu irmão teve um imprevisto, então pediu para eu vir te buscar.
-cecilia: Você está querendo insinuar que esse imprevisto é mais importante do que eu? Seu boçal, e que história é essa de amigo eu não caio nesse papinho não se você não for embora eu vou gritar bem alto.
-castiel: Calma, por favor não grite, o que eu posso fazer para te convencer a vir comigo?
-cecilia: Então, veja com seus próprios olhos o que meu maninho me ensinou.
-cecilia: Humm? Já sei cante uma música da “Katy Perry ” comigo, só assim eu vou com você.
+cecilia: Quem eh voce?! Cade o meu maninho? Ele tinha combinado de me buscar hoje, eu nao vou embora com um estranho.
+castiel: Eu sou amigo do seu irmao meu nome eh Castiel prazer em te conhecer, infelizmente seu irmao teve um imprevisto, entao pediu para eu vir te buscar.
+cecilia: Voce esta querendo insinuar que esse imprevisto e mais importante do que eu? Seu bocal, e que historia eh essa de amigo eu nao caio nesse papinho nao se voce nao for embora eu vou gritar bem alto.
+castiel: Calma, por favor nao grite, o que eu posso fazer para te convencer a vir comigo?
+cecilia: Entao, veja com seus proprios olhos o que meu maninho me ensinou.
+cecilia: Humm? Já sei cante uma musica da “Katy Perry ” comigo, so assim eu vou com voce.
 set {music} = "error"
 set {Ritmo.playing} = true
 set {isTalking} = false

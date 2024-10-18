@@ -10696,25 +10696,23 @@ position = Vector2(94, 197)
 position = Vector2(107, 15)
 shape = SubResource("RectangleShape2D_1xtpk")
 
-[node name="Node" type="Node" parent="."]
+[node name="Player" parent="." instance=ExtResource("11_ogqs1")]
+position = Vector2(-63, 20)
 
-[node name="Lana" parent="Node" instance=ExtResource("11_0k8yi")]
-position = Vector2(-131, -15)
+[node name="Lana" parent="." instance=ExtResource("11_0k8yi")]
+position = Vector2(-127, -11)
 npc_name = "Lana"
 npc_pos = Vector2(1, 0)
 
-[node name="Harry" parent="Node" instance=ExtResource("11_0k8yi")]
-position = Vector2(-82, -8)
+[node name="Harry" parent="." instance=ExtResource("11_0k8yi")]
+position = Vector2(-67, -6)
 npc_name = "Harry"
 npc_pos = Vector2(0, 1)
 
-[node name="Keith" parent="Node" instance=ExtResource("11_0k8yi")]
-position = Vector2(-97, 98)
+[node name="Keith" parent="." instance=ExtResource("11_0k8yi")]
+position = Vector2(-128, 69)
 npc_name = "Keith"
 npc_pos = Vector2(-1, 0)
-
-[node name="Player" parent="." instance=ExtResource("11_ogqs1")]
-position = Vector2(-71, 47)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

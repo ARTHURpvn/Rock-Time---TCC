@@ -9,7 +9,18 @@ var isPlayer : bool
 var isMenu : bool
 var instMenu
 
+func _ready() -> void:
+	$Lana.position = GlobalTime.lanaPosition
+	$Harry.position = GlobalTime.harryPosition
+	$Keith.position = GlobalTime.keithPosition
+	$Player.position = GlobalTime.castPosition
+
 func _process(_delta: float) -> void:
+	GlobalTime.lanaPosition = $Lana.position
+	GlobalTime.harryPosition = $Harry.position
+	GlobalTime.keithPosition = $Keith.position
+	GlobalTime.castPosition = $Player.position
+
 	if Dialogic.VAR.follow:
 		if !created:
 			created = true

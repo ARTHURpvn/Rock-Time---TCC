@@ -8,11 +8,11 @@ if {quest} == 4:
 if {quest} == 5:
 	jump FimQuest
 
-castiel: Foi mal galera, tive que ir buscar a irmã do Harry na escola e não consegui pegar os amplificadores.
-keith: Você sempre arruma compromissos demais Castiel, desse jeito fica difícil deixar uma missão nas suas mãos.
-lana: Olha gente, porque a gente não vai junto buscar os amplificadores?
+castiel: Foi mal galera, tive que ir buscar a irma do Harry na escola e nao consegui pegar os amplificadores.
+keith: Você sempre arruma compromissos demais Castiel, desse jeito fica dificil deixar uma missao nas suas maos.
+lana: Olha gente, porque a gente nao vai junto buscar os amplificadores?
 hanna: Concordo com a Lana.
-harry: Vamos lá então.
+harry: Vamos la entao.
 
 set {follow} = true
 set {quest} = 3
@@ -22,8 +22,8 @@ set {isTalking} = false
 
 label InicioQuest
 set {isTalking} = true
-harry: Castiel, você não disse que esse cara vendia em uma vã.
-hanna: Uma vã preta bem sinistra.
+harry: Castiel, voce nao disse que esse cara vendia em uma va.
+hanna: Uma va preta bem sinistra.
 castiel: Calma gente, vai dar tudo certo
 set {isTalking} = false
 set {quest} = 4
@@ -31,22 +31,22 @@ set {quest} = 4
 
 label TalkFinn
 set {isTalking} = true
-castiel: Oi, você que é o Finn?
+castiel: Oi, você que eh o Finn?
 finn: Eu mesmo.
 castiel: Eu sou o Castiel, sou o cara que pediu os amplificadores.
-finn: Eles já estão na parte de trás da vã. Como combinamos $450,00 e você leva.
-castiel: Nossa são baratos mesmo, mas eles estão funcionando certinho?
-finn: Lógico, meus produtos são de qualidade.
-castiel: Tá bom, vou levar.
+finn: Eles ja estao na parte de tras da va. Como combinamos $450,00 e voce leva.
+castiel: Nossa sao baratos mesmo, mas eles estao funcionando certinho?
+finn: Logico, meus produtos sao de qualidade.
+castiel: Ta bom, vou levar.
 set {quest} = 5
 set {isTalking} = false
 [end_timeline]
 
 label FimQuest
 set {isTalking} = true
-lana: Então galera, vamos testar o amplificador!
-castiel: Blz, então vou ligar o amplificador na guitarra pra gente começar a tocar.
-harry: DROGA!!! DEIXEI MEU COPO DE ÁGUA CAIR NA TOMADA
+lana: Entao galera, vamos testar o amplificador!
+castiel: Blz, entao vou ligar o amplificador na guitarra pra gente começar a tocar.
+harry: DROGA!!! DEIXEI MEU COPO DE AGUA CAIR NA TOMADA
 set {isTalking} = false
 set {cutscene} = "amplificador"
 set {isCutscene} = true

@@ -32,7 +32,6 @@ func _ready():
 	time = GlobalTime.time
 	start_pos = position
 	_state_machine = _animation_tree["parameters/playback"]
-	print(npc_name)
 
 func _process(delta):
 	isNight = GlobalTime.isNight
@@ -74,7 +73,7 @@ func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = true
 
@@ -82,10 +81,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			isMenu = true
 			instMenu = menu.instantiate()
 			instMenu.tecla = "F"
-			instMenu.text = "Conversar"
+			instMenu.texto = "Conversar"
 			add_child(instMenu)
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		inArea = true
 		isChatting = false
