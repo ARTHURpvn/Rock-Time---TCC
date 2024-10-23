@@ -9,7 +9,7 @@ castiel: O que aconteceu, onde estamos?
 keith: Acho que estamos no parque Antonio Dias.
 hanna: Sim, mas olha a vestimenta dessas pessoas.
 harry: Nossa! parece ate que voltamos no tempo.
-lana: Nao, isso eh impossível.
+lana: Nao, isso eh impossivel.
 hanna: Castiel, pergunta para aquele moco em que ano estamos.
 set {isTalking} = false
 set {Cecilia} = true
@@ -20,7 +20,7 @@ set {isTalking} = true
 castiel: Oii boa tarde moco, em que ano estamos?
 NPC: Ola viajantes, voces estao no ano de 1773, os amplificadores os trouxeram para o passado, o seu desafio sera encontrar e desafiar musicos deste tempo, boa sorte, voces tem uma cidade enorme para explorar!
 castiel: Mas como nos iremos saber onde eles estao?
-castiel: Pergunte para os Cidadoes, talvez eles saibam onde os artistas estao, ou vao estar.
+NPC: Pergunte para os Cidadoes, talvez eles saibam onde os artistas estao, ou vao estar.
 set {isTalking} = false
 set {Logo} = true
 

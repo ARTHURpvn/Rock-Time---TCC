@@ -9,7 +9,7 @@ if {quest} == 5:
 	jump FimQuest
 
 castiel: Foi mal galera, tive que ir buscar a irma do Harry na escola e nao consegui pegar os amplificadores.
-keith: Você sempre arruma compromissos demais Castiel, desse jeito fica dificil deixar uma missao nas suas maos.
+keith: Voce sempre arruma compromissos demais Castiel, desse jeito fica dificil deixar uma missao nas suas maos.
 lana: Olha gente, porque a gente nao vai junto buscar os amplificadores?
 hanna: Concordo com a Lana.
 harry: Vamos la entao.
@@ -22,8 +22,8 @@ set {isTalking} = false
 
 label InicioQuest
 set {isTalking} = true
-harry: Castiel, voce nao disse que esse cara vendia em uma va.
-hanna: Uma va preta bem sinistra.
+harry: Castiel, voce nao disse que esse cara vendia em uma van.
+hanna: Uma van preta bem sinistra.
 castiel: Calma gente, vai dar tudo certo
 set {isTalking} = false
 set {quest} = 4
@@ -31,10 +31,10 @@ set {quest} = 4
 
 label TalkFinn
 set {isTalking} = true
-castiel: Oi, você que eh o Finn?
+castiel: Oi, voce que eh o Finn?
 finn: Eu mesmo.
 castiel: Eu sou o Castiel, sou o cara que pediu os amplificadores.
-finn: Eles ja estao na parte de tras da va. Como combinamos $450,00 e voce leva.
+finn: Eles ja estao na parte de tras da van. Como combinamos 450 dolares e voce leva.
 castiel: Nossa sao baratos mesmo, mas eles estao funcionando certinho?
 finn: Logico, meus produtos sao de qualidade.
 castiel: Ta bom, vou levar.

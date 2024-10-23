@@ -13,7 +13,7 @@ castiel: Claro que temos, nos somos uma equipe, se trabalharmos juntos a gente c
 lana: Concordo!
 harry: Isso ai, Vamos la galera!
 hanna: Bora Arrebentar!!
-set {music} = "error"
+set {music} = "locked_out"
 set {Ritmo.playing} = true
 set {isTalking} = false
 [end_timeline]
@@ -30,8 +30,8 @@ set {isTalking} = true
 [wait time="2.0"]
 castiel: Foi um aprendizado e tanto pessoal, com essa batalha nos conseguimos ver em que precisamos melhorar.
 harry: Sim! Mas e agora?
-hanna: Verdad....
-NPC: Parabens jovens, Voces sao realmete incriveis, procurem o seu próximo desafio pelo mapa. Boa Sorte!\
+hanna: Verdade
+NPC: Parabens jovens, Voces sao realmete incriveis, procurem o seu proximo desafio pelo mapa. Boa Sorte!\
 Dica\: as pessoas que estao na escola conseguem ver ele
 set {isTalking} = false
 set {Cecilia} = false

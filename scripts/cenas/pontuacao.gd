@@ -8,7 +8,13 @@ func _process(_delta: float) -> void:
 	$Pontuacao/points.text = str(points)
 
 	if $Pontuacao/Button.button_pressed:
-		print(Dialogic.VAR.quest, clicked)
+		GlobalTime.points = 0
+		GlobalTime.life = 100
+		GlobalTime.tiles = 0
+		GlobalTime.acertos = 0
+		GlobalTime.combo = 1
+		GlobalTime.special = false
+		
 		if Dialogic.VAR.quest == 0 and !clicked:
 			clicked = true
 			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem.tscn")

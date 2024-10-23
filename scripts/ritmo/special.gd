@@ -14,11 +14,11 @@ func _process(_delta):
 
 	else:
 		$tiles.material_override = activeStyle
-
-		if !GlobalTime.special && Input.is_action_just_pressed("special"):
+		if !GlobalTime.special and Input.is_action_just_pressed("special"):
 			GlobalTime.special = true
 
-	if tile >= 0.5:
-		Dialogic.VAR.Ritmo.special = true
-	else:
-		Dialogic.VAR.Ritmo.special = false
+	if tile >= 0.01 and GlobalTime.special:
+		GlobalTime.acertos -= 0.001
+
+	elif tile <= 0.01 and GlobalTime.special:
+		GlobalTime.special = false

@@ -16,8 +16,8 @@ castiel: Eu sou amigo do seu irmao meu nome eh Castiel prazer em te conhecer, in
 cecilia: Voce esta querendo insinuar que esse imprevisto e mais importante do que eu? Seu bocal, e que historia eh essa de amigo eu nao caio nesse papinho nao se voce nao for embora eu vou gritar bem alto.
 castiel: Calma, por favor nao grite, o que eu posso fazer para te convencer a vir comigo?
 cecilia: Entao, veja com seus proprios olhos o que meu maninho me ensinou.
-cecilia: Humm? Já sei cante uma musica da “Katy Perry ” comigo, so assim eu vou com voce.
-set {music} = "error"
+cecilia: Humm? Ja sei cante uma musica da “Katy Perry ” comigo, so assim eu vou com voce.
+set {music} = "firework"
 set {Ritmo.playing} = true
 set {isTalking} = false
 set {Cecilia} = true

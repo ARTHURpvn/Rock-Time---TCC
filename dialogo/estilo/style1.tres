@@ -25,8 +25,9 @@ script = ExtResource("1_i2d73")
 scene = ExtResource("4_lxfm1")
 overrides = {
 "box_modulate_custom_color": "Color(0, 0, 0, 1)",
+"box_modulate_global_color": "false",
 "box_panel": "\"default_stylebox.tres\"",
-"box_size": "Vector2(900, 160)",
+"box_size": "Vector2(900, 180)",
 "custom_normal_font": "\"res://assets/Fonts/Little Malio 8-Bit For Dafont.otf\"",
 "name_label_color_mode": "1",
 "name_label_customfont": "\"res://assets/Fonts/Little Malio 8-Bit For Dafont.otf\"",

@@ -1,19 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://de7p3hv7x3ua8"]
+[gd_scene load_steps=3 format=3 uid="uid://de7p3hv7x3ua8"]
 
 [ext_resource type="Script" path="res://scripts/ritmo/vida.gd" id="1_kn334"]
+[ext_resource type="FontFile" uid="uid://ct84yothkwc8w" path="res://assets/Fonts/Little Malio 8-Bit For Dafont.otf" id="2_na4d2"]
 
 [node name="Vida" type="Node3D"]
 script = ExtResource("1_kn334")
 
 [node name="Label" type="Label3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0260613, 0.923456, 0.001)
-modulate = Color(1, 0, 0, 1)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0260613, 1.10246, 0.001)
+modulate = Color(0.556863, 0.254902, 0.87451, 1)
 text = "Vida"
-font_size = 90
-outline_size = 6
+font = ExtResource("2_na4d2")
+font_size = 75
+outline_size = 0
 
 [node name="Life" type="Label3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00642753, 0.310223, 0.002)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.00642753, 0.362897, 0.002)
 text = "100"
-font_size = 90
-outline_size = 6
+font = ExtResource("2_na4d2")
+font_size = 75
+outline_size = 0

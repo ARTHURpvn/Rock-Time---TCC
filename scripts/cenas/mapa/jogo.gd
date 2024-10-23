@@ -108,7 +108,7 @@ func _process(_delta: float) -> void:
 		npc_name = "Bruno Mars"
 		instanciate = static_npc.instantiate()
 		instanciate.npc_name = npc_name
-		instanciate.position = Vector2(192, -263)
+		instanciate.position = Vector2(-122, -264)
 		instanciate.npc_pos = Vector2(1, 0)
 		add_child(instanciate)
 

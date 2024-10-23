@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://3wod30rfetll"]
+[gd_scene load_steps=4 format=3 uid="uid://3wod30rfetll"]
 
 [ext_resource type="Script" path="res://scripts/cenas/outro_dia.gd" id="1_twpy4"]
+[ext_resource type="FontFile" uid="uid://ct84yothkwc8w" path="res://assets/Fonts/Little Malio 8-Bit For Dafont.otf" id="2_ssmye"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wouts"]
+font = ExtResource("2_ssmye")
 font_size = 120
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
@@ -24,13 +26,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -318.5
-offset_top = -82.5
-offset_right = 318.5
-offset_bottom = 82.5
+offset_left = -520.5
+offset_top = -123.0
+offset_right = 520.5
+offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Mais Tarde..."
+text = "Mais Tarde"
 label_settings = SubResource("LabelSettings_wouts")
 
 [node name="Timer" type="Timer" parent="."]

@@ -11,6 +11,7 @@ var createdStatic : bool = false
 var isPlayer : bool
 var isMenu : bool = false
 var instMenu
+var isVisible : bool = true
 
 func _ready() -> void:
 	if Dialogic.VAR.quest == 0:
@@ -30,6 +31,7 @@ func _process(_delta: float) -> void:
 	GlobalTime.keithPosition = $Keith.position
 	GlobalTime.castPosition = $Player.position
 	
+	
 	if Dialogic.VAR.quest == 1:
 		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
 
@@ -45,6 +47,12 @@ func _process(_delta: float) -> void:
 	if Dialogic.VAR.quest == 2 and !Dialogic.VAR.isTalking:
 		Dialogic.start_timeline("res://dialogo/timeline/introducao1.dtl")
 	
+	if Dialogic.VAR.quest == 2 and GlobalTime.quests[2].finished and isVisible:
+		isVisible = false
+		$Lana.visible = false
+		$Harry.visible = false
+		$Keith.visible = false
+
 	if Dialogic.VAR.quest == 5 and !Dialogic.VAR.isTalking and !Dialogic.VAR.Logo and !GlobalTime.quests[4].finished:
 		Dialogic.start_timeline("res://dialogo/timeline/introducao1.dtl")
 
@@ -56,6 +64,8 @@ func _process(_delta: float) -> void:
 		GlobalTime.quests[4].finished = true
 		Dialogic.VAR.isCutscene = false
 		cutscene = false
+
+
 	
 	if Dialogic.VAR.quest == 5 and GlobalTime.quests[4].finished and Dialogic.VAR.Logo and !cutscene and !Dialogic.VAR.isCutscene:
 		GlobalTime.player_position = Vector2(362, -286)

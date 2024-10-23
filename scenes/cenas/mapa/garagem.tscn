@@ -10836,10 +10836,10 @@ tracks/1/path = NodePath("Player:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 2, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-151, 54), Vector2(-133, 71), Vector2(-111, 80), Vector2(-44, 108), Vector2(129, 192)]
+"values": [Vector2(-151, 54)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -11062,7 +11062,6 @@ position = Vector2(-151, 54)
 _friction = 0.4
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
 z_index = 5
 position = Vector2(-146, 3)
 scale = Vector2(1.40625, 1.625)

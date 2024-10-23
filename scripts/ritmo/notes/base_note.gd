@@ -3,7 +3,6 @@ extends Node3D
 var red_mat = preload("res://scenes/ritmo/notas/red_note_mat.tres")
 var green_mat = preload("res://scenes/ritmo/notas/green_note_mat.tres")
 var blue_mat = preload("res://scenes/ritmo/notas/blue_note_mat.tres")
-var info_text = preload("res://scenes/ritmo/info.tscn")
 
 @onready var point : int = GlobalTime.points
 @onready var life : int = GlobalTime.life

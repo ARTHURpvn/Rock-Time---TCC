@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpatxk37l3tsd"]
+
+[ext_resource type="Texture2D" uid="uid://bivy5cj3s125d" path="res://assets/minimap/garagem.png" id="1_e1t3s"]
+
+[node name="home" type="Node2D" groups=["minimap_objects"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e1t3s")

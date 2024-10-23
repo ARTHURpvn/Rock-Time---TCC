@@ -4,7 +4,10 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if $VBoxContainer/try.button_pressed:
-		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
+		GlobalTime.points = 0
+		GlobalTime.life = 100
+		get_tree().change_scene_to_file("res://scenes/ritmo/game.tscn")
 	
 	if $VBoxContainer/exit.button_pressed:
-		get_tree().change_scene_to_file("res://scenes/cenas/mapa/inicial.tscn")
+		get_tree().quit
+		#get_tree().change_scene_to_file("res://scenes/cenas/mapa/inicial.tscn")
