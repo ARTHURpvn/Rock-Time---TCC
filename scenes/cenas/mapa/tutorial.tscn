@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5dweslop0te2"]
+[gd_scene load_steps=10 format=3 uid="uid://c5dweslop0te2"]
 
 [ext_resource type="Script" path="res://scripts/cenas/mapa/tutorial.gd" id="1_ql7am"]
 [ext_resource type="Texture2D" uid="uid://cjgfxy3ftrtvt" path="res://assets/Layers/back.png" id="2_cjd8i"]
 [ext_resource type="Texture2D" uid="uid://ee3hoh4ksqag" path="res://assets/logo2.png" id="3_capmx"]
 [ext_resource type="Texture2D" uid="uid://w8tg7s1nptb0" path="res://assets/Layers/middle.png" id="3_uxauj"]
 [ext_resource type="Texture2D" uid="uid://b8pti7cchexg3" path="res://assets/Layers/foreground.png" id="4_iln80"]
+[ext_resource type="PackedScene" uid="uid://dta7bmb4etp85" path="res://scenes/cenas/ui/teclas.tscn" id="6_cbb7m"]
 
 [sub_resource type="Animation" id="Animation_lpilg"]
 length = 0.001
@@ -170,3 +171,5 @@ position = Vector2(639, 359)
 libraries = {
 "": SubResource("AnimationLibrary_81g3y")
 }
+
+[node name="teclas" parent="." instance=ExtResource("6_cbb7m")]

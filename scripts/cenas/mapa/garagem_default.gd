@@ -42,7 +42,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if !isMenu:
 			isMenu = true
 			instMenu = menu.instantiate()
-			instMenu.tecla = "F"
 			instMenu.texto = "Sair"
 			add_child(instMenu)
 

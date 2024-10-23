@@ -30,8 +30,14 @@ Design: Alex <br>
 * [x] Arrumar posicoes inicias do player e quando sai da garagem.
 * [x] Adicionar o Icone de garagem no mapa.
 * [x] Consertar cena garagem (npc nasce ja seguindo player, mesmo quando no primeiro dialogo)
+* [x] Nao aparecer a quest de ir para a garagem
+* [x] Consertar spawnar perso andando e parado na quest de pegar os amplificadores
+* [x] Nao aparecer cena final depois da batalha com o Michael
 
 * [ ] Consertar npc empurrando player quando esta encostado neles.
 * [ ] Fazer algum jeito de mapear onde os npcs podem andar
 * [ ] Reduzir velocidade do player e trocar para sprite com ele com o amplificador (quest especifica) - acontece apenas qnd muda de cena correndo
-* [ ] Consertar spawnar perso andando e parado na quest de pegar os amplificadores
+* [ ] Algumas vezes quando leva a cecilia para a garagem, ele volta para o mapa inicial
+
+
+Roxo: #8e41df

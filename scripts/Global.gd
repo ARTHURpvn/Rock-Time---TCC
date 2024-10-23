@@ -10,6 +10,7 @@ var year : int = 1990
 
 var isPlaying : bool = false
 var isEnd : bool = false
+var paused : bool = false
 
 var harryPosition : Vector2 = Vector2(-67, -6)
 var hannaPosition : Vector2

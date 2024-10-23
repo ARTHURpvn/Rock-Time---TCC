@@ -3,7 +3,9 @@ lana: Castiel voce esta fazendo tudo errado cara! Nao e assim que se toca o solo
 castiel: Voces querem que eu toque um solo que nao conheco ai fica dificil!
 hanna: Entao vamos la, tudo de novo gente sem briga.
 set {music} = "back_in_black"
-[wait time="0.5"]
+set {paused} = true
+[wait time="1.0"]
 narrador: Vamos comecar com o basico! Acerte suas primeiras notas da musica!
 set {Ritmo.playing} = true
+
 [end_timeline]

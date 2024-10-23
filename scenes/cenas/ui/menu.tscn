@@ -1,13 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx47c7a10jea1"]
+[gd_scene load_steps=5 format=3 uid="uid://dx47c7a10jea1"]
 
 [ext_resource type="Script" path="res://scripts/cenas/ui/menu.gd" id="1_hvm4i"]
-[ext_resource type="Texture2D" uid="uid://wxruitikq37j" path="res://assets/tecla.png" id="2_sh1m0"]
+[ext_resource type="Texture2D" uid="uid://do73uk2blpqg5" path="res://assets/light/Keyboard Black.png" id="2_upr5a"]
 [ext_resource type="FontFile" uid="uid://ct84yothkwc8w" path="res://assets/Fonts/Little Malio 8-Bit For Dafont.otf" id="3_wo8kg"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_7in8h"]
-font = ExtResource("3_wo8kg")
-font_size = 25
-font_color = Color(0.641934, 0.641934, 0.641934, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_gu1wi"]
 font = ExtResource("3_wo8kg")
@@ -16,32 +11,21 @@ font_size = 15
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_hvm4i")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_left = 30.0
-offset_top = -26.0
+offset_top = 358.0
 offset_right = 189.0
-offset_bottom = 26.0
-grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(-44, -2)
-scale = Vector2(3, 3)
-texture = ExtResource("2_sh1m0")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
+offset_bottom = 410.0
 size_flags_vertical = 3
-theme_override_constants/separation = 25
+theme_override_constants/separation = 10
 
-[node name="tecla" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "F"
-label_settings = SubResource("LabelSettings_7in8h")
+texture = ExtResource("2_upr5a")
+region_rect = Rect2(96, 49, 16, 15)
 
-[node name="acao" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="acao" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 text = "Interagir"
 label_settings = SubResource("LabelSettings_gu1wi")

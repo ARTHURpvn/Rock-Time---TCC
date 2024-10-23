@@ -26,6 +26,7 @@ func _ready() -> void:
 	$Player.position = GlobalTime.castPosition
 
 func _process(_delta: float) -> void:
+	print(GlobalTime.quests[2])
 	GlobalTime.lanaPosition = $Lana.position
 	GlobalTime.harryPosition = $Harry.position
 	GlobalTime.keithPosition = $Keith.position
@@ -64,8 +65,6 @@ func _process(_delta: float) -> void:
 		GlobalTime.quests[4].finished = true
 		Dialogic.VAR.isCutscene = false
 		cutscene = false
-
-
 	
 	if Dialogic.VAR.quest == 5 and GlobalTime.quests[4].finished and Dialogic.VAR.Logo and !cutscene and !Dialogic.VAR.isCutscene:
 		GlobalTime.player_position = Vector2(362, -286)
@@ -93,7 +92,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if !isMenu:
 			isMenu = true
 			instMenu = menu.instantiate()
-			instMenu.tecla = "F"
 			instMenu.texto = "Sair"
 			add_child(instMenu)
 

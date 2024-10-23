@@ -76,6 +76,7 @@ variables={
 "isTalking": false,
 "music": "back_in_black",
 "name": "",
+"paused": false,
 "quest": 0,
 "questEnded": false
 }
