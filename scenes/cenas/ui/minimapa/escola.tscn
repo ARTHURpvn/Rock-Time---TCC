@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4xdmsq30ev8o"]
+
+[ext_resource type="Texture2D" uid="uid://d3feqpgf2vf3x" path="res://assets/minimap/escola.png" id="1_fx8j1"]
+
+[node name="escola" type="Node2D" groups=["minimap_objects"]]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_fx8j1")
+region_rect = Rect2(91, 0, 90, 65)

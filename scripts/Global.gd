@@ -6,7 +6,7 @@ var isNight: bool = false
 var time: String = str(hour)+":"+str(minu)
 var musicEnded : bool = false
 var player_position : Vector2 = Vector2(-1060, 114)
-var year : int = 1990
+var year : int = 2010
 
 var isPlaying : bool = false
 var isEnd : bool = false

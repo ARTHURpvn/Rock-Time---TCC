@@ -24,6 +24,8 @@ var npc_name : String
 func _ready() -> void:
 	$Player.position = GlobalTime.player_position
 	follow = Dialogic.VAR.follow
+	if GlobalTime.year == 1990:
+		$home.queue_free()
 
 	if Dialogic.VAR.quest == 1 and !follow:
 		if !Dialogic.VAR.Logo:
@@ -40,6 +42,7 @@ func _ready() -> void:
 		instanciate.npc_name = npc_name
 		instanciate.position = Vector2(182, -776)
 		instanciate.npc_pos = Vector2(-1, 0)
+		instanciate.scale = Vector2(0.8, 0.8)
 		add_child(instanciate)
 
 func _process(_delta: float) -> void:
@@ -57,6 +60,7 @@ func _process(_delta: float) -> void:
 			instanciate = follow_npc.instantiate()
 			instanciate.npc_name = npc_name
 			instanciate.position = Vector2(182, -776)
+			instanciate.scale = Vector2(0.8, 0.8)
 			add_child(instanciate)
 
 	if Dialogic.VAR.follow and !createdStatic and Dialogic.VAR.quest == 3:
@@ -153,10 +157,11 @@ func _process(_delta: float) -> void:
 
 	if isPlayer and Input.is_action_just_pressed("dialog"):
 		GlobalTime.player_position = Vector2(GlobalTime.player_position.x, 114)
-		if Dialogic.VAR.quest == 5:
+		if Dialogic.VAR.quest == 5 and GlobalTime.year == 2010:
 			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem.tscn")
 			return
-		get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
+		elif GlobalTime.year == 2010:
+			get_tree().change_scene_to_file("res://scenes/cenas/mapa/garagem_default.tscn")
 
 
 func _on_quest_body_entered(body: Node2D) -> void:		
