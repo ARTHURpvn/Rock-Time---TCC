@@ -9,7 +9,7 @@ harry: Eh galera, parece que agora vamos enfrentar mais um grande compositor.
 lana: Nao tenham medo, a gente consegue.
 castiel: Vamos mostrar do que somos capazes!
 set {isTalking} = false
-set {music} = "beat_it"
+set {music} = "error"
 set {Ritmo.playing} = true
 [end_timeline]
 label fimQuest

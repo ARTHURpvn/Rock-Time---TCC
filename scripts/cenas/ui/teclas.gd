@@ -1,11 +1,15 @@
 extends CanvasLayer
-
+var scene : bool = false
 
 func _ready() -> void:
 	visible = false 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if visible:
-		if event.is_action_pressed("ui_cancel"):
+		if scene:
 			visible = false
 			get_tree().paused = false
+
+
+func _on_timer_timeout() -> void:
+	scene = true

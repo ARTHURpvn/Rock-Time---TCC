@@ -26,7 +26,7 @@ cecilia: Humm? Já sei cante uma música da “Katty Perry ” comigo, só assim
 castiel: Perai oque!!! Não acredito que você goste desse tipo de música.
 cecilia: Então veja com seus próprios olhos o que meu maninho me ensinou.
 
-set {music} = firework
+set {music} = error
 set {Ritmo.playing} = true
 set {isTalking} = false
 [end_timeline]

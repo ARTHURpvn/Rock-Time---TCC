@@ -38,6 +38,10 @@ func _process(_delta: float) -> void:
 
 	if !Dialogic.VAR.follow and !createdStatic and Dialogic.VAR.quest == 2:
 		createdStatic = true
+		$Lana.queue_free()
+		$Harry.queue_free()
+		$Keith.queue_free()
+
 		for i in range(3):
 			var instantiate = follow_npc.instantiate()
 			instantiate.set_name(names[i - 1])
@@ -76,6 +80,7 @@ func _process(_delta: float) -> void:
 
 	
 	if isPlayer and Input.is_action_just_pressed("dialog"):
+		GlobalTime.castPosition.y = 186
 		get_tree().change_scene_to_file("res://scenes/cenas/mapa/jogo.tscn")
 
 func remove_existing_npcs():

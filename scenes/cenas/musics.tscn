@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjlab8inwgteq"]
+
+[ext_resource type="Theme" uid="uid://lfk2mgv12gp7" path="res://new_theme.tres" id="1_ent55"]
+[ext_resource type="Texture2D" uid="uid://bgs4w462hlwxy" path="res://assets/musica/Back_in_Black.jpg" id="2_ssfh1"]
+[ext_resource type="FontFile" uid="uid://bofsga82se7w1" path="res://assets/Fonts/Retro Gaming.ttf" id="3_sq41t"]
+[ext_resource type="Texture2D" uid="uid://bmry7ery4xhij" path="res://assets/musica/firework.jpg" id="4_8rwr7"]
+[ext_resource type="Texture2D" uid="uid://3ffpdei4ih2c" path="res://assets/musica/beat_it.jpg" id="5_2lb44"]
+[ext_resource type="Texture2D" uid="uid://daeg2qby31b48" path="res://assets/musica/locked_out.jpg" id="6_5vbvj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0pu2c"]
+font = ExtResource("3_sq41t")
+font_size = 50
+
+[node name="Musics" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 109.0
+offset_bottom = 56.0
+theme = ExtResource("1_ent55")
+text = "Voltar"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -126.0
+offset_right = 262.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ssfh1")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Back In Black"
+label_settings = SubResource("LabelSettings_0pu2c")
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer"]
+position = Vector2(20, 85)
+points = PackedVector2Array(835, 1, -20.3254, 0.420441)
+width = 4.0
+default_color = Color(0.404511, 0.404511, 0.404511, 1)
+
+[node name="Line2D2" type="Line2D" parent="VBoxContainer"]
+position = Vector2(21, 314)
+points = PackedVector2Array(835, 1, -20.3254, 0.420441)
+width = 4.0
+default_color = Color(0.404511, 0.404511, 0.404511, 1)
+
+[node name="Line2D3" type="Line2D" parent="VBoxContainer"]
+position = Vector2(24, 203)
+points = PackedVector2Array(835, 1, -20.3254, 0.420441)
+width = 4.0
+default_color = Color(0.404511, 0.404511, 0.404511, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_8rwr7")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "FireWork"
+label_settings = SubResource("LabelSettings_0pu2c")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("5_2lb44")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Beat It"
+label_settings = SubResource("LabelSettings_0pu2c")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("6_5vbvj")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Locked Out of Heaven"
+label_settings = SubResource("LabelSettings_0pu2c")

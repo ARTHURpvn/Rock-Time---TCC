@@ -13,7 +13,6 @@ var isEnd : bool = false
 var paused : bool = false
 
 var harryPosition : Vector2 = Vector2(-67, -6)
-var hannaPosition : Vector2
 var lanaPosition : Vector2 = Vector2(-127, -11)
 var keithPosition : Vector2 = Vector2(-128, 69)
 var castPosition : Vector2 = Vector2(-63, 20)
@@ -40,8 +39,8 @@ var quests = [
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Va para o Estacionamento"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Converse Com o Cara Misterioso"},
 	{ "name": "Pegar os Amplificadores", "finished": false, "todo": "Volte para a Garagem com os Amplificadores"},
-	{ "name": "Explore o Mapa", "finished": false, "todo": "Explore ao seu redor e ache o musico!"},
-	{ "name": "Procure pelo oponente", "finished": false, "todo": "Explore a cidade em busca de Informacoes para encontrar o oponente"},
+	{ "name": "Explore a praca", "finished": false, "todo": "Explore ao redor da praca para achar o musico!"},
+	{ "name": "Ache o ultimo oponente", "finished": false, "todo": "Ele ao redor !"},
 ]
 var quest : int = 0
 
