@@ -17,7 +17,7 @@ cecilia: Voce esta querendo insinuar que esse imprevisto e mais importante do qu
 castiel: Calma, por favor nao grite, o que eu posso fazer para te convencer a vir comigo?
 cecilia: Entao, veja com seus proprios olhos o que meu maninho me ensinou.
 cecilia: Humm? Ja sei cante uma musica da “Katy Perry ” comigo, so assim eu vou com voce.
-set {music} = "error"
+set {music} = "firework"
 set {Ritmo.playing} = true
 set {isTalking} = false
 set {Cecilia} = true

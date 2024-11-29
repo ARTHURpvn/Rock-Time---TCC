@@ -13,7 +13,7 @@ castiel: Claro que temos, nos somos uma equipe, se trabalharmos juntos a gente c
 lana: Concordo!
 harry: Isso ai, Vamos la galera!
 hanna: Bora Arrebentar!!
-set {music} = "error"
+set {music} = "locked_out"
 set {Ritmo.playing} = true
 set {isTalking} = false
 [end_timeline]

@@ -47,6 +47,14 @@ layout_mode = 2
 text = "Teclas para Ritmo"
 label_settings = SubResource("LabelSettings_e026j")
 
+[node name="Label" type="Label" parent="VBoxContainer2/Label"]
+offset_left = 691.338
+offset_top = 645.011
+offset_right = 1263.34
+offset_bottom = 727.011
+text = "Teclas para Jogar"
+label_settings = SubResource("LabelSettings_e026j")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 20
@@ -155,7 +163,7 @@ region_rect = Rect2(6, 65, 42, 15)
 
 [node name="Label2" type="Label" parent="VBoxContainer3/HBoxContainer3"]
 layout_mode = 2
-text = "Especial"
+text = "Correr"
 label_settings = SubResource("LabelSettings_mg0ii")
 
 [node name="Timer" type="Timer" parent="."]

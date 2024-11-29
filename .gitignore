@@ -2,3 +2,4 @@
 .godot/
 .MBOY_Editor.exe
 .settings.json
+*.exe

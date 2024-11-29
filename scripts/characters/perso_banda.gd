@@ -42,6 +42,9 @@ func _ready() -> void:
 	
 		"Cecilia":
 			texture = load('res://assets/personagens/cecilia.png')
+		
+		"Finn": 
+			texture = load('res://assets/personagens/brianMay.png')
 
 	$Sprite2D.texture = texture
 
